@@ -211,6 +211,12 @@ Messages</h2></td></tr>
 <tr class="memitem:structSLIpAddress"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#structSLIpAddress">SLIpAddress</a></td></tr>
 <tr class="memdesc:structSLIpAddress"><td class="mdescLeft">&#160;</td><td class="mdescRight">One of IPv4 or IPv6 addresses.  <a href="group__SLCommonTypes.html#structSLIpAddress">More...</a><br /></td></tr>
 <tr class="separator:structSLIpAddress"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLObjectId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#structSLObjectId">SLObjectId</a></td></tr>
+<tr class="memdesc:structSLObjectId"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common Object Identifier.  <a href="group__SLCommonTypes.html#structSLObjectId">More...</a><br /></td></tr>
+<tr class="separator:structSLObjectId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPathGroupRefKey"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#structSLPathGroupRefKey">SLPathGroupRefKey</a></td></tr>
+<tr class="memdesc:structSLPathGroupRefKey"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path group reference key.  <a href="group__SLCommonTypes.html#structSLPathGroupRefKey">More...</a><br /></td></tr>
+<tr class="separator:structSLPathGroupRefKey"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -234,12 +240,39 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:gaa809068894b7bf3fab0314dff50bd02d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification Operations.  <a href="group__SLCommonTypes.html#gaa809068894b7bf3fab0314dff50bd02d">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:gaa809068894b7bf3fab0314dff50bd02d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65c2010d83b4c8b4afe42af4b36f53b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#ga65c2010d83b4c8b4afe42af4b36f53b7">SLUpdatePriority</a> { <br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#gga65c2010d83b4c8b4afe42af4b36f53b7ad08028cd410b1d4978aa3327246deb2c">SL_PRIORITY_RESERVED</a> = 0x0, 
+<b>SL_PRIORITY_CRITICAL</b> = 0x4, 
+<b>SL_PRIORITY_HIGH</b> = 0x8, 
+<b>SL_PRIORITY_MEDIUM</b> = 0xc, 
+<br />
+&#160;&#160;<b>SL_PRIORITY_LOW</b> = 0x10
+<br />
+ }<tr class="memdesc:ga65c2010d83b4c8b4afe42af4b36f53b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update Priority.  <a href="group__SLCommonTypes.html#ga65c2010d83b4c8b4afe42af4b36f53b7">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ga65c2010d83b4c8b4afe42af4b36f53b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacf9698e39f1da873424b2a44dee2b741"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#gacf9698e39f1da873424b2a44dee2b741">SLEncapType</a> { <a class="el" href="group__SLCommonTypes.html#ggacf9698e39f1da873424b2a44dee2b741a06c75d5a40735271614a18ed211ab489">SL_ENCAP_RESERVED</a> = 0x0, 
 <a class="el" href="group__SLCommonTypes.html#ggacf9698e39f1da873424b2a44dee2b741a4e9001f1e0017b22a59fb46a95789433">SL_ENCAP_VXLAN</a> = 0x1, 
 <a class="el" href="group__SLCommonTypes.html#ggacf9698e39f1da873424b2a44dee2b741a5488dd4c4fabcb156abb6e87070b1143">SL_ENCAP_MPLS</a> = 0x2
  }<tr class="memdesc:gacf9698e39f1da873424b2a44dee2b741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulation Types.  <a href="group__SLCommonTypes.html#gacf9698e39f1da873424b2a44dee2b741">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:gacf9698e39f1da873424b2a44dee2b741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9a0d45d36b43a18018d89088dca1047"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#gaf9a0d45d36b43a18018d89088dca1047">SLTableType</a> { <br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#ggaf9a0d45d36b43a18018d89088dca1047ae44205023a19e3ec7578ef9b05a68ed0">SL_TABLE_TYPE_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLCommonTypes.html#ggaf9a0d45d36b43a18018d89088dca1047ae1f7757c482eff79c7ceef5778c7ac74">SL_IPv4_ROUTE_TABLE</a> = 0x1, 
+<a class="el" href="group__SLCommonTypes.html#ggaf9a0d45d36b43a18018d89088dca1047ac3d0d3d61b2b2b1a84ddd4c31d6c0eaa">SL_IPv6_ROUTE_TABLE</a> = 0x2, 
+<a class="el" href="group__SLCommonTypes.html#ggaf9a0d45d36b43a18018d89088dca1047acf28aaaaecb507f7a26e442a93e6eec6">SL_MPLS_LABEL_TABLE</a> = 0x3, 
+<br />
+&#160;&#160;<a class="el" href="group__SLCommonTypes.html#ggaf9a0d45d36b43a18018d89088dca1047a0077a4e8d749fa0e4af7daa458005205">SL_PATH_GROUP_TABLE</a> = 0x4
+<br />
+ }<tr class="memdesc:gaf9a0d45d36b43a18018d89088dca1047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Table types in a VRF.  <a href="group__SLCommonTypes.html#gaf9a0d45d36b43a18018d89088dca1047">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gaf9a0d45d36b43a18018d89088dca1047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab015cd9777d4ad3e0e1b78babe637308"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLCommonTypes.html#gab015cd9777d4ad3e0e1b78babe637308">SLRspACKType</a> { <a class="el" href="group__SLCommonTypes.html#ggab015cd9777d4ad3e0e1b78babe637308a58ba5eb7851c2f734e7bda7369dd7b74">RIB_ACK</a> = 0, 
+<a class="el" href="group__SLCommonTypes.html#ggab015cd9777d4ad3e0e1b78babe637308ab44f80bc0ba3ee9ba94e4a9b61070a38">RIB_AND_FIB_ACK</a> = 1
+ }<tr class="memdesc:gab015cd9777d4ad3e0e1b78babe637308"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of response that the client expects from the network element for any object programming operation.  <a href="group__SLCommonTypes.html#gab015cd9777d4ad3e0e1b78babe637308">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gab015cd9777d4ad3e0e1b78babe637308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Attributes</h2></td></tr>
@@ -249,10 +282,14 @@ Attributes</h2></td></tr>
 <tr class="memitem:a293eb43ea51d8359911f89a0e4c6284e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a293eb43ea51d8359911f89a0e4c6284e"></a>
 package&#160;</td><td class="memItemRight" valign="bottom"><b>service_layer</b></td></tr>
 <tr class="separator:a293eb43ea51d8359911f89a0e4c6284e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6545e6a32e6568e63da34c1cdf4c3bb5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6545e6a32e6568e63da34c1cdf4c3bb5"></a>
+option&#160;</td><td class="memItemRight" valign="bottom"><b>go_package</b> =&quot;github.com/Cisco-service-layer/service-layer-objmodel/grpc/protos;service_layer&quot;</td></tr>
+<tr class="separator:a6545e6a32e6568e63da34c1cdf4c3bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><hr/>
-<p> Copyright (c) 2019 by Cisco Systems, Inc. </p><h2>All rights reserved. </h2>
+<div class="textblock"><p>Common definitions for all of the service layer proto files. </p>
+<hr/>
+<p> Copyright (c) 2019, 2024 by Cisco Systems, Inc. </p><h2>All rights reserved. </h2>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

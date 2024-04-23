@@ -183,11 +183,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#nested-classes">Messages</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
-<div class="title">SLRouteCommon<div class="ingroups"><a class="el" href="group__Route.html">Route</a></div></div>  </div>
+<div class="title">SLRouteCommon<div class="ingroups"><a class="el" href="group__AF.html">AF</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Service Description</h2>
-<p>The following messages are used in both IPv4 and IPv6 Route operations. </p>
+<p>The following messages are used in IPv4, IPv6 Route, MPLS and PathGroup operations. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Messages</h2></td></tr>
@@ -239,9 +239,15 @@ Messages</h2></td></tr>
 <tr class="memitem:structSLVrfNotif"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#structSLVrfNotif">SLVrfNotif</a></td></tr>
 <tr class="memdesc:structSLVrfNotif"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common Vrf Notification message.  <a href="group__SLRouteCommon.html#structSLVrfNotif">More...</a><br /></td></tr>
 <tr class="separator:structSLVrfNotif"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRouteGetMatch"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#structSLRouteGetMatch">SLRouteGetMatch</a></td></tr>
+<tr class="memdesc:structSLRouteGetMatch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get objects whose attibutes match one of below entries.  <a href="group__SLRouteCommon.html#structSLRouteGetMatch">More...</a><br /></td></tr>
+<tr class="separator:structSLRouteGetMatch"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structSLRouteCommon"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#structSLRouteCommon">SLRouteCommon</a></td></tr>
 <tr class="memdesc:structSLRouteCommon"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common IPv4/IPv6 route attributes.  <a href="group__SLRouteCommon.html#structSLRouteCommon">More...</a><br /></td></tr>
 <tr class="separator:structSLRouteCommon"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLVxLANPath"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#structSLVxLANPath">SLVxLANPath</a></td></tr>
+<tr class="memdesc:structSLVxLANPath"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attributes for constructing VxLAN encapsulation for a IP packet.  <a href="group__SLRouteCommon.html#structSLVxLANPath">More...</a><br /></td></tr>
+<tr class="separator:structSLVxLANPath"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structSLRoutePath"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#structSLRoutePath">SLRoutePath</a></td></tr>
 <tr class="memdesc:structSLRoutePath"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route Path attributes.  <a href="group__SLRouteCommon.html#structSLRoutePath">More...</a><br /></td></tr>
 <tr class="separator:structSLRoutePath"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,6 +267,20 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:gad630c2e5490e88b889ccd79ace15005b"><td class="mdescLeft">&#160;</td><td class="mdescRight">L3 Event Notification types.  <a href="group__SLRouteCommon.html#gad630c2e5490e88b889ccd79ace15005b">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:gad630c2e5490e88b889ccd79ace15005b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c3e7f21144ed8e0510e2e2dedb746bf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#ga4c3e7f21144ed8e0510e2e2dedb746bf">SLRouteFlags</a> { <br />
+&#160;&#160;<a class="el" href="group__SLRouteCommon.html#gga4c3e7f21144ed8e0510e2e2dedb746bfa1a2b32b8fbf6eddc8ca92b93fce2e8e5">SL_ROUTE_FLAG_RESERVED</a> = 0x00, 
+<a class="el" href="group__SLRouteCommon.html#gga4c3e7f21144ed8e0510e2e2dedb746bfa416167424f947dd78f0070124bc9dd6f">SL_ROUTE_FLAG_PREFER_OVER_LDP</a> = 0x01, 
+<a class="el" href="group__SLRouteCommon.html#gga4c3e7f21144ed8e0510e2e2dedb746bfa9688b8b4f719f730792239f3cd55e274">SL_ROUTE_FLAG_DISABLE_LABEL_MERGE</a> = 0x2, 
+<a class="el" href="group__SLRouteCommon.html#gga4c3e7f21144ed8e0510e2e2dedb746bfa6ec1473a3bf9081d8e775c260bc443ac">SL_ROUTE_FLAG_VIABLE_PATHS_ONLY</a> = 0x04, 
+<br />
+&#160;&#160;<a class="el" href="group__SLRouteCommon.html#gga4c3e7f21144ed8e0510e2e2dedb746bfad1e3789b7361e54c80ae4ea02d8a4aa5">SL_ROUTE_FLAG_ACTIVE_ON_VIABLE_PATH</a> = 0x08
+<br />
+ }</td></tr>
+<tr class="separator:ga4c3e7f21144ed8e0510e2e2dedb746bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a73b562c477442b9de327481c991bf6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#ga8a73b562c477442b9de327481c991bf6">SLPathFlags</a> { <a class="el" href="group__SLRouteCommon.html#gga8a73b562c477442b9de327481c991bf6a224f79f1749ef4c90c5895ceb287e2c7">SL_PATH_FLAG_RESERVED</a> = 0x00, 
+<a class="el" href="group__SLRouteCommon.html#gga8a73b562c477442b9de327481c991bf6a63829fedf4879f861200c91dfc749b07">SL_PATH_FLAG_SINGLE_PATH_OPT</a> = 0x01
+ }</td></tr>
+<tr class="separator:ga8a73b562c477442b9de327481c991bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/><h2 class="groupheader">Message Documentation</h2>
 <a name="structSLRouteGlobalsGetMsg" id="structSLRouteGlobalsGetMsg"></a>
@@ -272,7 +292,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div>
+<div class="textblock"><p>Route Globals Get Message. </p>
+</div>
 </div>
 </div>
 <a name="structSLRouteGlobalsGetMsgRsp" id="structSLRouteGlobalsGetMsgRsp"></a>
@@ -284,7 +305,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Route Globals Get Message Response. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a35c10c7b2d5c6daa33821bc30bb659a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35c10c7b2d5c6daa33821bc30bb659a6"></a>
 <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a35c10c7b2d5c6daa33821bc30bb659a6">ErrStatus</a> = 1</td></tr>
@@ -311,7 +333,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div>
+<div class="textblock"><p>Route Global Stats Get Message. </p>
+</div>
 </div>
 </div>
 <a name="structSLRouteGlobalStatsGetMsgRsp" id="structSLRouteGlobalStatsGetMsgRsp"></a>
@@ -323,7 +346,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Route Global Stats Get Message Response. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a5f4372403b7168c60caabb57081836c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f4372403b7168c60caabb57081836c9"></a>
 <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a5f4372403b7168c60caabb57081836c9">ErrStatus</a> = 1</td></tr>
@@ -331,11 +355,11 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <tr class="separator:a5f4372403b7168c60caabb57081836c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5ad04924ee92ae5c0a56c80fe912485"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5ad04924ee92ae5c0a56c80fe912485"></a>
 uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#aa5ad04924ee92ae5c0a56c80fe912485">VrfCount</a> = 2</td></tr>
-<tr class="memdesc:aa5ad04924ee92ae5c0a56c80fe912485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Num VRFs registered through the service layer. <br /></td></tr>
+<tr class="memdesc:aa5ad04924ee92ae5c0a56c80fe912485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Num VRFs registered through the service layer for the requested client. <br /></td></tr>
 <tr class="separator:aa5ad04924ee92ae5c0a56c80fe912485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcbbaec079e2c6d5066acbf300914a24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcbbaec079e2c6d5066acbf300914a24"></a>
 uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#adcbbaec079e2c6d5066acbf300914a24">RouteCount</a> = 3</td></tr>
-<tr class="memdesc:adcbbaec079e2c6d5066acbf300914a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Num Routes added through the service layer. <br /></td></tr>
+<tr class="memdesc:adcbbaec079e2c6d5066acbf300914a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Num Routes added through the service layer for the requested client. <br /></td></tr>
 <tr class="separator:adcbbaec079e2c6d5066acbf300914a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
@@ -350,7 +374,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>VRF Registration message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a2d07b116959997b22b1e041dd09c0bcd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d07b116959997b22b1e041dd09c0bcd"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a2d07b116959997b22b1e041dd09c0bcd">VrfName</a> = 1</td></tr>
@@ -373,6 +398,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Default Admin distance for routes programmed by this application Range [0-255] This default value is used if route objects' AdminDistance is 0. </p>
 <p>Refer to <a class="el" href="group__SLRouteCommon.html#structSLRouteCommon" title="Common IPv4/IPv6 route attributes. ">SLRouteCommon</a> </p>
 
 </div>
@@ -386,11 +413,14 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>In case the Service Layer -&gt; RIB connection is lost, this specifies the timeout period after which RIB will automatically purge the installed routes, unless the service layer: </p>
 <ol type="1">
 <li>Re-registers (VRF)</li>
 <li>Replay all routes</li>
-<li>And send EOF, before the purge timeout </li>
+<li>And send EOF, before the purge timeout</li>
 </ol>
+<p>AdminDistance and VrfPurgeIntervalSeconds values are ignored for SL_PATH_GROUP_TABLE type registration </p>
 
 </div>
 </div>
@@ -406,7 +436,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>VRF Registration messages. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a177c43ef7fd6f54f9efe2c34f83e2133"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a177c43ef7fd6f54f9efe2c34f83e2133"></a>
 <a class="el" href="group__SLCommonTypes.html#gabcd5b7bdb1e75e62f586e079e924f896">SLRegOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a177c43ef7fd6f54f9efe2c34f83e2133">Oper</a> = 1</td></tr>
@@ -429,7 +460,8 @@ repeated <a class="el" href="group__SLRouteCommon.html#structSLVrfReg">SLVrfReg<
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>VRF Registration message Result. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a192c855d044a8435eef4f7be8f3ae31e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a192c855d044a8435eef4f7be8f3ae31e"></a>
 <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a192c855d044a8435eef4f7be8f3ae31e">ErrStatus</a> = 1</td></tr>
@@ -452,7 +484,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>VRF Registration message Response. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ac226e2008b95b7db9ce61992e6fd5932"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#ac226e2008b95b7db9ce61992e6fd5932">StatusSummary</a> = 1</td></tr>
 <tr class="memdesc:ac226e2008b95b7db9ce61992e6fd5932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summary result of the bulk operation (refer to enum <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) In general, the StatusSummary implies one of 3 things:  <a href="#ac226e2008b95b7db9ce61992e6fd5932">More...</a><br /></td></tr>
@@ -472,6 +505,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
       </table>
 </div><div class="memdoc">
 
+<p>In case of errors, this field indicates which entry in the bulk was erroneous. </p>
+
 </div>
 </div>
 <a class="anchor" id="ac226e2008b95b7db9ce61992e6fd5932"></a>
@@ -483,6 +518,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Summary result of the bulk operation (refer to enum <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) In general, the StatusSummary implies one of 3 things: </p>
 <ol type="1">
 <li>SL_SUCCESS: signifies that the entire bulk operation was successful. In this case, the Results list is empty.</li>
 <li>SL_SOME_ERR: signifies that the operation failed for one or more entries. In this case, Results holds the result for each individual entry in the bulk.</li>
@@ -503,7 +540,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>VRF Get Message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a1eac8a0ed2c0c5a3877500ddc63e711d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a1eac8a0ed2c0c5a3877500ddc63e711d">VrfName</a> = 1</td></tr>
 <tr class="memdesc:a1eac8a0ed2c0c5a3877500ddc63e711d"><td class="mdescLeft">&#160;</td><td class="mdescRight">VRF name (key).  <a href="#a1eac8a0ed2c0c5a3877500ddc63e711d">More...</a><br /></td></tr>
@@ -512,12 +550,25 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a601300c6b352f5efbedd180e100a1972">EntriesCount</a> = 2</td></tr>
 <tr class="memdesc:a601300c6b352f5efbedd180e100a1972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of entries requested. <br /></td></tr>
 <tr class="separator:a601300c6b352f5efbedd180e100a1972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9035d005edb780db02736adad2685c30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9035d005edb780db02736adad2685c30"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a9035d005edb780db02736adad2685c30">GetNext</a> = 3</td></tr>
-<tr class="memdesc:a9035d005edb780db02736adad2685c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">if GetNext is FALSE: request up to 'EntriesCount' entries starting from the key If GetNext is TRUE, or if the key exact match is not found: request up to 'EntriesCount' entries starting from the key's next <br /></td></tr>
+<tr class="memitem:a9035d005edb780db02736adad2685c30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a9035d005edb780db02736adad2685c30">GetNext</a> = 3</td></tr>
+<tr class="memdesc:a9035d005edb780db02736adad2685c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">if GetNext is FALSE: request up to 'EntriesCount' entries starting from the key If GetNext is TRUE, or if the key exact match is not found: request up to 'EntriesCount' entries starting from the key's next GetNext does not get the routes in the next client.  <a href="#a9035d005edb780db02736adad2685c30">More...</a><br /></td></tr>
 <tr class="separator:a9035d005edb780db02736adad2685c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a9035d005edb780db02736adad2685c30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SLVrfRegGetMsg::GetNext = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if GetNext is FALSE: request up to 'EntriesCount' entries starting from the key If GetNext is TRUE, or if the key exact match is not found: request up to 'EntriesCount' entries starting from the key's next GetNext does not get the routes in the next client. </p>
+
+</div>
+</div>
 <a class="anchor" id="a1eac8a0ed2c0c5a3877500ddc63e711d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -527,6 +578,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>VRF name (key). </p>
 <p>If the Key is not specified, then request up to the first 'EntriesCount' entries. </p>
 
 </div>
@@ -543,7 +596,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>VRF Get Message Response. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a6b4a93c268ccf89a3d01a7f55366db2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a6b4a93c268ccf89a3d01a7f55366db2c">Eof</a> = 1</td></tr>
 <tr class="memdesc:a6b4a93c268ccf89a3d01a7f55366db2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">End Of File.  <a href="#a6b4a93c268ccf89a3d01a7f55366db2c">More...</a><br /></td></tr>
@@ -566,6 +620,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returned entries as requested in the Get operation. </p>
 <p>if ErrStatus is SL_SUCCESS, Entries contains the info requested </p>
 
 </div>
@@ -579,6 +635,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>End Of File. </p>
 <p>When set to True, it indicates that the server has returned M, where M &lt; N, of the original N requested Entries. </p>
 
 </div>
@@ -595,7 +653,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>VRF Get Stats Message Response. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ad12789fc89a8cad6060b3ec4b31ca730"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad12789fc89a8cad6060b3ec4b31ca730"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#ad12789fc89a8cad6060b3ec4b31ca730">VrfName</a> = 1</td></tr>
@@ -618,7 +677,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>VRF Get Stats Message Response. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a8344ffc3125706e1f335bb61eb74e76e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a8344ffc3125706e1f335bb61eb74e76e">Eof</a> = 1</td></tr>
 <tr class="memdesc:a8344ffc3125706e1f335bb61eb74e76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">End Of File.  <a href="#a8344ffc3125706e1f335bb61eb74e76e">More...</a><br /></td></tr>
@@ -627,24 +687,12 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#af704d9ad090add44f1ebe1ec98394bcb">ErrStatus</a> = 2</td></tr>
 <tr class="memdesc:af704d9ad090add44f1ebe1ec98394bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of the Get Stats operation. <br /></td></tr>
 <tr class="separator:af704d9ad090add44f1ebe1ec98394bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba14a26f70736567dd407881b80c56bd"><td class="memItemLeft" align="right" valign="top">repeated <a class="el" href="group__SLRouteCommon.html#structSLVRFGetStatsMsgRes">SLVRFGetStatsMsgRes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#aba14a26f70736567dd407881b80c56bd">Entries</a> = 3</td></tr>
-<tr class="memdesc:aba14a26f70736567dd407881b80c56bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returned entries as requested in the Get Stats operation.  <a href="#aba14a26f70736567dd407881b80c56bd">More...</a><br /></td></tr>
+<tr class="memitem:aba14a26f70736567dd407881b80c56bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba14a26f70736567dd407881b80c56bd"></a>
+repeated <a class="el" href="group__SLRouteCommon.html#structSLVRFGetStatsMsgRes">SLVRFGetStatsMsgRes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#aba14a26f70736567dd407881b80c56bd">Entries</a> = 3</td></tr>
+<tr class="memdesc:aba14a26f70736567dd407881b80c56bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returned entries as requested in the Get Stats operation on per client basis if ErrStatus is SL_SUCCESS, Entries contains the info requested. <br /></td></tr>
 <tr class="separator:aba14a26f70736567dd407881b80c56bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Member Data Documentation</h4>
-<a class="anchor" id="aba14a26f70736567dd407881b80c56bd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">repeated <a class="el" href="group__SLRouteCommon.html#structSLVRFGetStatsMsgRes">SLVRFGetStatsMsgRes</a> SLVRFGetStatsMsgRsp::Entries = 3</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>if ErrStatus is SL_SUCCESS, Entries contains the info requested </p>
-
-</div>
-</div>
 <a class="anchor" id="a8344ffc3125706e1f335bb61eb74e76e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -654,6 +702,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>End Of File. </p>
 <p>When set to True, it indicates that the server has returned M, where M &lt; N, of the original N requested Entries. </p>
 
 </div>
@@ -670,7 +720,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Common Get Notifications message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ac4076c122cfd8dcc2a2298753e6a83e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4076c122cfd8dcc2a2298753e6a83e6"></a>
 <a class="el" href="group__SLCommonTypes.html#gaa809068894b7bf3fab0314dff50bd02d">SLNotifOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#ac4076c122cfd8dcc2a2298753e6a83e6">Oper</a> = 1</td></tr>
@@ -700,6 +751,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Correlator. </p>
 <p>This is used to correlate <a class="el" href="group__SLRouteCommon.html#structSLRouteGetNotifMsg" title="Common Get Notifications message. ">SLRouteGetNotifMsg</a> with <a class="el" href="group__SLRouteCommon.html#structSLRouteNotifStatus" title="Common Route Notification Status message. ">SLRouteNotifStatus</a>. The server reflects this field in the reply. A client can send a <a class="el" href="group__SLRouteCommon.html#structSLRouteGetNotifMsg" title="Common Get Notifications message. ">SLRouteGetNotifMsg</a> with the Correlator only. Once accepted and reply is sent, VRF notifications are sent. This is useful if a client wants to receive VRF notifications (<a class="el" href="group__SLRouteCommon.html#structSLVrfNotif" title="Common Vrf Notification message. ">SLVrfNotif</a>) only and is not interested in receiving route notifications (SLRoutev4NotifRoute/SLRoutev6NotifRoute) from any VRF. </p>
 
 </div>
@@ -713,6 +766,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Source Protocol. </p>
 <p>Only routes with specified source protocol and protocol tag will be notified. Contact Cisco for supported protocol string names. </p>
 
 </div>
@@ -726,6 +781,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Source Protocol Tag. </p>
 <p>This can be empty if N/A. Contact Cisco for supported protocol tags. </p>
 
 </div>
@@ -742,7 +799,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Common Route Notification Status message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a9abb250bebaa6aef65d493cbaf48f095"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9abb250bebaa6aef65d493cbaf48f095"></a>
 uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a9abb250bebaa6aef65d493cbaf48f095">Correlator</a> = 1</td></tr>
@@ -766,6 +824,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The NotifStatus implies one of 2 things: SL_SUCCESS: signifies that the notification request was successful SL_XXX: signifies an error in setting up a notification for the Vrf. </p>
 <p>Implies that notifications for this VRF will not be sent. </p>
 
 </div>
@@ -782,7 +842,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Common Marker Notification message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a663fa35afbdb4028180851bf9d55f2e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a663fa35afbdb4028180851bf9d55f2e2"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a663fa35afbdb4028180851bf9d55f2e2">VrfName</a> = 1</td></tr>
@@ -801,7 +862,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Common Vrf Notification message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a40a354da54d4b3c3e64015e14ce07fee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40a354da54d4b3c3e64015e14ce07fee"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a40a354da54d4b3c3e64015e14ce07fee">VrfName</a> = 1</td></tr>
@@ -815,6 +877,35 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 
 </div>
 </div>
+<a name="structSLRouteGetMatch" id="structSLRouteGetMatch"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRouteGetMatch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Get objects whose attibutes match one of below entries. </p>
+<p>Specify a regular expression for PathGroup name or a numerical value for Vxlan VNI. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:aea49558fe68cfdf47910c3aeaf5006a3"><td class="memItemLeft" ><a class="anchor" id="aea49558fe68cfdf47910c3aeaf5006a3"></a>
+oneof {</td></tr>
+<tr class="memitem:ac42d87816ff38213793336801f430787"><td class="memItemLeft" >
+&#160;&#160;&#160;string&#160;&#160;&#160;<a class="el" href="group__SLRouteCommon.html#a2fee77a3923b49f7a3a087b780dc8597">PathGroupRegex</a> = 1</td></tr>
+<tr class="memdesc:ac42d87816ff38213793336801f430787"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLAFGetMsgRsp.AFList.AFOp.AFObject.entry.PathGroupKey.PathGroupId.Name. <br /></td></tr>
+<tr class="separator:ac42d87816ff38213793336801f430787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ee445fea32b17100106fc10b79e962"><td class="memItemLeft" >
+&#160;&#160;&#160;uint32&#160;&#160;&#160;<a class="el" href="group__SLRouteCommon.html#a6d572664e5dad0355e40f78134512c31">VxlanVniId</a> = 2</td></tr>
+<tr class="memdesc:af8ee445fea32b17100106fc10b79e962"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLAFGetMsgRsp.AFList.AFOp.AFObject.PathList.VxLANPath.VNI. <br /></td></tr>
+<tr class="separator:af8ee445fea32b17100106fc10b79e962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea49558fe68cfdf47910c3aeaf5006a3"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:aea49558fe68cfdf47910c3aeaf5006a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
 <a name="structSLRouteCommon" id="structSLRouteCommon"></a>
 <div class="memitem">
 <div class="memproto">
@@ -824,7 +915,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Common IPv4/IPv6 route attributes. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a7a54d735e217ed7c1f865f86bfe2cf7b"><td class="memItemLeft" align="right" valign="top">uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a7a54d735e217ed7c1f865f86bfe2cf7b">AdminDistance</a> = 1</td></tr>
 <tr class="memdesc:a7a54d735e217ed7c1f865f86bfe2cf7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adminstrative distance of the route.  <a href="#a7a54d735e217ed7c1f865f86bfe2cf7b">More...</a><br /></td></tr>
@@ -855,7 +947,9 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>[0-255]. RIB uses this field to break the tie when multiple sources install the same route. Lower distance is preferred over higher distance. The per route object admin distance overrides the default's admin distance set at VRF registration. see <a class="el" href="group__SLRouteCommon.html#structSLVrfReg" title="VRF Registration message. ">SLVrfReg</a> </p>
+
+<p>Adminstrative distance of the route. </p>
+<p>[0-255]. RIB uses this field to break the tie when multiple sources install the same route. Lower distance is preferred over higher distance. The per route object admin distance overrides the default admin distance set at VRF registration. see <a class="el" href="group__SLRouteCommon.html#structSLVrfReg" title="VRF Registration message. ">SLVrfReg</a> </p>
 
 </div>
 </div>
@@ -868,7 +962,24 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Flags to control programming of the route to Routing Information Base. Each flag is indicated as a bit field. Supported values are: 0x1 - This route takes precedence over a route learnt by LDP. </p>
+
+<p>Route Flags. </p>
+<p>Flags to control programming of the route to Routing Information Base. Each flag is indicated as a bit field. See SLRouteFlags for flag enumerations. Supported values are:</p>
+<p>SL_ROUTE_FLAG_PREFER_OVER_LDP - This route takes precedence over a route learnt by LDP.</p>
+<p>SL_ROUTE_FLAG_DISABLE_LABEL_MERGE If this route is preferred over any other producer of the same prefix and the latter is programmed with a SR label as well, do not merge that label's programming this route.</p>
+<p>SL_ROUTE_FLAG_VIABLE_PATHS_ONLY - This flag on the route is applicable only if the route contains the PathList.</p>
+<ul>
+<li>If the flag is not set, all paths in the PathList are installed in the route's load balance group, even if paths are unviable. The Network element does not automatically update the route's load balance group when path viability changes and expects the client to take corrective action.</li>
+<li>If the flag is set, the network element only installs viable paths from the PathList in the route's load balance group. The Network element also automatically updates the route's load balance group when path viability changes.</li>
+<li>This flag is ignored if the route refers to the PathGroup and the corresponding setting on the PathGroup dictates path programming.</li>
+</ul>
+<p>SL_ROUTE_FLAG_ACTIVE_ON_VIABLE_PATH - This flag is supported only for routes that contain the PathList.</p>
+<ul>
+<li>If this flag is not set, the route is active if it is preferred based on administrative distance. Viability of the paths in the PathList is not used as a criterion to determine route's activeness. If the route is active, the PathList programming is dictated by SL_ROUTE_FLAG_VIABLE_PATHS_ONLY.</li>
+<li>If this flag is set, SL_ROUTE_FLAG_VIABLE_PATHS_ONLY must also be set. The route is considered as active if it is preferred based on administrative distance AND at least one path in the PathList is viable. The Network element also automatically promotes or demotes the route when the first path becomes viable or none of the paths are no longer viable.</li>
+<li>If the route refers to the PathGroup, then this flag on the route is ignored. Instead, the corresponding setting on PathGroup dictates whether this route should be considered in best route calculations.</li>
+</ul>
+<p>All others are reserved. </p>
 
 </div>
 </div>
@@ -881,6 +992,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Local label associated with this route. </p>
 <p>This is an optional field that can be used to simulatenously setup an ILM entry (e.g. head end of an MPLS LSP) for the same route. This is especially useful when setting up an MPLS LSP (a /32-route towards the remote LSP peer e.g. 2.2.2.2/32) which is required for MPLS VPN labeled routes.</p>
 <p>Note: MPLS VPN labeled routes can resolve only on:</p><ul>
 <li>/32-routes with valid LocalLabel and a valid egress MPLS path label </li>
@@ -897,6 +1010,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Source Protocol. </p>
 <p>For redistributed messages via notification stream only, ignored otherwise. Contact Cisco for supported protocol string names. </p>
 
 </div>
@@ -910,6 +1025,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Source Protocol Tag. </p>
 <p>This can be empty if N/A. For redistributed messages via notification stream only, ignored otherwise. Contact Cisco for supported protocol tags. </p>
 
 </div>
@@ -923,10 +1040,48 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Route Tag. </p>
 <p>Routes are usually tagged to prevent loops during redistribution between protocols. </p>
 
 </div>
 </div>
+
+</div>
+</div>
+<a name="structSLVxLANPath" id="structSLVxLANPath"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLVxLANPath</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Attributes for constructing VxLAN encapsulation for a IP packet. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a2d24e90620d0a9514c1d9d4d082a0acc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d24e90620d0a9514c1d9d4d082a0acc"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a2d24e90620d0a9514c1d9d4d082a0acc">VNI</a> = 1</td></tr>
+<tr class="memdesc:a2d24e90620d0a9514c1d9d4d082a0acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual network identifier. Client must set a valid non-zero idenifier. <br /></td></tr>
+<tr class="separator:a2d24e90620d0a9514c1d9d4d082a0acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3869374fa3eff5e9c928cdde586bb62c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3869374fa3eff5e9c928cdde586bb62c"></a>
+bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a3869374fa3eff5e9c928cdde586bb62c">SourceMacAddress</a> = 2</td></tr>
+<tr class="memdesc:a3869374fa3eff5e9c928cdde586bb62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source MAC address is optional. <br /></td></tr>
+<tr class="separator:a3869374fa3eff5e9c928cdde586bb62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90a154e0bf7fe6425c781cf83c99c90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab90a154e0bf7fe6425c781cf83c99c90"></a>
+bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#ab90a154e0bf7fe6425c781cf83c99c90">DestMacAddress</a> = 3</td></tr>
+<tr class="memdesc:ab90a154e0bf7fe6425c781cf83c99c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destination MAC address is optional. <br /></td></tr>
+<tr class="separator:ab90a154e0bf7fe6425c781cf83c99c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedb9ec9d14ab2b5b146fe3f5387aac5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abedb9ec9d14ab2b5b146fe3f5387aac5"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLIpAddress">SLIpAddress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#abedb9ec9d14ab2b5b146fe3f5387aac5">SrcIpAddress</a> = 4</td></tr>
+<tr class="memdesc:abedb9ec9d14ab2b5b146fe3f5387aac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tunnel Source or Local IP address is mandatory. <br /></td></tr>
+<tr class="separator:abedb9ec9d14ab2b5b146fe3f5387aac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad45433d559392de19a98b885ef058f0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad45433d559392de19a98b885ef058f0c"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLIpAddress">SLIpAddress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#ad45433d559392de19a98b885ef058f0c">DestIpAddress</a> = 5</td></tr>
+<tr class="memdesc:ad45433d559392de19a98b885ef058f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tunnel Destination or Remote IP address is mandatory. <br /></td></tr>
+<tr class="separator:ad45433d559392de19a98b885ef058f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 
 </div>
 </div>
@@ -939,15 +1094,17 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>FRR Note: Failover from primary to backup is based on the trigger used (e.g. link down, BFD, etc.). Revertion is mainly timeout based. The timeout value is platform specific and is not configurable. </p>
+<div class="textblock"><p>Route Path attributes. </p>
+<p>In the multi-path associated with a IP route, MPLS label or a Path Group, paths with identical keys are coalesced and cannot be used as a mechanism to achieve unequal cost multi-path distribution.</p>
+<p>Path key includes NextHopAdress, NextHopInterface, LabelStack and VrfName.</p>
+<p>FRR Note: Failover from primary to backup is based on the trigger used (e.g. link down, BFD, etc.). Revertion is mainly timeout based. The timeout value is platform specific and is not configurable. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a11ef39a2e430f01e7cbdcaef17a4325d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLIpAddress">SLIpAddress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a11ef39a2e430f01e7cbdcaef17a4325d">NexthopAddress</a> = 1</td></tr>
-<tr class="memdesc:a11ef39a2e430f01e7cbdcaef17a4325d"><td class="mdescLeft">&#160;</td><td class="mdescRight">One of IPv4 or IPv6 address For ENCAP_VXLAN, this will specify the tunnel end point IP address.  <a href="#a11ef39a2e430f01e7cbdcaef17a4325d">More...</a><br /></td></tr>
+<tr class="memdesc:a11ef39a2e430f01e7cbdcaef17a4325d"><td class="mdescLeft">&#160;</td><td class="mdescRight">One of IPv4 or IPv6 address.  <a href="#a11ef39a2e430f01e7cbdcaef17a4325d">More...</a><br /></td></tr>
 <tr class="separator:a11ef39a2e430f01e7cbdcaef17a4325d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6901a13ca011c312bd17684e39b0ef0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6901a13ca011c312bd17684e39b0ef0e"></a>
-<a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a6901a13ca011c312bd17684e39b0ef0e">NexthopInterface</a> = 2</td></tr>
-<tr class="memdesc:a6901a13ca011c312bd17684e39b0ef0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outgoing interface name for the path. <br /></td></tr>
+<tr class="memitem:a6901a13ca011c312bd17684e39b0ef0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a6901a13ca011c312bd17684e39b0ef0e">NexthopInterface</a> = 2</td></tr>
+<tr class="memdesc:a6901a13ca011c312bd17684e39b0ef0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outgoing interface name for the path.  <a href="#a6901a13ca011c312bd17684e39b0ef0e">More...</a><br /></td></tr>
 <tr class="separator:a6901a13ca011c312bd17684e39b0ef0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a069e2d56da815b511af2f828421fc87e"><td class="memItemLeft" align="right" valign="top">uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a069e2d56da815b511af2f828421fc87e">LoadMetric</a> = 3</td></tr>
 <tr class="memdesc:a069e2d56da815b511af2f828421fc87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load metric for this path.  <a href="#a069e2d56da815b511af2f828421fc87e">More...</a><br /></td></tr>
@@ -965,20 +1122,43 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <tr class="memdesc:a9069c08b123f6d570d8b710bd834b95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path protection bitmap.  <a href="#a9069c08b123f6d570d8b710bd834b95a">More...</a><br /></td></tr>
 <tr class="separator:a9069c08b123f6d570d8b710bd834b95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9eabed8a482f30572651e7aa8da0472"><td class="memItemLeft" align="right" valign="top">repeated uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#aa9eabed8a482f30572651e7aa8da0472">LabelStack</a> = 8</td></tr>
-<tr class="memdesc:aa9eabed8a482f30572651e7aa8da0472"><td class="mdescLeft">&#160;</td><td class="mdescRight">MPLS label stack or VxLAN Virtual Network Identifier.  <a href="#aa9eabed8a482f30572651e7aa8da0472">More...</a><br /></td></tr>
+<tr class="memdesc:aa9eabed8a482f30572651e7aa8da0472"><td class="mdescLeft">&#160;</td><td class="mdescRight">MPLS label stack.  <a href="#aa9eabed8a482f30572651e7aa8da0472">More...</a><br /></td></tr>
 <tr class="separator:aa9eabed8a482f30572651e7aa8da0472"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a440a1ff1c17715d94bc3863319a895b5"><td class="memItemLeft" align="right" valign="top">repeated <a class="el" href="group__SLCommonTypes.html#structSLIpAddress">SLIpAddress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a440a1ff1c17715d94bc3863319a895b5">RemoteAddress</a> = 9</td></tr>
 <tr class="memdesc:a440a1ff1c17715d94bc3863319a895b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">MPLS Remote router backup address.  <a href="#a440a1ff1c17715d94bc3863319a895b5">More...</a><br /></td></tr>
 <tr class="separator:a440a1ff1c17715d94bc3863319a895b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50545faa2df19975cff88baaf31b509c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50545faa2df19975cff88baaf31b509c"></a>
 <a class="el" href="group__SLCommonTypes.html#gacf9698e39f1da873424b2a44dee2b741">SLEncapType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a50545faa2df19975cff88baaf31b509c">EncapType</a> = 10</td></tr>
-<tr class="memdesc:a50545faa2df19975cff88baaf31b509c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulation type (VXLAN or MPLS) <br /></td></tr>
+<tr class="memdesc:a50545faa2df19975cff88baaf31b509c"><td class="mdescLeft">&#160;</td><td class="mdescRight">For VxLAN, Encapsulation type must be set to SL_ENCAP_VXLAN. <br /></td></tr>
 <tr class="separator:a50545faa2df19975cff88baaf31b509c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87850351bc4bd1a1a87df5054d9df46f"><td class="memItemLeft" align="right" valign="top">bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a87850351bc4bd1a1a87df5054d9df46f">VtepRouterMacAddress</a> = 11</td></tr>
 <tr class="memdesc:a87850351bc4bd1a1a87df5054d9df46f"><td class="mdescLeft">&#160;</td><td class="mdescRight">VTEP (VxLAN tunnel end point) router MAC address.  <a href="#a87850351bc4bd1a1a87df5054d9df46f">More...</a><br /></td></tr>
 <tr class="separator:a87850351bc4bd1a1a87df5054d9df46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae049ef41a1b84538924fe23b9d13b906"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLRouteCommon.html#structSLVxLANPath">SLVxLANPath</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#ae049ef41a1b84538924fe23b9d13b906">VxLANPath</a> = 12</td></tr>
+<tr class="memdesc:ae049ef41a1b84538924fe23b9d13b906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create L3 VxLAN tunnel endpoint.  <a href="#ae049ef41a1b84538924fe23b9d13b906">More...</a><br /></td></tr>
+<tr class="separator:ae049ef41a1b84538924fe23b9d13b906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ccd879b1435b5df3f54092f48478ee8"><td class="memItemLeft" align="right" valign="top">uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#a1ccd879b1435b5df3f54092f48478ee8">Flags</a> = 13</td></tr>
+<tr class="memdesc:a1ccd879b1435b5df3f54092f48478ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path Flags.  <a href="#a1ccd879b1435b5df3f54092f48478ee8">More...</a><br /></td></tr>
+<tr class="separator:a1ccd879b1435b5df3f54092f48478ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a1ccd879b1435b5df3f54092f48478ee8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32 SLRoutePath::Flags = 13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Path Flags. </p>
+<p>Each flag is indicated as a bit field. Supported values are:</p><ul>
+<li>0x00000001 = SINGLE_PATH_OPT Enables hardware optimization for single path VxLAN tunnels. </li>
+</ul>
+
+</div>
+</div>
 <a class="anchor" id="aa9eabed8a482f30572651e7aa8da0472"></a>
 <div class="memitem">
 <div class="memproto">
@@ -988,7 +1168,10 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stack of labels that is pushed when the packet is switched out. Label size is LSB 20 bits. Forwarding will set EXP, TTL and BOS. For primary path, typically only 1 label is used. For backup paths, more than 1 label can be used. If more than one label is used, remote backup addresses must be specified. The maximum number of labels pushed for primary and backup are platform dependent. For ENCAP_VXLAN, this field will specify the Virtual Network Identifier (VNI) </p>
+
+<p>MPLS label stack. </p>
+<p>Stack of labels that is pushed when the packet is switched out. Label size is LSB 20 bits. Forwarding will set EXP, TTL and BOS. For primary path, typically only 1 label is used. For backup paths, more than 1 label can be used. If more than one label is used, remote backup addresses must be specified.</p>
+<p>The maximum number of labels pushed for primary and backup are platform dependent. </p>
 
 </div>
 </div>
@@ -1001,7 +1184,9 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Used for equal/unequal cost load balancing of traffic distribution. </p>
+
+<p>Load metric for this path. </p>
+<p>Used for equal/unequal cost load balancing of traffic distribution. For equal cost load balancing, all paths associated with the route, MPLS label or PathGroup must have a value of 0. For unequal cost load balancing, all paths must have non-zero value otherwise system defaults to equal cost load balancing. </p>
 
 </div>
 </div>
@@ -1014,6 +1199,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Route Metric. </p>
 <p>The metric is typically based on information like load, hop count, MTU, reliability of the path, etc. </p>
 
 </div>
@@ -1028,6 +1215,24 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
       </table>
 </div><div class="memdoc">
 
+<p>One of IPv4 or IPv6 address. </p>
+<p>For ENCAP_VXLAN, this field is not supported and will be ignored. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6901a13ca011c312bd17684e39b0ef0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInterface</a> SLRoutePath::NexthopInterface = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Outgoing interface name for the path. </p>
+<p>For ENCAP_VXLAN, this field is not supported and will be ignored. </p>
+
 </div>
 </div>
 <a class="anchor" id="ac73838f58bd91d528addad23dbb5628c"></a>
@@ -1039,6 +1244,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Path identifier. </p>
 <p>Path-id is used to uniquely identify a path when it comes to protection (Fast Re-Route - FRR). It is not used otherwise.</p>
 <p>In general, for FRR, There are 3 main path attributes:</p><ol type="1">
 <li>Primary. The path is the main path to carry traffic.</li>
@@ -1066,6 +1273,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Path protection bitmap. </p>
 <p>The bitmap of paths this Backup path is protecting. Example: If this path is protecting paths with IDs 4, 5 and 6, then set bitmap to: 0x38 ==&gt; 0011 1000 || |&ndash; path 4 ||&ndash; path 5 |&ndash; path 6 (1 &lt;&lt; (pathId_1 - 1)) | (1 &lt;&lt; (pathId_2 - 1)) | (1 &lt;&lt; (pathId_3 - 1)) </p>
 
 </div>
@@ -1079,6 +1288,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>MPLS Remote router backup address. </p>
 <p>This field is used only for backup MPLS path with more than one label For N+1 backup labels, N remote backup addresses must be specified. </p>
 
 </div>
@@ -1092,7 +1303,9 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This field is used ONLY if the path is in a different VRF than the route (e.g. VPN cases) For ENCAP_VXLAN, this field can be used to specify the VRF where the tunnel end point IP address resides ("default" will be assumed if not specified). </p>
+
+<p>Path VRF name. </p>
+<p>This field is used ONLY if the path is in a different VRF than the route (e.g. VPN cases). </p>
 
 </div>
 </div>
@@ -1105,7 +1318,25 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A unique system MAC address that other VTEPs can use for inter-VNI routing. The router MAC address is used as the inner destination MAC address for routed VXLAN packet. Used for ENCAP_VXLAN (mandatory) only. </p>
+
+<p>VTEP (VxLAN tunnel end point) router MAC address. </p>
+<p>A unique system MAC address that other VTEPs can use for inter-VNI routing. The router MAC address is used as the inner destination MAC address for routed VXLAN packet. If this attribute is set, route can be only be signalled via BGP for EVPN use and local tunnel endpoint is not created.</p>
+<p>This field and VxLANPath are mutually exclusive. This field is deprecated and will eventually be removed. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae049ef41a1b84538924fe23b9d13b906"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLRouteCommon.html#structSLVxLANPath">SLVxLANPath</a> SLRoutePath::VxLANPath = 12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create L3 VxLAN tunnel endpoint. </p>
+<p>Apply VxLAN encapsulation on the IP packet. </p>
 
 </div>
 </div>
@@ -1122,6 +1353,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>L3 Event Notification types. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggad630c2e5490e88b889ccd79ace15005ba85f847f33cbe88582bad33bfbda9d74c"></a>SL_EVENT_TYPE_RESERVED&#160;</td><td class="fielddoc">
 <p>Reserved. 0x0. </p>
@@ -1147,6 +1380,58 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ggad630c2e5490e88b889ccd79ace15005ba1d626cdcca66bf276da7d4a51cc4b718"></a>SL_EVENT_TYPE_VRF&#160;</td><td class="fielddoc">
 <p>VRF Add/Update/Delete Notification. 0x6. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga8a73b562c477442b9de327481c991bf6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLRouteCommon.html#ga8a73b562c477442b9de327481c991bf6">SLPathFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga8a73b562c477442b9de327481c991bf6a224f79f1749ef4c90c5895ceb287e2c7"></a>SL_PATH_FLAG_RESERVED&#160;</td><td class="fielddoc">
+<p>Path Flags. </p>
+<p>Each flag is indicated as a bit field. Supported values are: Reserved. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga8a73b562c477442b9de327481c991bf6a63829fedf4879f861200c91dfc749b07"></a>SL_PATH_FLAG_SINGLE_PATH_OPT&#160;</td><td class="fielddoc">
+<p>Enables hardware optimization for single path VxLAN tunnels. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga4c3e7f21144ed8e0510e2e2dedb746bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLRouteCommon.html#ga4c3e7f21144ed8e0510e2e2dedb746bf">SLRouteFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga4c3e7f21144ed8e0510e2e2dedb746bfa1a2b32b8fbf6eddc8ca92b93fce2e8e5"></a>SL_ROUTE_FLAG_RESERVED&#160;</td><td class="fielddoc">
+<p>Flags to control programming of the route and Path Group to Routing Information Base. </p>
+<p>Each flag is indicated as a bit field. Supported values are: Reserved. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga4c3e7f21144ed8e0510e2e2dedb746bfa416167424f947dd78f0070124bc9dd6f"></a>SL_ROUTE_FLAG_PREFER_OVER_LDP&#160;</td><td class="fielddoc">
+<p>This route takes precedence over a route learnt by LDP. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga4c3e7f21144ed8e0510e2e2dedb746bfa9688b8b4f719f730792239f3cd55e274"></a>SL_ROUTE_FLAG_DISABLE_LABEL_MERGE&#160;</td><td class="fielddoc">
+<p>If this route is preferred over any other producer of the same prefix and the latter is programmed with a SR label as well, do not merge that label's programming this route. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga4c3e7f21144ed8e0510e2e2dedb746bfa6ec1473a3bf9081d8e775c260bc443ac"></a>SL_ROUTE_FLAG_VIABLE_PATHS_ONLY&#160;</td><td class="fielddoc">
+<p>Install viable paths only. See text in SLRoutecommon/PathGroup for more details. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga4c3e7f21144ed8e0510e2e2dedb746bfad1e3789b7361e54c80ae4ea02d8a4aa5"></a>SL_ROUTE_FLAG_ACTIVE_ON_VIABLE_PATH&#160;</td><td class="fielddoc">
+<p>Route is considered active if there is atleast one viable path. </p>
+<p>See text in SLRoutecommon/PathGroup for more details. </p>
 </td></tr>
 </table>
 

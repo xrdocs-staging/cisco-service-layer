@@ -188,12 +188,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Service Description</h2>
+<p>Global Initialization and Notifications. </p>
 <p>The following RPCs are used in global initialization and capability queries. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 RPC Calls</h2></td></tr>
 <tr class="memitem:ga2244a7c8c2e9e84f8d05b7261df3f23d"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#ga2244a7c8c2e9e84f8d05b7261df3f23d">SLGlobal::SLGlobalInitNotif</a> (<a class="el" href="group__SLGlobal.html#structSLInitMsg">SLInitMsg</a>) returns(stream <a class="el" href="group__SLGlobal.html#structSLGlobalNotif">SLGlobalNotif</a>)</td></tr>
-<tr class="memdesc:ga2244a7c8c2e9e84f8d05b7261df3f23d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the connection, and setup a notification channel.  <a href="group__SLGlobal.html#ga2244a7c8c2e9e84f8d05b7261df3f23d">More...</a><br /></td></tr>
+<tr class="memdesc:ga2244a7c8c2e9e84f8d05b7261df3f23d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the connection, and setup a application level heartbeat channel.  <a href="group__SLGlobal.html#ga2244a7c8c2e9e84f8d05b7261df3f23d">More...</a><br /></td></tr>
 <tr class="separator:ga2244a7c8c2e9e84f8d05b7261df3f23d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaac42ae6835f19c21d9cd8607529c0321"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaac42ae6835f19c21d9cd8607529c0321"></a>
 rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#gaac42ae6835f19c21d9cd8607529c0321">SLGlobal::SLGlobalsGet</a> (<a class="el" href="group__SLGlobal.html#structSLGlobalsGetMsg">SLGlobalsGetMsg</a>) returns(<a class="el" href="group__SLGlobal.html#structSLGlobalsGetMsgRsp">SLGlobalsGetMsgRsp</a>)</td></tr>
@@ -245,8 +246,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This MUST be the first call to setup the Service Layer connection.</p>
-<p>The caller MUST maintain the notification channel to be able to communicate with the server. If this channel is not properly established and maintained, all other RPC requests are rejected.</p>
+
+<p>Initialize the connection, and setup a application level heartbeat channel. </p>
 <p>The caller must send its version information as part of the <a class="el" href="group__SLGlobal.html#structSLInitMsg" title="Initialization message sent to the server. ">SLInitMsg</a> message. The server will reply with SL_GLOBAL_EVENT_TYPE_VERSION that tells the caller whether he can proceed or not. Refer to message <a class="el" href="group__SLGlobal.html#structSLGlobalNotif" title="Globals query message. ">SLGlobalNotif</a> below for further details.</p>
 <p>After the version handshake, the notification channel is used for "push" event notifications, such as:</p><ul>
 <li><a class="el" href="group__SLGlobal.html#af6fe7b2282aaac058bf26750936589fd" title="Event Type. ">SLGlobalNotif.EventType</a> = SL_GLOBAL_EVENT_TYPE_HEARTBEAT heartbeat notification messages are sent to the client on a periodic basis. Refer to <a class="el" href="group__SLGlobal.html#structSLGlobalNotif" title="Globals query message. ">SLGlobalNotif</a> definition for further info. </li>
@@ -264,7 +265,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>If the client and server are running compatible version numbers, a connection will be made and the server response will be received with a successful status code. </p>
+<div class="textblock"><p>Initialization message sent to the server. </p>
+<p>If the client and server are running compatible version numbers, a connection will be made and the server response will be received with a successful status code. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a151a844e5cc3d436a0d8a5d74b299bb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a151a844e5cc3d436a0d8a5d74b299bb4"></a>
@@ -292,7 +294,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>On Success (ErrStatus), the session with the server is established and the client is allowed to proceed. </p>
+<div class="textblock"><p>Server's response to the <a class="el" href="group__SLGlobal.html#structSLInitMsg" title="Initialization message sent to the server. ">SLInitMsg</a>. </p>
+<p>On Success (ErrStatus), the session with the server is established and the client is allowed to proceed. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a61a570ba7a92f1d6d172e5b55735150d"><td class="memItemLeft" align="right" valign="top">uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#a61a570ba7a92f1d6d172e5b55735150d">MajorVer</a> = 1</td></tr>
@@ -317,6 +320,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Server's version of service-layer API (refer to <a class="el" href="sl__version_8proto.html" title="Specifies the API version number. ">sl_version.proto</a>) Major-number revisions are NOT backwards compatible, unless otherwise specified. </p>
 <p>The Server may reject a session if there is a version number mismatch or non-backwards compatibility. </p>
 
 </div>
@@ -333,7 +338,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Routes replay error notification. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a2a3b46266e986dfca0a272d694df70ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a3b46266e986dfca0a272d694df70ca"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#a2a3b46266e986dfca0a272d694df70ca">VrfName</a> = 1</td></tr>
@@ -352,7 +358,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Globals query message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:af6fe7b2282aaac058bf26750936589fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6fe7b2282aaac058bf26750936589fd"></a>
 <a class="el" href="group__SLGlobal.html#ga1d1b4192ce3a6703d905d8babb38e3a6">SLGlobalNotifType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#af6fe7b2282aaac058bf26750936589fd">EventType</a> = 1</td></tr>
@@ -361,12 +368,17 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <tr class="memitem:a7407d792fdd4dc0253b79b1ee6599e32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#a7407d792fdd4dc0253b79b1ee6599e32">ErrStatus</a> = 2</td></tr>
 <tr class="memdesc:a7407d792fdd4dc0253b79b1ee6599e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status code, interpreted based on the Event Type.  <a href="#a7407d792fdd4dc0253b79b1ee6599e32">More...</a><br /></td></tr>
 <tr class="separator:a7407d792fdd4dc0253b79b1ee6599e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb8a9bd75c0bdcaa72637d92b3a1cfec"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#abb8a9bd75c0bdcaa72637d92b3a1cfec">Event</a></td></tr>
-<tr class="memdesc:abb8a9bd75c0bdcaa72637d92b3a1cfec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on EventType.  <a href="#abb8a9bd75c0bdcaa72637d92b3a1cfec">More...</a><br /></td></tr>
-<tr class="separator:abb8a9bd75c0bdcaa72637d92b3a1cfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a502933a2bbe0c21382c718e4778b7024"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLGlobal.html#structSLVrfRouteReplayErrorNotif">SLVrfRouteReplayErrorNotif</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#a502933a2bbe0c21382c718e4778b7024">VrfReplayErrorNotif</a> = 4</td></tr>
-<tr class="memdesc:a502933a2bbe0c21382c718e4778b7024"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_GLOBAL_EVENT_TYPE_ERROR: case ErrStatus == SL_VRF_V4_ROUTE_REPLAY_FATAL_ERROR: case ErrStatus == SL_VRF_V6_ROUTE_REPLAY_FATAL_ERROR: case ErrStatus == SL_VRF_V4_ROUTE_REPLAY_OK: case ErrStatus == SL_VRF_V6_ROUTE_REPLAY_OK: =&gt; this field carries the failed VRF information.  <a href="#a502933a2bbe0c21382c718e4778b7024">More...</a><br /></td></tr>
-<tr class="separator:a502933a2bbe0c21382c718e4778b7024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9757494f899f0ea80cd9889d1ceb298"><td class="memItemLeft" ><a class="anchor" id="ae9757494f899f0ea80cd9889d1ceb298"></a>
+oneof {</td></tr>
+<tr class="memitem:a309e114ed9c06828da24eab521dcddf3"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="group__SLGlobal.html#structSLInitMsgRsp">SLInitMsgRsp</a>&#160;&#160;&#160;<a class="el" href="group__SLGlobal.html#a3734c31d0b1f6d8f1dedb05416923ec3">InitRspMsg</a> = 3</td></tr>
+<tr class="memdesc:a309e114ed9c06828da24eab521dcddf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_GLOBAL_EVENT_TYPE_VERSION: =&gt; this field carries the Server version number.  <a href="#a309e114ed9c06828da24eab521dcddf3">More...</a><br /></td></tr>
+<tr class="separator:a309e114ed9c06828da24eab521dcddf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38c33d3182c60318181538f48f9b3e4d"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="group__SLGlobal.html#structSLVrfRouteReplayErrorNotif">SLVrfRouteReplayErrorNotif</a>&#160;&#160;&#160;<a class="el" href="group__SLGlobal.html#a502933a2bbe0c21382c718e4778b7024">VrfReplayErrorNotif</a> = 4 [deprecated = true]</td></tr>
+<tr class="memdesc:a38c33d3182c60318181538f48f9b3e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_GLOBAL_EVENT_TYPE_ERROR: case ErrStatus == SL_VRF_V4_ROUTE_REPLAY_FATAL_ERROR: case ErrStatus == SL_VRF_V6_ROUTE_REPLAY_FATAL_ERROR: case ErrStatus == SL_VRF_V4_ROUTE_REPLAY_OK: case ErrStatus == SL_VRF_V6_ROUTE_REPLAY_OK: =&gt; this field carries the failed VRF information.  <a href="#a38c33d3182c60318181538f48f9b3e4d">More...</a><br /></td></tr>
+<tr class="separator:a38c33d3182c60318181538f48f9b3e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9757494f899f0ea80cd9889d1ceb298"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ae9757494f899f0ea80cd9889d1ceb298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on EventType. <br /></td></tr>
+<tr class="separator:ae9757494f899f0ea80cd9889d1ceb298"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Member Data Documentation</h4>
 <a class="anchor" id="a7407d792fdd4dc0253b79b1ee6599e32"></a>
@@ -378,22 +390,26 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>case EventType == SL_GLOBAL_EVENT_TYPE_ERROR: case ErrStatus == SL_NOTIF_TERM: =&gt; Another client is attempting to take over the session. This session will be closed. case ErrStatus == SL_VRF_V4_ROUTE_REPLAY_FATAL_ERROR: =&gt; IPv4 Routes replay failed for a VRF. See VrfReplayErrorNotif for details. case ErrStatus == SL_VRF_V6_ROUTE_REPLAY_FATAL_ERROR: =&gt; IPv6 Routes replay failed for a VRF. See VrfReplayErrorNotif for details. case ErrStatus == SL_ILM_REPLAY_FATAL_ERROR: =&gt; ILM replay failed. case ErrStatus == SL_VRF_V4_ROUTE_REPLAY_OK: =&gt; IPv4 Routes replay succeeded for a VRF. See VrfReplayErrorNotif for details. This notification is sent only if a SL_VRF_V4_ROUTE_REPLAY_FATAL_ERROR was sent earlier on the identified VRF. case ErrStatus == SL_VRF_V6_ROUTE_REPLAY_OK: =&gt; IPv6 Routes replay succeeded for a VRF. See VrfReplayErrorNotif for details. This notification is sent only if a SL_VRF_V6_ROUTE_REPLAY_FATAL_ERROR was sent earlier on the identified VRF. case ErrStatus == SL_ILM_REPLAY_OK: =&gt; ILM replay succeeded. This notification is sent only if a SL_ILM_REPLAY_FATAL_ERROR was sent earlier. case ErrStatus == (some error from <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) =&gt; Client must look into the specific error message returned.</p>
+
+<p>Status code, interpreted based on the Event Type. </p>
+<p>case EventType == SL_GLOBAL_EVENT_TYPE_ERROR: case ErrStatus == (some error from <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) =&gt; Client must look into the specific error message returned.</p>
 <p>case EventType == SL_GLOBAL_EVENT_TYPE_HEARTBEAT: case ErrStatus == SL_SUCCESS =&gt; Client can safely ignore this heartbeat message.</p>
 <p>case EventType == SL_GLOBAL_EVENT_TYPE_VERSION: case ErrStatus == SL_SUCCESS =&gt; Client version accepted. case ErrStatus == SL_INIT_STATE_READY =&gt; Client version accepted. Any previous state was sucessfully recovered. case ErrStatus == SL_INIT_STATE_CLEAR =&gt; Client version accepted. Any previous state was lost. Client must replay all previous objects to server. case ErrStatus == SL_UNSUPPORTED_VER =&gt; Client and Server version mismatch. The client is not allowed to proceed, and the channel will be closed. case ErrStatus == (some error from <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) =&gt; Client must either try again, or look into the specific error message returned. </p>
 
 </div>
 </div>
-<a class="anchor" id="abb8a9bd75c0bdcaa72637d92b3a1cfec"></a>
+<a class="anchor" id="a3734c31d0b1f6d8f1dedb05416923ec3"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">oneof SLGlobalNotif::Event</td>
+          <td class="memname"><a class="el" href="group__SLGlobal.html#structSLInitMsgRsp">SLInitMsgRsp</a> SLGlobalNotif::InitRspMsg = 3</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        </div><div class="line">        <a class="code" href="group__SLGlobal.html#structSLInitMsgRsp">SLInitMsgRsp</a> InitRspMsg = 3</div></div><!-- fragment -->
+
+<p>case EventType == SL_GLOBAL_EVENT_TYPE_VERSION: =&gt; this field carries the Server version number. </p>
+
 </div>
 </div>
 <a class="anchor" id="a502933a2bbe0c21382c718e4778b7024"></a>
@@ -401,10 +417,12 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__SLGlobal.html#structSLVrfRouteReplayErrorNotif">SLVrfRouteReplayErrorNotif</a> SLGlobalNotif::VrfReplayErrorNotif = 4</td>
+          <td class="memname"><a class="el" href="group__SLGlobal.html#structSLVrfRouteReplayErrorNotif">SLVrfRouteReplayErrorNotif</a> SLGlobalNotif::VrfReplayErrorNotif = 4 [deprecated = true]</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>case EventType == SL_GLOBAL_EVENT_TYPE_ERROR: case ErrStatus == SL_VRF_V4_ROUTE_REPLAY_FATAL_ERROR: case ErrStatus == SL_VRF_V6_ROUTE_REPLAY_FATAL_ERROR: case ErrStatus == SL_VRF_V4_ROUTE_REPLAY_OK: case ErrStatus == SL_VRF_V6_ROUTE_REPLAY_OK: =&gt; this field carries the failed VRF information. </p>
 
 </div>
 </div>
@@ -420,7 +438,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div>
+<div class="textblock"><p>Globals query message. </p>
+</div>
 </div>
 </div>
 <a name="structSLGlobalsGetMsgRsp" id="structSLGlobalsGetMsgRsp"></a>
@@ -432,7 +451,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Platform specific globals Response. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a41ff15b2e0166ead9d0b3c17aa9d5e69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41ff15b2e0166ead9d0b3c17aa9d5e69"></a>
 <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#a41ff15b2e0166ead9d0b3c17aa9d5e69">ErrStatus</a> = 1</td></tr>
@@ -493,6 +513,22 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#a0dcc6023543856b7d9653a35bc06d19e">MaxLabelBlockClientNameLength</a> = 15</td></tr>
 <tr class="memdesc:a0dcc6023543856b7d9653a35bc06d19e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum label block client name length. <br /></td></tr>
 <tr class="separator:a0dcc6023543856b7d9653a35bc06d19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b77ab75cea09db2e3c4d467e8c3ea0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3b77ab75cea09db2e3c4d467e8c3ea0"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#aa3b77ab75cea09db2e3c4d467e8c3ea0">MaxPathsInNexthopNotif</a> = 16</td></tr>
+<tr class="memdesc:aa3b77ab75cea09db2e3c4d467e8c3ea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum paths returned by the network element for a next hop notification. <br /></td></tr>
+<tr class="separator:aa3b77ab75cea09db2e3c4d467e8c3ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0505ffaa85e2b771d99bafea8f405d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d0505ffaa85e2b771d99bafea8f405d"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#a4d0505ffaa85e2b771d99bafea8f405d">MaxVrfRegPerMsg</a> = 17</td></tr>
+<tr class="memdesc:a4d0505ffaa85e2b771d99bafea8f405d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max <a class="el" href="group__SLRouteCommon.html#structSLVrfReg" title="VRF Registration message. ">SLVrfReg</a> objects within a <a class="el" href="group__SLRouteCommon.html#structSLVrfRegMsg" title="VRF Registration messages. ">SLVrfRegMsg</a> or <a class="el" href="group__SLAF.html#structSLAFVrfRegMsg" title="AF VRF Registration messages. ">SLAFVrfRegMsg</a>. <br /></td></tr>
+<tr class="separator:a4d0505ffaa85e2b771d99bafea8f405d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece556574bc04ba553909bdd9e737f11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aece556574bc04ba553909bdd9e737f11"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#aece556574bc04ba553909bdd9e737f11">MaxAFOpsPerMsg</a> = 18</td></tr>
+<tr class="memdesc:aece556574bc04ba553909bdd9e737f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max Route or AF objects within a single RouteMsg or <a class="el" href="group__SLAF.html#structSLAFMsg" title="Operation on the address family. ">SLAFMsg</a>. <br /></td></tr>
+<tr class="separator:aece556574bc04ba553909bdd9e737f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf161e6dc66bd69eab1c9dfe516b8de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaaf161e6dc66bd69eab1c9dfe516b8de"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLGlobal.html#aaaf161e6dc66bd69eab1c9dfe516b8de">MaxNotifReqPerSLAFNotifReq</a> = 19</td></tr>
+<tr class="memdesc:aaaf161e6dc66bd69eab1c9dfe516b8de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max <a class="el" href="group__SLAF.html#structSLAFNotifRegReq" title="Notification request message for a single item. ">SLAFNotifRegReq</a> requests in <a class="el" href="group__SLAF.html#structSLAFNotifReq" title="RPC Notification request - either a route redistribution request or a next hop change notification re...">SLAFNotifReq</a>. <br /></td></tr>
+<tr class="separator:aaaf161e6dc66bd69eab1c9dfe516b8de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Member Data Documentation</h4>
 <a class="anchor" id="a827e8285cf495c10ce574bae86fba1e1"></a>
@@ -504,6 +540,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Maximum Provider Multicast Service Interface (PMSI) tunnel ID length. </p>
 <p>Used for L2 Inclusive Multicast Ethernet Tag (IMET) routes. </p>
 
 </div>
@@ -521,6 +559,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Global Event Notification types. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga1d1b4192ce3a6703d905d8babb38e3a6adeee416d268bf8e1b5c4e81e386412db"></a>SL_GLOBAL_EVENT_TYPE_RESERVED&#160;</td><td class="fielddoc">
 <p>Reserved. 0x0. </p>
