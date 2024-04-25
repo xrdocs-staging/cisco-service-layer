@@ -251,9 +251,15 @@ Messages</h2></td></tr>
 <tr class="memitem:structSLVrfNotif"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#structSLVrfNotif">SLVrfNotif</a></td></tr>
 <tr class="memdesc:structSLVrfNotif"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common Vrf Notification message.  <a href="group__SLRouteCommon.html#structSLVrfNotif">More...</a><br /></td></tr>
 <tr class="separator:structSLVrfNotif"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRouteGetMatch"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#structSLRouteGetMatch">SLRouteGetMatch</a></td></tr>
+<tr class="memdesc:structSLRouteGetMatch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get objects whose attibutes match one of below entries.  <a href="group__SLRouteCommon.html#structSLRouteGetMatch">More...</a><br /></td></tr>
+<tr class="separator:structSLRouteGetMatch"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structSLRouteCommon"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#structSLRouteCommon">SLRouteCommon</a></td></tr>
 <tr class="memdesc:structSLRouteCommon"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common IPv4/IPv6 route attributes.  <a href="group__SLRouteCommon.html#structSLRouteCommon">More...</a><br /></td></tr>
 <tr class="separator:structSLRouteCommon"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLVxLANPath"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#structSLVxLANPath">SLVxLANPath</a></td></tr>
+<tr class="memdesc:structSLVxLANPath"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attributes for constructing VxLAN encapsulation for a IP packet.  <a href="group__SLRouteCommon.html#structSLVxLANPath">More...</a><br /></td></tr>
+<tr class="separator:structSLVxLANPath"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structSLRoutePath"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#structSLRoutePath">SLRoutePath</a></td></tr>
 <tr class="memdesc:structSLRoutePath"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route Path attributes.  <a href="group__SLRouteCommon.html#structSLRoutePath">More...</a><br /></td></tr>
 <tr class="separator:structSLRoutePath"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -273,6 +279,20 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:gad630c2e5490e88b889ccd79ace15005b"><td class="mdescLeft">&#160;</td><td class="mdescRight">L3 Event Notification types.  <a href="group__SLRouteCommon.html#gad630c2e5490e88b889ccd79ace15005b">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:gad630c2e5490e88b889ccd79ace15005b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c3e7f21144ed8e0510e2e2dedb746bf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#ga4c3e7f21144ed8e0510e2e2dedb746bf">SLRouteFlags</a> { <br />
+&#160;&#160;<a class="el" href="group__SLRouteCommon.html#gga4c3e7f21144ed8e0510e2e2dedb746bfa1a2b32b8fbf6eddc8ca92b93fce2e8e5">SL_ROUTE_FLAG_RESERVED</a> = 0x00, 
+<a class="el" href="group__SLRouteCommon.html#gga4c3e7f21144ed8e0510e2e2dedb746bfa416167424f947dd78f0070124bc9dd6f">SL_ROUTE_FLAG_PREFER_OVER_LDP</a> = 0x01, 
+<a class="el" href="group__SLRouteCommon.html#gga4c3e7f21144ed8e0510e2e2dedb746bfa9688b8b4f719f730792239f3cd55e274">SL_ROUTE_FLAG_DISABLE_LABEL_MERGE</a> = 0x2, 
+<a class="el" href="group__SLRouteCommon.html#gga4c3e7f21144ed8e0510e2e2dedb746bfa6ec1473a3bf9081d8e775c260bc443ac">SL_ROUTE_FLAG_VIABLE_PATHS_ONLY</a> = 0x04, 
+<br />
+&#160;&#160;<a class="el" href="group__SLRouteCommon.html#gga4c3e7f21144ed8e0510e2e2dedb746bfad1e3789b7361e54c80ae4ea02d8a4aa5">SL_ROUTE_FLAG_ACTIVE_ON_VIABLE_PATH</a> = 0x08
+<br />
+ }</td></tr>
+<tr class="separator:ga4c3e7f21144ed8e0510e2e2dedb746bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a73b562c477442b9de327481c991bf6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLRouteCommon.html#ga8a73b562c477442b9de327481c991bf6">SLPathFlags</a> { <a class="el" href="group__SLRouteCommon.html#gga8a73b562c477442b9de327481c991bf6a224f79f1749ef4c90c5895ceb287e2c7">SL_PATH_FLAG_RESERVED</a> = 0x00, 
+<a class="el" href="group__SLRouteCommon.html#gga8a73b562c477442b9de327481c991bf6a63829fedf4879f861200c91dfc749b07">SL_PATH_FLAG_SINGLE_PATH_OPT</a> = 0x01
+ }</td></tr>
+<tr class="separator:ga8a73b562c477442b9de327481c991bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Attributes</h2></td></tr>
@@ -282,10 +302,14 @@ Attributes</h2></td></tr>
 <tr class="memitem:a293eb43ea51d8359911f89a0e4c6284e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a293eb43ea51d8359911f89a0e4c6284e"></a>
 package&#160;</td><td class="memItemRight" valign="bottom"><b>service_layer</b></td></tr>
 <tr class="separator:a293eb43ea51d8359911f89a0e4c6284e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6545e6a32e6568e63da34c1cdf4c3bb5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6545e6a32e6568e63da34c1cdf4c3bb5"></a>
+option&#160;</td><td class="memItemRight" valign="bottom"><b>go_package</b> =&quot;github.com/Cisco-service-layer/service-layer-objmodel/grpc/protos;service_layer&quot;</td></tr>
+<tr class="separator:a6545e6a32e6568e63da34c1cdf4c3bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file defines common route features, including the Prefix, VRF information, path information, administrative distance, and default route status for a route object. </p><hr/>
-<p> Copyright (c) 2016 by Cisco Systems, Inc. </p><h2>All rights reserved. </h2>
+<div class="textblock"><p>Client RPC proto file for common route types. </p>
+<p>This file defines common route features, including the Prefix, VRF information, path information, administrative distance, and default route status for a route object. </p><hr/>
+<p> Copyright (c) 2016, 2023 by Cisco Systems, Inc. </p><h2>All rights reserved. </h2>
 </div></div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.8-->
 <!-- start footer part -->

@@ -188,6 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Service Description</h2>
+<p>Interface service definitions. </p>
 <p>Defines the RPC for getting interface status(es). </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -284,6 +285,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieve interface attributes and state. </p>
 <p>This call can be used to "poll" the current state of interfaces. </p>
 
 </div>
@@ -301,6 +304,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This call is used to get a stream of interface notifications. </p>
 <p>The caller must maintain the GRPC channel as long as there is interest in interface notifications. This call can be used to get "push" notifications for interface info. It is advised that the caller register for notifications before any interfaces are used to avoid any loss of notifications. </p>
 
 </div>
@@ -318,9 +323,14 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Interface Registration Operations. </p>
+<p>This service can be used to receive interface state change notifications.</p>
 <p><a class="el" href="group__Interfaces.html#af3683fd54ba7b5dae106552cf672151a" title="Registration Operation. ">SLInterfaceGlobalsRegMsg.Oper</a> = SL_REGOP_REGISTER: Global Interface registration. A client Must Register BEFORE interfaces can be modified/queried.</p>
 <p><a class="el" href="group__Interfaces.html#af3683fd54ba7b5dae106552cf672151a" title="Registration Operation. ">SLInterfaceGlobalsRegMsg.Oper</a> = SL_REGOP_UNREGISTER: Global Interface un-registration. This call is used to end all interface notifications. This call cleans up all interface notifications previously requested.</p>
-<p><a class="el" href="group__Interfaces.html#af3683fd54ba7b5dae106552cf672151a" title="Registration Operation. ">SLInterfaceGlobalsRegMsg.Oper</a> = SL_REGOP_EOF: Interface End Of File. After Registration, the client is expected to send an EOF message to convey the end of replay of the client's known objects. This is especially useful under certain restart scenarios when the client and the server are trying to synchronize their interfaces. </p>
+<p><a class="el" href="group__Interfaces.html#af3683fd54ba7b5dae106552cf672151a" title="Registration Operation. ">SLInterfaceGlobalsRegMsg.Oper</a> = SL_REGOP_EOF: Interface End Of File. After Registration, the client is expected to send an EOF message to convey the end of replay of the client's known objects. This is especially useful under certain restart scenarios when the client and the server are trying to synchronize their interfaces.</p>
+<p>The <a class="el" href="group__Interfaces.html#structSLInterfaceGlobalsRegMsg" title="Global Interface Registration Message. ">SLInterfaceGlobalsRegMsg</a> operations can be used by the client to synchronize interface registrations with the server. When the client re-registers with the server using SL_REGOP_REGISTER, server marks all interface registrations as stale. Client can then reprogram interface registrations. When the client sends SL_REGOP_EOF, any interface registrations not reprogrammed by the client are removed from the device.</p>
+<p>The client must perform all operations (<a class="el" href="group__Interfaces.html#structSLInterfaceGlobalsRegMsg" title="Global Interface Registration Message. ">SLInterfaceGlobalsRegMsg</a>, interface registration operations) from a single execution context. </p>
 
 </div>
 </div>
@@ -337,6 +347,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Used to enable/disable event notifications for a certain interface. </p>
 <p>By default, all interface events are disabled. The user must enable notifications for the interested interfaces. </p>
 
 </div>
@@ -351,7 +363,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>This message is used for interface global registration. Clients must register before using any interface service. </p>
+<div class="textblock"><p>Global Interface Registration Message. </p>
+<p>This message is used for interface global registration. Clients must register before using any interface service. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:af3683fd54ba7b5dae106552cf672151a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3683fd54ba7b5dae106552cf672151a"></a>
@@ -371,7 +384,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>This message is used to convey the result of the interface registration. </p>
+<div class="textblock"><p>interface registration response message. </p>
+<p>This message is used to convey the result of the interface registration. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:af9956119abdc6469e7e89d6f52b6d61f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9956119abdc6469e7e89d6f52b6d61f"></a>
@@ -391,7 +405,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>This message is used to query interface global capabilities. </p>
+<div class="textblock"><p>Global Interface Get message. </p>
+<p>This message is used to query interface global capabilities. </p>
 </div>
 </div>
 </div>
@@ -404,7 +419,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>This message is used to convey the response to the global capabilities query. </p>
+<div class="textblock"><p>Global interface Get response message. </p>
+<p>This message is used to convey the response to the global capabilities query. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a2d2e252f0a2c562115dbbca8ec28e1a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d2e252f0a2c562115dbbca8ec28e1a5"></a>
@@ -428,7 +444,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>This message is used to convey the response to the interface statistics query. </p>
+<div class="textblock"><p>Global Interface Get stats message. </p>
+<p>This message is used to convey the response to the interface statistics query. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:aca766491c055220cc19a53420bf13f04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca766491c055220cc19a53420bf13f04"></a>
@@ -453,6 +470,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Global Interface event sequence number. </p>
 <p>The sequence number is equivalent to a timestamp </p>
 
 </div>
@@ -469,7 +488,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Interface Get message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ae5b7d41b7d8ba161b306a2472473153e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Interfaces.html#ae5b7d41b7d8ba161b306a2472473153e">Key</a> = 1</td></tr>
 <tr class="memdesc:ae5b7d41b7d8ba161b306a2472473153e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface key attributes.  <a href="#ae5b7d41b7d8ba161b306a2472473153e">More...</a><br /></td></tr>
@@ -493,6 +513,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Interface key attributes. </p>
 <p>If the Key is not specified, then request up to the first 'EntriesCount' entries. </p>
 
 </div>
@@ -509,7 +531,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Interface Get Message result. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:acce62bc9d073d38da227c3a9db850ab1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acce62bc9d073d38da227c3a9db850ab1"></a>
 <a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Interfaces.html#acce62bc9d073d38da227c3a9db850ab1">SLIfInfo</a> = 1</td></tr>
@@ -533,6 +556,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Global Interface event sequence number. </p>
 <p>The sequence number is equivalent to a timestamp </p>
 
 </div>
@@ -549,7 +574,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Interface Get Message Response. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a89ec081318e0c269df8d9062e2df7a5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Interfaces.html#a89ec081318e0c269df8d9062e2df7a5b">Eof</a> = 1</td></tr>
 <tr class="memdesc:a89ec081318e0c269df8d9062e2df7a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">End Of File.  <a href="#a89ec081318e0c269df8d9062e2df7a5b">More...</a><br /></td></tr>
@@ -572,6 +598,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returned entries as requested in the Get operation. </p>
 <p>if ErrStatus is SL_SUCCESS, Entries contains the info requested </p>
 
 </div>
@@ -585,6 +613,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>End Of File. </p>
 <p>When set to True, it indicates that the server has returned M, where M &lt; N, of the original N requested Entries. </p>
 
 </div>
@@ -601,7 +631,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div>
+<div class="textblock"><p>Interface Get Notification message. </p>
+</div>
 </div>
 </div>
 <a name="structSLInterfaceNotif" id="structSLInterfaceNotif"></a>
@@ -613,31 +644,39 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Interface Notification Event. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ad01140f2e1e9b4bb4a6789db4a3b1476"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad01140f2e1e9b4bb4a6789db4a3b1476"></a>
 <a class="el" href="group__Interfaces.html#gad644c26cd72b1b17ebfe15b81d0981cb">SLInterfaceNotifType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Interfaces.html#ad01140f2e1e9b4bb4a6789db4a3b1476">EventType</a> = 1</td></tr>
 <tr class="memdesc:ad01140f2e1e9b4bb4a6789db4a3b1476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface Event Notification type. <br /></td></tr>
 <tr class="separator:ad01140f2e1e9b4bb4a6789db4a3b1476"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a716aba1e0bfb8b56654ee096ea6a784b"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Interfaces.html#a716aba1e0bfb8b56654ee096ea6a784b">Event</a></td></tr>
-<tr class="memdesc:a716aba1e0bfb8b56654ee096ea6a784b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on EventType.  <a href="#a716aba1e0bfb8b56654ee096ea6a784b">More...</a><br /></td></tr>
-<tr class="separator:a716aba1e0bfb8b56654ee096ea6a784b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83e1e05dce82c998148b6fd906ae0a78"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83e1e05dce82c998148b6fd906ae0a78"></a>
-<a class="el" href="group__Interfaces.html#structSLInterfaceInfoMsg">SLInterfaceInfoMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Interfaces.html#a83e1e05dce82c998148b6fd906ae0a78">Info</a> = 3</td></tr>
-<tr class="memdesc:a83e1e05dce82c998148b6fd906ae0a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_INTERFACE_EVENT_TYPE_INTERFACE_INFO: =&gt; this field carries the session state info <br /></td></tr>
-<tr class="separator:a83e1e05dce82c998148b6fd906ae0a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f29bc28af0de911703b07291784cdd9"><td class="memItemLeft" ><a class="anchor" id="a6f29bc28af0de911703b07291784cdd9"></a>
+oneof {</td></tr>
+<tr class="memitem:a79d3c79ecfc97b5fcd1c2491da7cf0f7"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;&#160;&#160;<a class="el" href="group__Interfaces.html#a63e996f7286107971798b76ff486dfc8">ErrStatus</a> = 2</td></tr>
+<tr class="memdesc:a79d3c79ecfc97b5fcd1c2491da7cf0f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_INTERFACE_EVENT_TYPE_ERROR: =&gt; This field carries error info, if any error occurs during notification subscription.  <a href="#a79d3c79ecfc97b5fcd1c2491da7cf0f7">More...</a><br /></td></tr>
+<tr class="separator:a79d3c79ecfc97b5fcd1c2491da7cf0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bcf503dcbec82948ac118a985cd9b88"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="group__Interfaces.html#structSLInterfaceInfoMsg">SLInterfaceInfoMsg</a>&#160;&#160;&#160;<a class="el" href="group__Interfaces.html#a83e1e05dce82c998148b6fd906ae0a78">Info</a> = 3</td></tr>
+<tr class="memdesc:a5bcf503dcbec82948ac118a985cd9b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_INTERFACE_EVENT_TYPE_INTERFACE_INFO: =&gt; this field carries the session state info <br /></td></tr>
+<tr class="separator:a5bcf503dcbec82948ac118a985cd9b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f29bc28af0de911703b07291784cdd9"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a6f29bc28af0de911703b07291784cdd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on EventType. <br /></td></tr>
+<tr class="separator:a6f29bc28af0de911703b07291784cdd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Member Data Documentation</h4>
-<a class="anchor" id="a716aba1e0bfb8b56654ee096ea6a784b"></a>
+<a class="anchor" id="a63e996f7286107971798b76ff486dfc8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">oneof SLInterfaceNotif::Event</td>
+          <td class="memname"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a> SLInterfaceNotif::ErrStatus = 2</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        </div><div class="line">        <a class="code" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a> ErrStatus = 2</div></div><!-- fragment -->
+
+<p>case EventType == SL_INTERFACE_EVENT_TYPE_ERROR: =&gt; This field carries error info, if any error occurs during notification subscription. </p>
+
 </div>
 </div>
 
@@ -652,7 +691,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Interface Notification message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a844cec83149f302ad577b7c7e83b7e04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a844cec83149f302ad577b7c7e83b7e04"></a>
 <a class="el" href="group__SLCommonTypes.html#gaa809068894b7bf3fab0314dff50bd02d">SLNotifOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Interfaces.html#a844cec83149f302ad577b7c7e83b7e04">Oper</a> = 1</td></tr>
@@ -675,7 +715,8 @@ repeated <a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInte
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Interface Notification message result. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a4f3fbb467f6cd30ceb768e14c73d4e81"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f3fbb467f6cd30ceb768e14c73d4e81"></a>
 <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Interfaces.html#a4f3fbb467f6cd30ceb768e14c73d4e81">ErrStatus</a> = 1</td></tr>
@@ -698,7 +739,8 @@ repeated <a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInte
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Interface Notification message response. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a2767c0290f30d7109f48086f9aac904f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Interfaces.html#a2767c0290f30d7109f48086f9aac904f">StatusSummary</a> = 1</td></tr>
 <tr class="memdesc:a2767c0290f30d7109f48086f9aac904f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summary result of the bulk operation (refer to enum <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) In general, the StatusSummary implies one of 3 things:  <a href="#a2767c0290f30d7109f48086f9aac904f">More...</a><br /></td></tr>
@@ -718,6 +760,8 @@ repeated <a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInte
       </table>
 </div><div class="memdoc">
 
+<p>In case of errors, this field indicates which entry in the bulk was erroneous. </p>
+
 </div>
 </div>
 <a class="anchor" id="a2767c0290f30d7109f48086f9aac904f"></a>
@@ -729,6 +773,8 @@ repeated <a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInte
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Summary result of the bulk operation (refer to enum <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) In general, the StatusSummary implies one of 3 things: </p>
 <ol type="1">
 <li>SL_SUCCESS: signifies that the entire bulk operation was successful. In this case, the Results list is empty.</li>
 <li>SL_SOME_ERR: signifies that the operation failed for one or more entries. In this case, Results holds the result for each individual entry in the bulk.</li>
@@ -750,6 +796,8 @@ repeated <a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInte
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Interface Event Notification types. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggad644c26cd72b1b17ebfe15b81d0981cbaa12706459d64d565d698df29403b90fd"></a>SL_INTERFACE_EVENT_TYPE_RESERVED&#160;</td><td class="fielddoc">
 <p>Reserved. 0x0. </p>
@@ -773,6 +821,8 @@ repeated <a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInte
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The current state of the interface. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga5d22fc52929e36eec124d3dd06b3d755ad8f7cd127e34b7ca3c0f2d714873f43e"></a>SL_IF_STATE_UNKNOWN&#160;</td><td class="fielddoc">
 <p>State unknown. </p>

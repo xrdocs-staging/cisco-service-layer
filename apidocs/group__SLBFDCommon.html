@@ -187,6 +187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Service Description</h2>
+<p>Common IPv4, IPv6 BFD messages. </p>
 <p>The following messages are used in both IPv4 and IPv6 BFD operations. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -240,7 +241,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD Registration message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a6541b81fddd9e1eceb3ee81592fd5609"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6541b81fddd9e1eceb3ee81592fd5609"></a>
 <a class="el" href="group__SLCommonTypes.html#gabcd5b7bdb1e75e62f586e079e924f896">SLRegOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBFDCommon.html#a6541b81fddd9e1eceb3ee81592fd5609">Oper</a> = 1</td></tr>
@@ -259,7 +261,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD Registration response message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ac3abe26aa4da00e6b5396bf0547f1df4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3abe26aa4da00e6b5396bf0547f1df4"></a>
 <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBFDCommon.html#ac3abe26aa4da00e6b5396bf0547f1df4">ErrStatus</a> = 1</td></tr>
@@ -278,7 +281,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div>
+<div class="textblock"><p>BFD Globals Get message. </p>
+</div>
 </div>
 </div>
 <a name="structSLBfdGetMsgRsp" id="structSLBfdGetMsgRsp"></a>
@@ -290,7 +294,8 @@ Enumerations</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD Get Global info response message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a0817c31db14b1865a2118f604a0980ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0817c31db14b1865a2118f604a0980ff"></a>
 <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBFDCommon.html#a0817c31db14b1865a2118f604a0980ff">ErrStatus</a> = 1</td></tr>
@@ -329,7 +334,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD Get Global Stats response message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a1149ce8f70bd765757ba3b7ab522fa61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1149ce8f70bd765757ba3b7ab522fa61"></a>
 <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBFDCommon.html#a1149ce8f70bd765757ba3b7ab522fa61">ErrStatus</a> = 1</td></tr>
@@ -353,6 +359,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Global BFD event sequence number. </p>
 <p>This is used to order various events The sequence number is equivalent to a timestamp This field contains the latest global BFD event sequence number </p>
 
 </div>
@@ -369,7 +377,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div>
+<div class="textblock"><p>BFD Get Notifications message. </p>
+</div>
 </div>
 </div>
 <a name="structSLBfdConfigCommon" id="structSLBfdConfigCommon"></a>
@@ -381,7 +390,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Common bidirectional forwarding detection attributes. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:a582b0b0e33111851bbf1a8b603242cc2"><td class="memItemLeft" align="right" valign="top">uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBFDCommon.html#a582b0b0e33111851bbf1a8b603242cc2">DesiredTxIntUsec</a> = 1</td></tr>
 <tr class="memdesc:a582b0b0e33111851bbf1a8b603242cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desired Tx interval in micro seconds.  <a href="#a582b0b0e33111851bbf1a8b603242cc2">More...</a><br /></td></tr>
@@ -400,6 +410,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Desired Tx interval in micro seconds. </p>
 <p>This is the minimum interval that the local system would like to use when transmitting BFD control packets. The value zero is reserved. This can be changed at anytime. </p>
 
 </div>
@@ -413,6 +425,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Detection time = DesiredTxIntUsec * DetectMultiplier Detection time is the period of time without receiving BFD packets after which the session is determined to have failed. </p>
 <p>Note: there may be a different detection time in each direction. </p>
 
 </div>
@@ -429,7 +443,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD state information. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Public Types</h3></td></tr>
 <tr class="memitem:af5f6e48cbf878e29c83de30e13fb4bf7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBFDCommon.html#af5f6e48cbf878e29c83de30e13fb4bf7">SLBfdStateEnum</a> { <a class="el" href="group__SLBFDCommon.html#af5f6e48cbf878e29c83de30e13fb4bf7a1e3417d4cefb3026ef03f57a09f1277e">SL_BFD_SESSION_STATE_UNKNOWN</a> = 0, 
 <a class="el" href="group__SLBFDCommon.html#af5f6e48cbf878e29c83de30e13fb4bf7a874e749a92e4f4318cb465322b305539">SL_BFD_SESSION_UP</a> = 1, 
@@ -475,6 +490,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>BFD diagnostic indicates the reason for the last transition of the local protocol from up to some other state. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a8f2d89a2cb5d1504bdf24c678b3bb5a9ab4561f1c1d42f9cee6a179d8c1c8b9a3"></a>SL_BFD_DIAG_NONE&#160;</td><td class="fielddoc">
 <p>Diag Value &ndash; Value Meaning No diagnostic. </p>
@@ -516,6 +533,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>BFD state information. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="af5f6e48cbf878e29c83de30e13fb4bf7a1e3417d4cefb3026ef03f57a09f1277e"></a>SL_BFD_SESSION_STATE_UNKNOWN&#160;</td><td class="fielddoc">
 <p>Session never established. </p>
@@ -543,6 +562,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Global BFD event sequence number. </p>
 <p>This is used to order various events The sequence number is equivalent to a timestamp </p>
 
 </div>
@@ -560,6 +581,8 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>BFD Event Notification types. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga435e20adf0b2db870d1cf25028fe3a12a045faf66debdbc9f7a220fa006d51f7a"></a>SL_BFD_EVENT_TYPE_RESERVED&#160;</td><td class="fielddoc">
 <p>Reserved. 0x0. </p>

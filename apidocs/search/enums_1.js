@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['slapplydirection',['SLApplyDirection',['../group__SLPolicy.html#gac94b7b85c615152b6fcadae36e67093a',1,'sl_policy.proto']]],
   ['slbfddiagstateenum',['SLBfdDiagStateEnum',['../group__SLBFDCommon.html#a8f2d89a2cb5d1504bdf24c678b3bb5a9',1,'SLBfdCommonState']]],
   ['slbfdnotiftype',['SLBfdNotifType',['../group__SLBFDCommon.html#ga435e20adf0b2db870d1cf25028fe3a12',1,'sl_bfd_common.proto']]],
   ['slbfdstateenum',['SLBfdStateEnum',['../group__SLBFDCommon.html#af5f6e48cbf878e29c83de30e13fb4bf7',1,'SLBfdCommonState']]],
@@ -18,5 +19,12 @@ var searchData=
   ['slnotifop',['SLNotifOp',['../group__SLCommonTypes.html#gaa809068894b7bf3fab0314dff50bd02d',1,'sl_common_types.proto']]],
   ['slnotiftype',['SLNotifType',['../group__SLRouteCommon.html#gad630c2e5490e88b889ccd79ace15005b',1,'sl_route_common.proto']]],
   ['slobjectop',['SLObjectOp',['../group__SLCommonTypes.html#ga0b166605b901d6e5ad5f7706ac60baf1',1,'sl_common_types.proto']]],
-  ['slregop',['SLRegOp',['../group__SLCommonTypes.html#gabcd5b7bdb1e75e62f586e079e924f896',1,'sl_common_types.proto']]]
+  ['slpathflags',['SLPathFlags',['../group__SLRouteCommon.html#ga8a73b562c477442b9de327481c991bf6',1,'sl_route_common.proto']]],
+  ['slpolicyobjectop',['SLPolicyObjectOp',['../group__SLPolicy.html#gaab45854a05b7df6a2c060198f2a6d0d6',1,'sl_policy.proto']]],
+  ['slpolicytype',['SLPolicyType',['../group__SLPolicy.html#ga322acb3942d4731a4737299c2f4e3d8e',1,'sl_policy.proto']]],
+  ['slregop',['SLRegOp',['../group__SLCommonTypes.html#gabcd5b7bdb1e75e62f586e079e924f896',1,'sl_common_types.proto']]],
+  ['slrouteflags',['SLRouteFlags',['../group__SLRouteCommon.html#ga4c3e7f21144ed8e0510e2e2dedb746bf',1,'sl_route_common.proto']]],
+  ['slrspacktype',['SLRspACKType',['../group__SLCommonTypes.html#gab015cd9777d4ad3e0e1b78babe637308',1,'sl_common_types.proto']]],
+  ['sltabletype',['SLTableType',['../group__SLCommonTypes.html#gaf9a0d45d36b43a18018d89088dca1047',1,'sl_common_types.proto']]],
+  ['slupdatepriority',['SLUpdatePriority',['../group__SLCommonTypes.html#ga65c2010d83b4c8b4afe42af4b36f53b7',1,'sl_common_types.proto']]]
 ];

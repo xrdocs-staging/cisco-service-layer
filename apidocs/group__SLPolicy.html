@@ -1,0 +1,974 @@
+<!-- HTML header for doxygen 1.8.8-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- For Mobile Devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+        <meta name="generator" content="Doxygen 1.8.11"/>
+<meta charset="utf-8">
+<!-- begin SEO -->
+<title>            Blogs and Events      IOS XR Documentation @xrdocs      </title>
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="IOS XR Documentation @xrdocs">
+<meta property="og:title" content="Blogs and Events">
+  <link rel="canonical" href="https://xrdocs.github.io/cisco-service-layer/apidocs/">
+  <meta property="og:url" content="/cisco-service-layer/apidocs/">
+  <meta name="twitter:site" content="@xrdocs">
+  <meta name="twitter:title" content="Blogs and Events">
+  <meta name="twitter:description" content="Documentation, Blogs and Tutorials on the IOS-XR software">
+  <meta name="twitter:url" content="https://xrdocs.github.io/cisco-service-layer/apidocs/">
+    <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="https://xrdocs.github.io/cisco-service-layer/images/service-layer-icon-xrdocs.png">
+    <meta name="twitter:creator" content="@xrdocs">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "https://xrdocs.github.io/cisco-service-layer",
+      "logo": "https://xrdocs.github.io/images/service-layer-icon-xrdocs.png"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "person",
+      "name" : "Cisco Systems Inc",
+      "url" : "https://xrdocs.github.io/cisco-service-layer",
+      "sameAs" : ["https://twitter.com/xrdocs"]
+    }
+  </script>
+<!-- end SEO -->
+<link href="https://xrdocs.github.io/cisco-service-layer/feed.xml" type="application/atom+xml" rel="alternate" title="IOS XR Documentation @xrdocs Feed">
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="jgRKKm6B9FwJJPXxpmc0-EP3D0Mh8JHXaJqoYIGj1ek" />
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+<script>
+if (!(window.location.host.startsWith("127.0.0.1") || window.location.host.startsWith("localhost")) && (window.location.host.substr(-10) == '.github.io') && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
+<!-- For all browsers -->
+        <link href="customdoxygen.css" rel="stylesheet" type="text/css" />
+        <link href="doxyboot.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+<style>
+.underline-on-hover:hover {
+    text-decoration: underline;
+}
+.searchForm{
+      border-radius:5px;
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      width: 900px;
+   }
+#search_results{
+      display: table; margin:0 auto;
+   }
+</style>
+</style>
+<!-- start custom head snippets -->
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/lity.min.css" rel="stylesheet">
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/cisco-sans.min.css" rel="stylesheet">
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/material-scrolltop.css" rel="stylesheet">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-128.png" sizes="128x128" />
+<link rel="shortcut icon" href="https://xrdocs.github.io/cisco-service-layer/images/favicon_cisco.ico" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-310x310.png" />
+<!-- end custom head snippets -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="dynsections.js"></script>
+        <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="doxy-boot.js"></script>
+    </head>
+<body style="overflow-x: visible;">
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu" style="padding-left: 0;">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <img src="https://xrdocs.github.io/images/xrdocs_logo.png" width="45px" height="45px" alt="xrdocs logo" style="float:left;">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://xrdocs.github.io/">@xrdocs</a></li>
+          <li class="masthead__menu-item masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/">Cisco Service Layer</a></li>
+                    <li class="masthead__menu-item greedy-nav-active"><a href="https://xrdocs.github.io/cisco-service-layer/apidocs/">Apidocs</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/blogs/">Blogs</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/tutorials/">Tutorials</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/search">Search <i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/tags/">Tags</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/collection-archive/">Archive</a></li>
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+        <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+          <div id="apititle_div"><h1 class="apititle"><span>Cisco Service Layer API Documentation</span></h1></div>
+            <div class="content" id="content_tabs">
+<!-- Generated by Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Quick&#160;Start</span></a></li>
+      <li class="current"><a href="modules.html"><span>Services</span></a></li>
+      <li><a href="annotated.html"><span>Messages</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">RPC Calls</a> &#124;
+<a href="#nested-classes">Messages</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
+  <div class="headertitle">
+<div class="title">SLPolicy</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Service Description</h2>
+<p>Used for policy creation and deletion, add and delete rules from policy, apply and un-apply policy from interfaces. </p>
+<p>Defines the RPC for operations on policy, interface and get requests. </p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+RPC Calls</h2></td></tr>
+<tr class="memitem:ga5cdcaea63a0f1fb0f184fdc91414eb1d"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#ga5cdcaea63a0f1fb0f184fdc91414eb1d">SLPolicy::SLPolicyOp</a> (<a class="el" href="group__SLPolicy.html#structSLPolicyOpMsg">SLPolicyOpMsg</a>) returns(<a class="el" href="group__SLPolicy.html#structSLPolicyOpRsp">SLPolicyOpRsp</a>)</td></tr>
+<tr class="memdesc:ga5cdcaea63a0f1fb0f184fdc91414eb1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy-object operations.  <a href="group__SLPolicy.html#ga5cdcaea63a0f1fb0f184fdc91414eb1d">More...</a><br /></td></tr>
+<tr class="separator:ga5cdcaea63a0f1fb0f184fdc91414eb1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad65b65ee8b223f19260bf22ceb024de5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad65b65ee8b223f19260bf22ceb024de5"></a>
+rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#gad65b65ee8b223f19260bf22ceb024de5">SLPolicy::SLPolicyGet</a> (<a class="el" href="group__SLPolicy.html#structSLPolicyGetMsg">SLPolicyGetMsg</a>) returns(stream <a class="el" href="group__SLPolicy.html#structSLPolicyGetMsgRsp">SLPolicyGetMsgRsp</a>)</td></tr>
+<tr class="memdesc:gad65b65ee8b223f19260bf22ceb024de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve all Policies and its rules and the interfaces where the policy is applied from the server. <br /></td></tr>
+<tr class="separator:gad65b65ee8b223f19260bf22ceb024de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeabe35f17a752e42676810230dea6c35"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaeabe35f17a752e42676810230dea6c35"></a>
+rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#gaeabe35f17a752e42676810230dea6c35">SLPolicy::SLPolicyGlobalGet</a> (<a class="el" href="group__SLPolicy.html#structSLPolicyGlobalGetMsg">SLPolicyGlobalGetMsg</a>) returns(<a class="el" href="group__SLPolicy.html#structSLPolicyGlobalGetMsgRsp">SLPolicyGlobalGetMsgRsp</a>)</td></tr>
+<tr class="memdesc:gaeabe35f17a752e42676810230dea6c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve Global Policy capabilities. <br /></td></tr>
+<tr class="separator:gaeabe35f17a752e42676810230dea6c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Messages</h2></td></tr>
+<tr class="memitem:structSLPolicyOpMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyOpMsg">SLPolicyOpMsg</a></td></tr>
+<tr class="separator:structSLPolicyOpMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyEntry"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyEntry">SLPolicyEntry</a></td></tr>
+<tr class="memdesc:structSLPolicyEntry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy-map object.  <a href="group__SLPolicy.html#structSLPolicyEntry">More...</a><br /></td></tr>
+<tr class="separator:structSLPolicyEntry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structPolicyRuleList"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structPolicyRuleList">PolicyRuleList</a></td></tr>
+<tr class="memdesc:structPolicyRuleList"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of rules.  <a href="group__SLPolicy.html#structPolicyRuleList">More...</a><br /></td></tr>
+<tr class="separator:structPolicyRuleList"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structPolicyIntfList"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structPolicyIntfList">PolicyIntfList</a></td></tr>
+<tr class="memdesc:structPolicyIntfList"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of interfaces.  <a href="group__SLPolicy.html#structPolicyIntfList">More...</a><br /></td></tr>
+<tr class="separator:structPolicyIntfList"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyKey"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyKey">SLPolicyKey</a></td></tr>
+<tr class="separator:structSLPolicyKey"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyRule"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyRule">SLPolicyRule</a></td></tr>
+<tr class="memdesc:structSLPolicyRule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Each rule in a policy is associated with a Rule name - that identifies a rule Priority - priority of the rule within the policy Match - Contains at least one or more match criteria.  <a href="group__SLPolicy.html#structSLPolicyRule">More...</a><br /></td></tr>
+<tr class="separator:structSLPolicyRule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRuleMatch"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLRuleMatch">SLRuleMatch</a></td></tr>
+<tr class="memdesc:structSLRuleMatch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attributes to match within a rule in a policy.  <a href="group__SLPolicy.html#structSLRuleMatch">More...</a><br /></td></tr>
+<tr class="separator:structSLRuleMatch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLDscpMatch"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLDscpMatch">SLDscpMatch</a></td></tr>
+<tr class="memdesc:structSLDscpMatch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dscp match type Oneof is used here for future extensibility.  <a href="group__SLPolicy.html#structSLDscpMatch">More...</a><br /></td></tr>
+<tr class="separator:structSLDscpMatch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLRuleAction"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLRuleAction">SLRuleAction</a></td></tr>
+<tr class="memdesc:structSLRuleAction"><td class="mdescLeft">&#160;</td><td class="mdescRight">Action applied on the packet that matches a rule.  <a href="group__SLPolicy.html#structSLRuleAction">More...</a><br /></td></tr>
+<tr class="separator:structSLRuleAction"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyIntf"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyIntf">SLPolicyIntf</a></td></tr>
+<tr class="memdesc:structSLPolicyIntf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy intf object.  <a href="group__SLPolicy.html#structSLPolicyIntf">More...</a><br /></td></tr>
+<tr class="separator:structSLPolicyIntf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyOpRsp"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyOpRsp">SLPolicyOpRsp</a></td></tr>
+<tr class="separator:structSLPolicyOpRsp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyRes"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyRes">SLPolicyRes</a></td></tr>
+<tr class="separator:structSLPolicyRes"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyRuleStatusList"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyRuleStatusList">SLPolicyRuleStatusList</a></td></tr>
+<tr class="separator:structSLPolicyRuleStatusList"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyIntfStatusList"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyIntfStatusList">SLPolicyIntfStatusList</a></td></tr>
+<tr class="separator:structSLPolicyIntfStatusList"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyRuleStatus"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyRuleStatus">SLPolicyRuleStatus</a></td></tr>
+<tr class="separator:structSLPolicyRuleStatus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyIntfStatus"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyIntfStatus">SLPolicyIntfStatus</a></td></tr>
+<tr class="separator:structSLPolicyIntfStatus"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyGetMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyGetMsg">SLPolicyGetMsg</a></td></tr>
+<tr class="memdesc:structSLPolicyGetMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all the policies and the interfaces where it is applied.  <a href="group__SLPolicy.html#structSLPolicyGetMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLPolicyGetMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyInfo"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyInfo">SLPolicyInfo</a></td></tr>
+<tr class="memdesc:structSLPolicyInfo"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of policies, rules and the interfaces where it is applied.  <a href="group__SLPolicy.html#structSLPolicyInfo">More...</a><br /></td></tr>
+<tr class="separator:structSLPolicyInfo"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyGetMsgRsp"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyGetMsgRsp">SLPolicyGetMsgRsp</a></td></tr>
+<tr class="separator:structSLPolicyGetMsgRsp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyGlobalGetMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyGlobalGetMsg">SLPolicyGlobalGetMsg</a></td></tr>
+<tr class="memdesc:structSLPolicyGlobalGetMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy Global Get Capabilities Message.  <a href="group__SLPolicy.html#structSLPolicyGlobalGetMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLPolicyGlobalGetMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLPolicyGlobalGetMsgRsp"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#structSLPolicyGlobalGetMsgRsp">SLPolicyGlobalGetMsgRsp</a></td></tr>
+<tr class="memdesc:structSLPolicyGlobalGetMsgRsp"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy Global Get Capabilities Message Response.  <a href="group__SLPolicy.html#structSLPolicyGlobalGetMsgRsp">More...</a><br /></td></tr>
+<tr class="separator:structSLPolicyGlobalGetMsgRsp"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gaab45854a05b7df6a2c060198f2a6d0d6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#gaab45854a05b7df6a2c060198f2a6d0d6">SLPolicyObjectOp</a> { <br />
+&#160;&#160;<a class="el" href="group__SLPolicy.html#ggaab45854a05b7df6a2c060198f2a6d0d6a91fa1fa07c77a2c99807f96d2c5a52bc">SL_OBJOP_POLICY_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLPolicy.html#ggaab45854a05b7df6a2c060198f2a6d0d6aa9abeb60ef6343c0005d3bcc687d349f">SL_OBJOP_POLICY_ADD</a> = 0x1, 
+<a class="el" href="group__SLPolicy.html#ggaab45854a05b7df6a2c060198f2a6d0d6ad9a969a8adda0da7e789aafd63be888a">SL_OBJOP_POLICY_DELETE</a> = 0x2, 
+<a class="el" href="group__SLPolicy.html#ggaab45854a05b7df6a2c060198f2a6d0d6a59075e66e6a58c047972e93dd3d52d69">SL_OBJOP_RULE_ADD</a> = 0x3, 
+<br />
+&#160;&#160;<a class="el" href="group__SLPolicy.html#ggaab45854a05b7df6a2c060198f2a6d0d6a4ff371301ad69590cf32035415a93682">SL_OBJOP_RULE_DELETE</a> = 0x4, 
+<a class="el" href="group__SLPolicy.html#ggaab45854a05b7df6a2c060198f2a6d0d6a47c5639ddc27c42a271a3880b8198a4b">SL_OBJOP_POLICY_APPLY</a> = 0x5, 
+<a class="el" href="group__SLPolicy.html#ggaab45854a05b7df6a2c060198f2a6d0d6a3b3119961685fdc51934abc3df33d582">SL_OBJOP_POLICY_UNAPPLY</a> = 0x6
+<br />
+ }<tr class="memdesc:gaab45854a05b7df6a2c060198f2a6d0d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy Object Operations.  <a href="group__SLPolicy.html#gaab45854a05b7df6a2c060198f2a6d0d6">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gaab45854a05b7df6a2c060198f2a6d0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga322acb3942d4731a4737299c2f4e3d8e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#ga322acb3942d4731a4737299c2f4e3d8e">SLPolicyType</a> { <a class="el" href="group__SLPolicy.html#gga322acb3942d4731a4737299c2f4e3d8ea9381438f90888709cdac9d0d6b7b2bbb">SL_PM_PTYPE_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLPolicy.html#gga322acb3942d4731a4737299c2f4e3d8ea88ba03bbf2ca19e90ce8e9f7977780f8">SL_PM_PTYPE_PBR</a> = 0x1
+ }<tr class="memdesc:ga322acb3942d4731a4737299c2f4e3d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy types supported.  <a href="group__SLPolicy.html#ga322acb3942d4731a4737299c2f4e3d8e">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ga322acb3942d4731a4737299c2f4e3d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac94b7b85c615152b6fcadae36e67093a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#gac94b7b85c615152b6fcadae36e67093a">SLApplyDirection</a> { <a class="el" href="group__SLPolicy.html#ggac94b7b85c615152b6fcadae36e67093aa091f5c598eff14e7545123fdecb12045">SL_APPLY_TYPE_RESERVED</a> = 0x0, 
+<a class="el" href="group__SLPolicy.html#ggac94b7b85c615152b6fcadae36e67093aacdc0e5ef4776d6a850d394ebd81930dc">SL_APPLY_DIRECTION_INGRESS</a> = 0x1
+ }<tr class="memdesc:gac94b7b85c615152b6fcadae36e67093a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direction of policy apply Only ingress supported for pbr policies.  <a href="group__SLPolicy.html#gac94b7b85c615152b6fcadae36e67093a">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gac94b7b85c615152b6fcadae36e67093a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">RPC Documentation</h2>
+<a class="anchor" id="ga5cdcaea63a0f1fb0f184fdc91414eb1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpc SLPolicy::SLPolicyOp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__SLPolicy.html#structSLPolicyOpMsg">SLPolicyOpMsg</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Policy-object operations. </p>
+<p>Policy and its rules </p><h2>Example for policy p1 with 3 rules r1, r2 and r3 </h2>
+<p>Policy p1 Rule r1 Priority 1 Match dscp 1 Match PathGroup Silver Action PathGroup Bronze</p>
+<p>Rule r2 Priority 2 Match dscp 2 Match PathGroup Bronze Action PathGroup Silver</p>
+<p>Rule r3 Priority 3 Match PathGroup xxx Action PathGroup Gold End-policy <a class="el" href="group__SLPolicy.html#ab0c3e946e89bce2d3ae2aa200f137e5f" title="Policy object operation. ">SLPolicyOpMsg.Oper</a> = SL_OBJOP_POLICY_ADD Add a new Policy object. Fails if a Policy object with the specified key already exists.</p>
+<p><a class="el" href="group__SLPolicy.html#ab0c3e946e89bce2d3ae2aa200f137e5f" title="Policy object operation. ">SLPolicyOpMsg.Oper</a> = SL_OBJOP_POLICY_DELETE Delete the policy object. The object's key is enough to delete the object. Other attributes if present are ignored. Delete of a non- existant object is returned as success.</p>
+<p><a class="el" href="group__SLPolicy.html#ab0c3e946e89bce2d3ae2aa200f137e5f" title="Policy object operation. ">SLPolicyOpMsg.Oper</a> = SL_OBJOP_RULE_ADD Add rules to an existing Policy object. If any of the rules exist, return "Object exists" error. Fails if the Policy object key does not exist in the system or if no rule is provided.</p>
+<p><a class="el" href="group__SLPolicy.html#ab0c3e946e89bce2d3ae2aa200f137e5f" title="Policy object operation. ">SLPolicyOpMsg.Oper</a> = SL_OBJOP_RULE_DELETE If the policy object does not exist, "Policy not found" error is returned. If policy object exists, delete the list of rules provided. Delete of a non-existant rule within a policy object is returned as success. If the last rule within a policy object is deleted, an empty policy will continue to exist. Fails if no rule is provided.</p>
+<p><a class="el" href="group__SLPolicy.html#ab0c3e946e89bce2d3ae2aa200f137e5f" title="Policy object operation. ">SLPolicyOpMsg.Oper</a> = SL_OBJOP_POLICY_APPLY Apply the policy on an interface. Only the policy object key and the interface where it needs to be applied will be verified and used. Other attributes are ignored. <a class="el" href="group__SLPolicy.html#ab0c3e946e89bce2d3ae2aa200f137e5f" title="Policy object operation. ">SLPolicyOpMsg.Oper</a> = SL_OBJOP_POLICY_UNAPPLY Unapply the policy on an interface. Only the policy object key and the interface where it needs to be removed from will be verified and used, other attributes are ignored.</p>
+<p>The device can be programmed by only one active instance of this RPC. On client restart or RPC disconnects, the client has the to reconcile its new state with the state on the device by replaying the difference. </p>
+
+</div>
+</div>
+<hr/><h2 class="groupheader">Message Documentation</h2>
+<a name="structSLPolicyOpMsg" id="structSLPolicyOpMsg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyOpMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:ab0c3e946e89bce2d3ae2aa200f137e5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0c3e946e89bce2d3ae2aa200f137e5f"></a>
+<a class="el" href="group__SLPolicy.html#gaab45854a05b7df6a2c060198f2a6d0d6">SLPolicyObjectOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#ab0c3e946e89bce2d3ae2aa200f137e5f">Oper</a> = 1</td></tr>
+<tr class="memdesc:ab0c3e946e89bce2d3ae2aa200f137e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy object operation. <br /></td></tr>
+<tr class="separator:ab0c3e946e89bce2d3ae2aa200f137e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675aebd137db81a0f46f0d9cd0758508"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a675aebd137db81a0f46f0d9cd0758508">OperationID</a> = 2</td></tr>
+<tr class="memdesc:a675aebd137db81a0f46f0d9cd0758508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique OperationID sent by the client to correlate the responses.  <a href="#a675aebd137db81a0f46f0d9cd0758508">More...</a><br /></td></tr>
+<tr class="separator:a675aebd137db81a0f46f0d9cd0758508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98698e4362edf3a96c82249b71785eb4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98698e4362edf3a96c82249b71785eb4"></a>
+repeated <a class="el" href="group__SLPolicy.html#structSLPolicyEntry">SLPolicyEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a98698e4362edf3a96c82249b71785eb4">Policies</a> = 3</td></tr>
+<tr class="memdesc:a98698e4362edf3a96c82249b71785eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of policy entries. <br /></td></tr>
+<tr class="separator:a98698e4362edf3a96c82249b71785eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a675aebd137db81a0f46f0d9cd0758508"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 SLPolicyOpMsg::OperationID = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unique OperationID sent by the client to correlate the responses. </p>
+<p>Operation Id should be monotonically increasing for the life of the client. </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLPolicyEntry" id="structSLPolicyEntry"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyEntry</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Policy-map object. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:af390b3e0a5815229949eb02467cfeaed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af390b3e0a5815229949eb02467cfeaed"></a>
+<a class="el" href="group__SLPolicy.html#structSLPolicyKey">SLPolicyKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#af390b3e0a5815229949eb02467cfeaed">Key</a> = 1</td></tr>
+<tr class="memdesc:af390b3e0a5815229949eb02467cfeaed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy unique key identifier. <br /></td></tr>
+<tr class="separator:af390b3e0a5815229949eb02467cfeaed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c43c4c3acdb889e541af738145a4f91"><td class="memItemLeft" ><a class="anchor" id="a9c43c4c3acdb889e541af738145a4f91"></a>
+oneof {</td></tr>
+<tr class="memitem:abf63c08256659f03c0c6ade4f240291d"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="group__SLPolicy.html#structPolicyRuleList">PolicyRuleList</a>&#160;&#160;&#160;<b>Rules</b> = 2</td></tr>
+<tr class="separator:abf63c08256659f03c0c6ade4f240291d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c2d7d016f6581c4890c49909d672238"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="group__SLPolicy.html#structPolicyIntfList">PolicyIntfList</a>&#160;&#160;&#160;<b>Intfs</b> = 3</td></tr>
+<tr class="separator:a2c2d7d016f6581c4890c49909d672238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c43c4c3acdb889e541af738145a4f91"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a9c43c4c3acdb889e541af738145a4f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structPolicyRuleList" id="structPolicyRuleList"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message PolicyRuleList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>List of rules. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a0ab02553a2bff20e08390aa0b12260e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ab02553a2bff20e08390aa0b12260e9"></a>
+repeated <a class="el" href="group__SLPolicy.html#structSLPolicyRule">SLPolicyRule</a>&#160;</td><td class="memItemRight" valign="bottom"><b>PolicyRules</b> = 1</td></tr>
+<tr class="separator:a0ab02553a2bff20e08390aa0b12260e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structPolicyIntfList" id="structPolicyIntfList"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message PolicyIntfList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>List of interfaces. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a37f8e9f243e3b8e37b673a6b3ae0e8d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37f8e9f243e3b8e37b673a6b3ae0e8d4"></a>
+repeated <a class="el" href="group__SLPolicy.html#structSLPolicyIntf">SLPolicyIntf</a>&#160;</td><td class="memItemRight" valign="bottom"><b>PolicyIntfs</b> = 1</td></tr>
+<tr class="separator:a37f8e9f243e3b8e37b673a6b3ae0e8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyKey" id="structSLPolicyKey"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyKey</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a89d966e188cd5565e819ecd1406493b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89d966e188cd5565e819ecd1406493b1"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a89d966e188cd5565e819ecd1406493b1">PolicyName</a> = 1</td></tr>
+<tr class="memdesc:a89d966e188cd5565e819ecd1406493b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the policy. <br /></td></tr>
+<tr class="separator:a89d966e188cd5565e819ecd1406493b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab029e47f591c2060c91730440c967d8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab029e47f591c2060c91730440c967d8a"></a>
+<a class="el" href="group__SLPolicy.html#ga322acb3942d4731a4737299c2f4e3d8e">SLPolicyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#ab029e47f591c2060c91730440c967d8a">Type</a> = 2</td></tr>
+<tr class="memdesc:ab029e47f591c2060c91730440c967d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">PolicyType. <br /></td></tr>
+<tr class="separator:ab029e47f591c2060c91730440c967d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyRule" id="structSLPolicyRule"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyRule</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Each rule in a policy is associated with a Rule name - that identifies a rule Priority - priority of the rule within the policy Match - Contains at least one or more match criteria. </p>
+<p>Packet is a match if ALL the fields in the packet match the criteria. Atleast one rule MUST be present for the packet to match. Action - Contains at least one or more action. Action applied on the packet that matches the rule. Atleast one action MUST be present for the match criteria under a rule. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a693287f634dc8efff22efe976b082f96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a693287f634dc8efff22efe976b082f96"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a693287f634dc8efff22efe976b082f96">RuleName</a> = 1</td></tr>
+<tr class="memdesc:a693287f634dc8efff22efe976b082f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the rule referenced in the policy object. <br /></td></tr>
+<tr class="separator:a693287f634dc8efff22efe976b082f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a3ed37222f991ea527edab344f5292"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54a3ed37222f991ea527edab344f5292"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a54a3ed37222f991ea527edab344f5292">PriorityStr</a> = 2</td></tr>
+<tr class="memdesc:a54a3ed37222f991ea527edab344f5292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Priority of the rule within the policy. <br /></td></tr>
+<tr class="separator:a54a3ed37222f991ea527edab344f5292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3526a53fbcd643302a759957333440"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a3526a53fbcd643302a759957333440"></a>
+<a class="el" href="group__SLPolicy.html#structSLRuleMatch">SLRuleMatch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a8a3526a53fbcd643302a759957333440">Match</a> = 3</td></tr>
+<tr class="memdesc:a8a3526a53fbcd643302a759957333440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the match criteria under this rule. <br /></td></tr>
+<tr class="separator:a8a3526a53fbcd643302a759957333440"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef5a69992a62a3278fa535d11fcf4d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afef5a69992a62a3278fa535d11fcf4d5"></a>
+<a class="el" href="group__SLPolicy.html#structSLRuleAction">SLRuleAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#afef5a69992a62a3278fa535d11fcf4d5">Action</a> = 4</td></tr>
+<tr class="memdesc:afef5a69992a62a3278fa535d11fcf4d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Action associated with this rule. <br /></td></tr>
+<tr class="separator:afef5a69992a62a3278fa535d11fcf4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLRuleMatch" id="structSLRuleMatch"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRuleMatch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Attributes to match within a rule in a policy. </p>
+<p>All specified values in the message MUST be matched by the packet for application of the specified action. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:ae4fad9499acf9b36b1865e90f82798a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4fad9499acf9b36b1865e90f82798a6"></a>
+<a class="el" href="group__SLPolicy.html#structSLDscpMatch">SLDscpMatch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#ae4fad9499acf9b36b1865e90f82798a6">Dscp</a> = 1</td></tr>
+<tr class="memdesc:ae4fad9499acf9b36b1865e90f82798a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulate all different values of dscp supported. <br /></td></tr>
+<tr class="separator:ae4fad9499acf9b36b1865e90f82798a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab471e70e65a82192ab003611efc4c1f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLPathGroupRefKey">SLPathGroupRefKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#ab471e70e65a82192ab003611efc4c1f4">PathGroup</a> = 2</td></tr>
+<tr class="memdesc:ab471e70e65a82192ab003611efc4c1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match on PathGroup Identifier The path group belongs to the same VRF as the policy entry.  <a href="#ab471e70e65a82192ab003611efc4c1f4">More...</a><br /></td></tr>
+<tr class="separator:ab471e70e65a82192ab003611efc4c1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="ab471e70e65a82192ab003611efc4c1f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLCommonTypes.html#structSLPathGroupRefKey">SLPathGroupRefKey</a> SLRuleMatch::PathGroup = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Match on PathGroup Identifier The path group belongs to the same VRF as the policy entry. </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLDscpMatch" id="structSLDscpMatch"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLDscpMatch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Dscp match type Oneof is used here for future extensibility. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a8d33fc7ef8615c91a59a454ffae8e052"><td class="memItemLeft" ><a class="anchor" id="a8d33fc7ef8615c91a59a454ffae8e052"></a>
+oneof {</td></tr>
+<tr class="memitem:a980c836ea7cf4dcc3a3b92cc6b671fa7"><td class="memItemLeft" >
+&#160;&#160;&#160;uint32&#160;&#160;&#160;<a class="el" href="group__SLPolicy.html#afe7151f8a2c4005f8a836b0304aeb5e8">DscpValue</a> = 1</td></tr>
+<tr class="memdesc:a980c836ea7cf4dcc3a3b92cc6b671fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single dscp value. <br /></td></tr>
+<tr class="separator:a980c836ea7cf4dcc3a3b92cc6b671fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d33fc7ef8615c91a59a454ffae8e052"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a8d33fc7ef8615c91a59a454ffae8e052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLRuleAction" id="structSLRuleAction"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLRuleAction</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Action applied on the packet that matches a rule. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a11adfa2bd730f681a32cd29083a7f4cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLPathGroupRefKey">SLPathGroupRefKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a11adfa2bd730f681a32cd29083a7f4cc">PathGroup</a> = 1</td></tr>
+<tr class="memdesc:a11adfa2bd730f681a32cd29083a7f4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">PathGroup where packet will be forwarded.  <a href="#a11adfa2bd730f681a32cd29083a7f4cc">More...</a><br /></td></tr>
+<tr class="separator:a11adfa2bd730f681a32cd29083a7f4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66886f2ef8e9cdcef3091498ac53d11a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a66886f2ef8e9cdcef3091498ac53d11a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a66886f2ef8e9cdcef3091498ac53d11a">EnableStatsCounter</a> = 2</td></tr>
+<tr class="memdesc:a66886f2ef8e9cdcef3091498ac53d11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable Stats counter. <br /></td></tr>
+<tr class="separator:a66886f2ef8e9cdcef3091498ac53d11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a11adfa2bd730f681a32cd29083a7f4cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLCommonTypes.html#structSLPathGroupRefKey">SLPathGroupRefKey</a> SLRuleAction::PathGroup = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PathGroup where packet will be forwarded. </p>
+<p>The path group belongs to the same VRF as the policy entry. </p>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLPolicyIntf" id="structSLPolicyIntf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyIntf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Policy intf object. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a973dcae070aa5ed756205b0ea9663861"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a973dcae070aa5ed756205b0ea9663861"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a973dcae070aa5ed756205b0ea9663861">Key</a> = 1</td></tr>
+<tr class="memdesc:a973dcae070aa5ed756205b0ea9663861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface on which the policy is applied/unapplied. <br /></td></tr>
+<tr class="separator:a973dcae070aa5ed756205b0ea9663861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29776a75e5aeb2ded883d40e9a3a6815"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29776a75e5aeb2ded883d40e9a3a6815"></a>
+<a class="el" href="group__SLPolicy.html#gac94b7b85c615152b6fcadae36e67093a">SLApplyDirection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a29776a75e5aeb2ded883d40e9a3a6815">IntfDir</a> = 2</td></tr>
+<tr class="memdesc:a29776a75e5aeb2ded883d40e9a3a6815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy Apply Direction. <br /></td></tr>
+<tr class="separator:a29776a75e5aeb2ded883d40e9a3a6815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyOpRsp" id="structSLPolicyOpRsp"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyOpRsp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:ae10fa8b81ad3120a4a6aa04aa913d6bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae10fa8b81ad3120a4a6aa04aa913d6bd"></a>
+uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#ae10fa8b81ad3120a4a6aa04aa913d6bd">OperationID</a> = 1</td></tr>
+<tr class="memdesc:ae10fa8b81ad3120a4a6aa04aa913d6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy object operation for which the response is sent. <br /></td></tr>
+<tr class="separator:ae10fa8b81ad3120a4a6aa04aa913d6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbaea6a9e368274c7e2db87e70328fea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbaea6a9e368274c7e2db87e70328fea"></a>
+repeated <a class="el" href="group__SLPolicy.html#structSLPolicyRes">SLPolicyRes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Results</b> = 2</td></tr>
+<tr class="separator:abbaea6a9e368274c7e2db87e70328fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyRes" id="structSLPolicyRes"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyRes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a07c64412e337be7cd0fa72812fccb9b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07c64412e337be7cd0fa72812fccb9b9"></a>
+<a class="el" href="group__SLPolicy.html#structSLPolicyKey">SLPolicyKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a07c64412e337be7cd0fa72812fccb9b9">Key</a> = 1</td></tr>
+<tr class="memdesc:a07c64412e337be7cd0fa72812fccb9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy unique key identifier. <br /></td></tr>
+<tr class="separator:a07c64412e337be7cd0fa72812fccb9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f2eacec4d118b2540cf2b3e64dbc35"><td class="memItemLeft" ><a class="anchor" id="af0f2eacec4d118b2540cf2b3e64dbc35"></a>
+oneof {</td></tr>
+<tr class="memitem:a133d42fd26966fde10a68feb702b2bf0"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;&#160;&#160;<a class="el" href="group__SLPolicy.html#a69af92da67065ea6ec3762125402f5b8">PolicyStatus</a> = 2</td></tr>
+<tr class="memdesc:a133d42fd26966fde10a68feb702b2bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of policy level operations like policy add and policy delete. <br /></td></tr>
+<tr class="separator:a133d42fd26966fde10a68feb702b2bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b720365e748d48b7ef3bd4d61cdb34f"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="group__SLPolicy.html#structSLPolicyRuleStatusList">SLPolicyRuleStatusList</a>&#160;&#160;&#160;<a class="el" href="group__SLPolicy.html#af87f89cd1cd9f1077fbf578d0d93e41d">RulesStatus</a> = 3</td></tr>
+<tr class="memdesc:a2b720365e748d48b7ef3bd4d61cdb34f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of rule operations on a policy. <br /></td></tr>
+<tr class="separator:a2b720365e748d48b7ef3bd4d61cdb34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af271ffc538330a1adfd2d118e278ddbb"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="group__SLPolicy.html#structSLPolicyIntfStatusList">SLPolicyIntfStatusList</a>&#160;&#160;&#160;<a class="el" href="group__SLPolicy.html#aebcb6de21f126149b67f399f52937fe8">IntfStatus</a> = 4</td></tr>
+<tr class="memdesc:af271ffc538330a1adfd2d118e278ddbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of interface operations on a policy. <br /></td></tr>
+<tr class="separator:af271ffc538330a1adfd2d118e278ddbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f2eacec4d118b2540cf2b3e64dbc35"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:af0f2eacec4d118b2540cf2b3e64dbc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyRuleStatusList" id="structSLPolicyRuleStatusList"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyRuleStatusList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a86497e1b748ed75d8f42ae38aab504c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86497e1b748ed75d8f42ae38aab504c7"></a>
+repeated <a class="el" href="group__SLPolicy.html#structSLPolicyRuleStatus">SLPolicyRuleStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RulesStatus</b> =1</td></tr>
+<tr class="separator:a86497e1b748ed75d8f42ae38aab504c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyIntfStatusList" id="structSLPolicyIntfStatusList"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyIntfStatusList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a78d433cac426bff2c7bb89ed32dad67a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78d433cac426bff2c7bb89ed32dad67a"></a>
+repeated <a class="el" href="group__SLPolicy.html#structSLPolicyIntfStatus">SLPolicyIntfStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>IntfsStatus</b> = 1</td></tr>
+<tr class="separator:a78d433cac426bff2c7bb89ed32dad67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyRuleStatus" id="structSLPolicyRuleStatus"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyRuleStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a991ddeaee0e141be2c3fe34cf2afc7f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a991ddeaee0e141be2c3fe34cf2afc7f2"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>RuleName</b> = 1</td></tr>
+<tr class="separator:a991ddeaee0e141be2c3fe34cf2afc7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee78b183c514330c3d265b41e6c2fa87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee78b183c514330c3d265b41e6c2fa87"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Status</b> = 2</td></tr>
+<tr class="separator:aee78b183c514330c3d265b41e6c2fa87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyIntfStatus" id="structSLPolicyIntfStatus"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyIntfStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a8b790aebd9481053b58d9a0e02512dc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b790aebd9481053b58d9a0e02512dc1"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLInterface">SLInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Intf</b> = 1</td></tr>
+<tr class="separator:a8b790aebd9481053b58d9a0e02512dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3ff6b328eeec47cc22a514f648391e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc3ff6b328eeec47cc22a514f648391e"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Status</b> = 2</td></tr>
+<tr class="separator:afc3ff6b328eeec47cc22a514f648391e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyGetMsg" id="structSLPolicyGetMsg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyGetMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Get all the policies and the interfaces where it is applied. </p>
+</div>
+</div>
+</div>
+<a name="structSLPolicyInfo" id="structSLPolicyInfo"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>List of policies, rules and the interfaces where it is applied. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:ab291e1677b9b9d15608d439b2aa792ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab291e1677b9b9d15608d439b2aa792ed"></a>
+<a class="el" href="group__SLPolicy.html#structSLPolicyKey">SLPolicyKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#ab291e1677b9b9d15608d439b2aa792ed">Key</a> = 1</td></tr>
+<tr class="memdesc:ab291e1677b9b9d15608d439b2aa792ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Policy unique key identifier. <br /></td></tr>
+<tr class="separator:ab291e1677b9b9d15608d439b2aa792ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86bf55405f12a51889c1a4bbf9875f4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86bf55405f12a51889c1a4bbf9875f4c"></a>
+repeated <a class="el" href="group__SLPolicy.html#structSLPolicyRule">SLPolicyRule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a86bf55405f12a51889c1a4bbf9875f4c">PolicyRules</a> = 2</td></tr>
+<tr class="memdesc:a86bf55405f12a51889c1a4bbf9875f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of rules. <br /></td></tr>
+<tr class="separator:a86bf55405f12a51889c1a4bbf9875f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0979f71154ac684564386f4e29712e21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0979f71154ac684564386f4e29712e21"></a>
+repeated <a class="el" href="group__SLPolicy.html#structSLPolicyIntf">SLPolicyIntf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a0979f71154ac684564386f4e29712e21">PolicyIntfs</a> = 3</td></tr>
+<tr class="memdesc:a0979f71154ac684564386f4e29712e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of interfaces. <br /></td></tr>
+<tr class="separator:a0979f71154ac684564386f4e29712e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyGetMsgRsp" id="structSLPolicyGetMsgRsp"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyGetMsgRsp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:ad58669381f15445d3a42b45855b6fa1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad58669381f15445d3a42b45855b6fa1b"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#ad58669381f15445d3a42b45855b6fa1b">PolicyCfgOpStatus</a> = 1</td></tr>
+<tr class="memdesc:ad58669381f15445d3a42b45855b6fa1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of the policy get operation. <br /></td></tr>
+<tr class="separator:ad58669381f15445d3a42b45855b6fa1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aa5f6503fb0bc5450ff12a1ea5c6a7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8aa5f6503fb0bc5450ff12a1ea5c6a7f"></a>
+repeated <a class="el" href="group__SLPolicy.html#structSLPolicyInfo">SLPolicyInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a8aa5f6503fb0bc5450ff12a1ea5c6a7f">PolicyObjs</a> = 2</td></tr>
+<tr class="memdesc:a8aa5f6503fb0bc5450ff12a1ea5c6a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Policy info. It will be empty incase of failure. <br /></td></tr>
+<tr class="separator:a8aa5f6503fb0bc5450ff12a1ea5c6a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<a name="structSLPolicyGlobalGetMsg" id="structSLPolicyGlobalGetMsg"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyGlobalGetMsg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Policy Global Get Capabilities Message. </p>
+</div>
+</div>
+</div>
+<a name="structSLPolicyGlobalGetMsgRsp" id="structSLPolicyGlobalGetMsgRsp"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLPolicyGlobalGetMsgRsp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Policy Global Get Capabilities Message Response. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:ad732df925e85688d66d9bdbec7688210"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad732df925e85688d66d9bdbec7688210"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#ad732df925e85688d66d9bdbec7688210">ErrStatus</a> = 1</td></tr>
+<tr class="memdesc:ad732df925e85688d66d9bdbec7688210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Corresponding error code. <br /></td></tr>
+<tr class="separator:ad732df925e85688d66d9bdbec7688210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa47279182adfe72e0e3932377ee56ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa47279182adfe72e0e3932377ee56ac"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#afa47279182adfe72e0e3932377ee56ac">MaxPolicies</a> = 2</td></tr>
+<tr class="memdesc:afa47279182adfe72e0e3932377ee56ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of policies supported. <br /></td></tr>
+<tr class="separator:afa47279182adfe72e0e3932377ee56ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1b0ee7f9bc9bdf4f95d2401d6e0a36"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f1b0ee7f9bc9bdf4f95d2401d6e0a36"></a>
+uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLPolicy.html#a1f1b0ee7f9bc9bdf4f95d2401d6e0a36">MaxRules</a> = 3</td></tr>
+<tr class="memdesc:a1f1b0ee7f9bc9bdf4f95d2401d6e0a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max Rules supported within a policy. <br /></td></tr>
+<tr class="separator:a1f1b0ee7f9bc9bdf4f95d2401d6e0a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="gac94b7b85c615152b6fcadae36e67093a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLPolicy.html#gac94b7b85c615152b6fcadae36e67093a">SLApplyDirection</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Direction of policy apply Only ingress supported for pbr policies. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggac94b7b85c615152b6fcadae36e67093aa091f5c598eff14e7545123fdecb12045"></a>SL_APPLY_TYPE_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved, 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggac94b7b85c615152b6fcadae36e67093aacdc0e5ef4776d6a850d394ebd81930dc"></a>SL_APPLY_DIRECTION_INGRESS&#160;</td><td class="fielddoc">
+<p>Ingress direction, 0x1. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="gaab45854a05b7df6a2c060198f2a6d0d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLPolicy.html#gaab45854a05b7df6a2c060198f2a6d0d6">SLPolicyObjectOp</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Policy Object Operations. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggaab45854a05b7df6a2c060198f2a6d0d6a91fa1fa07c77a2c99807f96d2c5a52bc"></a>SL_OBJOP_POLICY_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved. 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaab45854a05b7df6a2c060198f2a6d0d6aa9abeb60ef6343c0005d3bcc687d349f"></a>SL_OBJOP_POLICY_ADD&#160;</td><td class="fielddoc">
+<p>Policy Add. 0x1. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaab45854a05b7df6a2c060198f2a6d0d6ad9a969a8adda0da7e789aafd63be888a"></a>SL_OBJOP_POLICY_DELETE&#160;</td><td class="fielddoc">
+<p>Policy Delete. 0x2. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaab45854a05b7df6a2c060198f2a6d0d6a59075e66e6a58c047972e93dd3d52d69"></a>SL_OBJOP_RULE_ADD&#160;</td><td class="fielddoc">
+<p>Rule Add. 0x3. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaab45854a05b7df6a2c060198f2a6d0d6a4ff371301ad69590cf32035415a93682"></a>SL_OBJOP_RULE_DELETE&#160;</td><td class="fielddoc">
+<p>Rule Delete. 0x4. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaab45854a05b7df6a2c060198f2a6d0d6a47c5639ddc27c42a271a3880b8198a4b"></a>SL_OBJOP_POLICY_APPLY&#160;</td><td class="fielddoc">
+<p>Policy Apply. 0x5. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaab45854a05b7df6a2c060198f2a6d0d6a3b3119961685fdc51934abc3df33d582"></a>SL_OBJOP_POLICY_UNAPPLY&#160;</td><td class="fielddoc">
+<p>Policy UnApply. 0x6. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga322acb3942d4731a4737299c2f4e3d8e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__SLPolicy.html#ga322acb3942d4731a4737299c2f4e3d8e">SLPolicyType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Policy types supported. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga322acb3942d4731a4737299c2f4e3d8ea9381438f90888709cdac9d0d6b7b2bbb"></a>SL_PM_PTYPE_RESERVED&#160;</td><td class="fielddoc">
+<p>Reserved, 0x0. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga322acb3942d4731a4737299c2f4e3d8ea88ba03bbf2ca19e90ce8e9f7977780f8"></a>SL_PM_PTYPE_PBR&#160;</td><td class="fielddoc">
+<p>PBR type policy. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.8-->
+<!-- start footer part -->
+</div>
+</div>
+</div>
+</div>
+</div>
+    <div class="page__footer" style="position: relative;">
+      <footer>
+<div class="page__footer-follow">
+  <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/xrdocs"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="http://github.com/xrdocs"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    <li><a href="https://xrdocs.github.io/cisco-service-layer/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+<div class="page__footer-copyright">&copy; 2017 Cisco Systems Inc. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+    <script src="https://xrdocs.github.io/cisco-service-layer/assets/js/main.min.js"></script>
+<script src="https://xrdocs.github.io/cisco-service-layer/assets/js/scrollmenu.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-78256516-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- material-scrolltop button -->
+<button class="material-scrolltop" type="button"></button>
+<!-- material-scrolltop plugin -->
+<script src="https://xrdocs.github.io/cisco-service-layer/assets/js/material-scrolltop.js"></script>
+<!-- Initialize material-scrolltop with (minimal) -->
+<script>
+    $('body').materialScrollTop();
+</script>
+</body>
+</html>

@@ -186,6 +186,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><h2>Table of Contents</h2>
 <ul>
 <li><a href="#server">Server Setup</a></li>
+<li><a href="#python">Python Setup</a></li>
 <li><a href="#quick">Running the tutorial</a></li>
 <li><a href="#gen">Generate gRPC Code</a></li>
 <li><a href="#init">Initialize the client server connection</a></li>
@@ -218,10 +219,13 @@ end
 $ export SERVER_PORT=57344
 </pre><p>The above assumes that the IP address of the node is 192.168.122.192.</p>
 <p>This completes all the setup needed to start writing some code! Hop into your python interpreter and try out some of the commands to get familiar with the API.</p>
-<h2><a class="anchor" id="quick"></a>Running the tutorial</h2>
+<h4><a class="anchor" id="python"></a>Setting up Python Environment</h4>
+<p>To install dependencies first create a virtual env: python3.11 -m venv sl-env source sl-env/bin/activate pip install -r grpc/python/requirements.txt</p>
+<h4><a class="anchor" id="quick"></a>Running the tutorial</h4>
 <p>The following basic tutorial will walk you through getting started with the Service Layer API, in particular on how to add a route. This may require some initial python and GRPC setup, which will be explained below. For now, if you already have passed this setup step, run the example: </p><pre class="fragment">cd grpc/python/src
-python3 tutorial/quickstart.py
-</pre><p>The following sections explain the details of the above example tutorial.</p>
+python3.11 tutorial/quickstart.py -u &lt;username&gt; -p &lt;password&gt;
+</pre><p> each of the individual tests also can be run in similar way.(vrf.py, riute.py,client_init.py)</p>
+<p>The following sections explain the details of the above example tutorial.</p>
 <h4><a class="anchor" id="gen"></a>Generate gRPC Code (optional in this example)</h4>
 <p>If you are not familiar with gRPC, we recommend you refer to gRPC's documentation before beginning with our tutorial: <a href="http://www.grpc.io/docs/">gRPC Docs</a></p>
 <p>You should have received all of the Protobuf files required to run the Cisco Service Laye API. In order to generate the gRPC client side code stubs in python, run the following command (you may have to adjust the path to the proto files and the output according to your requirements):</p>
@@ -233,7 +237,7 @@ client_init.py : Used to setup the client-server connection
 vrf.py         : Used to setup the Route vertical
 </pre><p>As shown in quickstart.py, the first thing to do is to setup the GRPC channel: </p><pre class="fragment">server_ip, server_port = util.get_server_ip_port()
 channel = grpc.insecure_channel(server_ip, server_port)
-</pre><p>Once connected, we need to handshake the API version number with the server. The same RPC call also sets up an asynchronous stream of notifications from the server. The first notification would be the response to our version number message i.e. <a class="el" href="group__SLGlobal.html#structSLInitMsg" title="Initialization message sent to the server. ">SLInitMsg</a>, as a <a class="el" href="group__SLGlobal.html#structSLGlobalNotif" title="Globals query message. ">SLGlobalNotif</a> event with type SL_GLOBAL_EVENT_TYPE_VERSION. This can be done by calling: </p><pre class="fragment">SLGlobalInitNotif(init_msg, Timeout)
+</pre><p>Once connected, the client may optionally handshake the API version number with the server. The same RPC call also sets up an asynchronous stream of heartbeat notifications from the server. The first notification would be the response to our version number message i.e. <a class="el" href="group__SLGlobal.html#structSLInitMsg" title="Initialization message sent to the server. ">SLInitMsg</a>, as a <a class="el" href="group__SLGlobal.html#structSLGlobalNotif" title="Globals query message. ">SLGlobalNotif</a> event with type SL_GLOBAL_EVENT_TYPE_VERSION. This can be done by calling: </p><pre class="fragment">SLGlobalInitNotif(init_msg, Timeout)
 </pre><p>The above function takes the client major, minor and sub version numbers and sends them to the Service Layer service to get a handshake on the API version number. More on this below.</p>
 <p>The following code snippets are copied from file client_init.py </p><pre class="fragment">def client_init(stub, event):
     #

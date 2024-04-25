@@ -1,11 +1,13 @@
 var searchData=
 [
+  ['slaf',['SLAF',['../group__SLAF.html',1,'']]],
   ['slbfdcommon',['SLBFDCommon',['../group__SLBFDCommon.html',1,'']]],
   ['slbfdipv4oper',['SLBfdIPv4Oper',['../group__SLBfdIPv4Oper.html',1,'']]],
   ['slbfdipv6oper',['SLBfdIPv6Oper',['../group__SLBfdIPv6Oper.html',1,'']]],
   ['slcommontypes',['SLCommonTypes',['../group__SLCommonTypes.html',1,'']]],
   ['slglobal',['SLGlobal',['../group__SLGlobal.html',1,'']]],
   ['slmpls',['SLMpls',['../group__SLMpls.html',1,'']]],
+  ['slpolicy',['SLPolicy',['../group__SLPolicy.html',1,'']]],
   ['slroutecommon',['SLRouteCommon',['../group__SLRouteCommon.html',1,'']]],
   ['slrouteipv4oper',['SLRouteIPv4Oper',['../group__SLRouteIPv4Oper.html',1,'']]],
   ['slrouteipv6oper',['SLRouteIPv6Oper',['../group__SLRouteIPv6Oper.html',1,'']]],

@@ -1,5 +1,11 @@
 var searchData=
 [
+  ['slafget',['SLAFGet',['../group__SLAF.html#gafa0f7aaf4501618ca8ba598868fada5e',1,'SLAF']]],
+  ['slafnotifstream',['SLAFNotifStream',['../group__SLAF.html#gaa3ed83221e354a8e1db2bce8d25547d1',1,'SLAF']]],
+  ['slafop',['SLAFOp',['../group__SLAF.html#ga72e640f8f0697cd7ee2999876739d19b',1,'SLAF']]],
+  ['slafopstream',['SLAFOpStream',['../group__SLAF.html#ga6f4473128fb4ceb864a3b751530810c9',1,'SLAF']]],
+  ['slafvrfregget',['SLAFVrfRegGet',['../group__SLAF.html#gab0e3cf8df763ddef258a73fe59fe720d',1,'SLAF']]],
+  ['slafvrfregop',['SLAFVrfRegOp',['../group__SLAF.html#ga72739d6ed0c892150d6a4caf5b72fa68',1,'SLAF']]],
   ['slbfdv4get',['SLBfdv4Get',['../group__SLBfdIPv4Oper.html#ga1954d31c1d3805652c083d1e1842c4ea',1,'SLBfdv4Oper']]],
   ['slbfdv4getnotifstream',['SLBfdv4GetNotifStream',['../group__SLBfdIPv4Oper.html#ga541afb8fa477e6ba8bc1f4e9e26c8cc1',1,'SLBfdv4Oper']]],
   ['slbfdv4getstats',['SLBfdv4GetStats',['../group__SLBfdIPv4Oper.html#ga8cb7bb01f541b365f5174e54fa336c1b',1,'SLBfdv4Oper']]],
@@ -35,6 +41,9 @@ var searchData=
   ['slmplslabelblockget',['SLMplsLabelBlockGet',['../group__SLMpls.html#ga2773c59e052b2774a9d1322c5a0d8443',1,'SLMplsOper']]],
   ['slmplslabelblockop',['SLMplsLabelBlockOp',['../group__SLMpls.html#ga4ea9b112f1cdc5f1216cf9e42e0f460d',1,'SLMplsOper']]],
   ['slmplsregop',['SLMplsRegOp',['../group__SLMpls.html#ga78e6c73baac90df7abfa6ca091e2ad80',1,'SLMplsOper']]],
+  ['slpolicyget',['SLPolicyGet',['../group__SLPolicy.html#gad65b65ee8b223f19260bf22ceb024de5',1,'SLPolicy']]],
+  ['slpolicyglobalget',['SLPolicyGlobalGet',['../group__SLPolicy.html#gaeabe35f17a752e42676810230dea6c35',1,'SLPolicy']]],
+  ['slpolicyop',['SLPolicyOp',['../group__SLPolicy.html#ga5cdcaea63a0f1fb0f184fdc91414eb1d',1,'SLPolicy']]],
   ['slroutev4get',['SLRoutev4Get',['../group__SLRouteIPv4Oper.html#ga46c7d6ff6c494509c9f97c003e84ff62',1,'SLRoutev4Oper']]],
   ['slroutev4getnotifstream',['SLRoutev4GetNotifStream',['../group__SLRouteIPv4Oper.html#gaf248fb2c08e64c817bd3ed2509eadd64',1,'SLRoutev4Oper']]],
   ['slroutev4getstream',['SLRoutev4GetStream',['../group__SLRouteIPv4Oper.html#ga5ff6c135e5d22539eb16080e79e8d66b',1,'SLRoutev4Oper']]],

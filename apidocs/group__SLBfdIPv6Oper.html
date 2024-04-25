@@ -188,6 +188,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Service Description</h2>
+<p>Used for IPv6 BFD registrations, and BFD session operations and notifications. </p>
 <p>Defines the RPC for adding, deleting, updating, and retrieving BFD sessions. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -346,13 +347,25 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <a class="el" href="group__SLBFDCommon.html#ga435e20adf0b2db870d1cf25028fe3a12">SLBfdNotifType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga470b890992b31e85850c090da50f64c8">SLBfdv6Notif::EventType</a> = 1</td></tr>
 <tr class="memdesc:ga470b890992b31e85850c090da50f64c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event Type. <br /></td></tr>
 <tr class="separator:ga470b890992b31e85850c090da50f64c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga40a27aa625dd31a2861078928e75abbf"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga40a27aa625dd31a2861078928e75abbf">SLBfdv6Notif::Event</a></td></tr>
-<tr class="memdesc:ga40a27aa625dd31a2861078928e75abbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on EventType.  <a href="#ga40a27aa625dd31a2861078928e75abbf">More...</a><br /></td></tr>
-<tr class="separator:ga40a27aa625dd31a2861078928e75abbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga88d3200a87b6da71320c7d4ad79b0a3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga88d3200a87b6da71320c7d4ad79b0a3d"></a>
-<a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6SessionState">SLBfdv6SessionState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga88d3200a87b6da71320c7d4ad79b0a3d">SLBfdv6Notif::Session</a> = 3</td></tr>
-<tr class="memdesc:ga88d3200a87b6da71320c7d4ad79b0a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_BFD_EVENT_TYPE_SESSION_STATE: =&gt; this field carries the session state info <br /></td></tr>
-<tr class="separator:ga88d3200a87b6da71320c7d4ad79b0a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6c3510b42d6055872c9a153027aef05"><td class="memItemLeft" ><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;&#160;&#160;<a class="el" href="group__SLBfdIPv6Oper.html#ga3a35d88205b773349d0b43ee0a594240">SLBfdv6Notif::ErrStatus</a> = 2</td></tr>
+<tr class="memdesc:gac6c3510b42d6055872c9a153027aef05"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_BFD_EVENT_TYPE_ERROR: =&gt; This field carries error info, if any error occurs during notification subscription.  <a href="#gac6c3510b42d6055872c9a153027aef05">More...</a><br /></td></tr>
+<tr class="separator:gac6c3510b42d6055872c9a153027aef05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga83c1a68241eee4063f323cedc48c99fb"><td class="memItemLeft" >
+<a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6SessionState">SLBfdv6SessionState</a>&#160;&#160;&#160;<a class="el" href="group__SLBfdIPv6Oper.html#ga88d3200a87b6da71320c7d4ad79b0a3d">SLBfdv6Notif::Session</a> = 3</td></tr>
+<tr class="memdesc:ga83c1a68241eee4063f323cedc48c99fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_BFD_EVENT_TYPE_SESSION_STATE: =&gt; this field carries the session state info <br /></td></tr>
+<tr class="separator:ga83c1a68241eee4063f323cedc48c99fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00c0af9087656d119084e5a86dfbd456"><td class="memItemLeft" ><a class="anchor" id="ga00c0af9087656d119084e5a86dfbd456"></a>
+oneof {</td></tr>
+<tr class="memitem:gac6c3510b42d6055872c9a153027aef05"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;&#160;&#160;<a class="el" href="group__SLBfdIPv6Oper.html#ga3a35d88205b773349d0b43ee0a594240">SLBfdv6Notif::ErrStatus</a> = 2</td></tr>
+<tr class="memdesc:gac6c3510b42d6055872c9a153027aef05"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_BFD_EVENT_TYPE_ERROR: =&gt; This field carries error info, if any error occurs during notification subscription.  <a href="group__SLBfdIPv6Oper.html#gac6c3510b42d6055872c9a153027aef05">More...</a><br /></td></tr>
+<tr class="separator:gac6c3510b42d6055872c9a153027aef05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga83c1a68241eee4063f323cedc48c99fb"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6SessionState">SLBfdv6SessionState</a>&#160;&#160;&#160;<a class="el" href="group__SLBfdIPv6Oper.html#ga88d3200a87b6da71320c7d4ad79b0a3d">SLBfdv6Notif::Session</a> = 3</td></tr>
+<tr class="memdesc:ga83c1a68241eee4063f323cedc48c99fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_BFD_EVENT_TYPE_SESSION_STATE: =&gt; this field carries the session state info <br /></td></tr>
+<tr class="separator:ga83c1a68241eee4063f323cedc48c99fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00c0af9087656d119084e5a86dfbd456"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga00c0af9087656d119084e5a86dfbd456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on EventType. <br /></td></tr>
+<tr class="separator:ga00c0af9087656d119084e5a86dfbd456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">RPC Documentation</h2>
 <a class="anchor" id="gafcc7e75a4bdb4702d05a625abf0c8e56"></a>
@@ -368,6 +381,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>BFD notifications. </p>
 <p>This call is used to get a stream of session state notifications. The caller must maintain the GRPC channel as long as there is interest in BFD session notifications. Only sessions that were created through this API will be notified to caller. This call can be used to get "push" notifications for session states. It is advised that the caller register for notifications before any sessions are created to avoid any loss of notifications. </p>
 
 </div>
@@ -385,9 +400,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>BFD Registration Operations. </p>
 <p><a class="el" href="group__SLBFDCommon.html#a6541b81fddd9e1eceb3ee81592fd5609" title="Registration Operation. ">SLBfdRegMsg.Oper</a> = SL_REGOP_REGISTER: Global BFD registration. A client Must Register BEFORE BFD sessions can be added/modified.</p>
 <p><a class="el" href="group__SLBFDCommon.html#a6541b81fddd9e1eceb3ee81592fd5609" title="Registration Operation. ">SLBfdRegMsg.Oper</a> = SL_REGOP_UNREGISTER: Global BFD un-registration. This call is used to end all BFD notifications and unregister any interest in BFD session configuration. This call cleans up all BFD sessions previously requested.</p>
-<p><a class="el" href="group__SLBFDCommon.html#a6541b81fddd9e1eceb3ee81592fd5609" title="Registration Operation. ">SLBfdRegMsg.Oper</a> = SL_REGOP_EOF: BFD End Of File. After Registration, the client is expected to send an EOF message to convey the end of replay of the client's known objects. This is especially useful under certain restart scenarios when the client and the server are trying to synchronize their BFD sessions. </p>
+<p><a class="el" href="group__SLBFDCommon.html#a6541b81fddd9e1eceb3ee81592fd5609" title="Registration Operation. ">SLBfdRegMsg.Oper</a> = SL_REGOP_EOF: BFD End Of File. After Registration, the client is expected to send an EOF message to convey the end of replay of the client's known objects. This is especially useful under certain restart scenarios when the client and the server are trying to synchronize their BFD sessions.</p>
+<p>The BFD registration operations can be used by the client to synchronize BFD sessions with the server. When the client re-registers with the server using SL_REGOP_REGISTER, server marks all BFD sessions as stale. Client can then reprogram BFD sessions. When client sends SL_REGOP_EOF, any session not reprogrammed by the client are removed from the device.</p>
+<p>The client must perform all operations (BFD registration, BFD session operations) from a single execution context. </p>
 
 </div>
 </div>
@@ -404,6 +423,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieve BFD session attributes and state. </p>
 <p>This call can be used to "poll" the current state of a session. </p>
 
 </div>
@@ -421,6 +442,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>BFD session operations. </p>
 <p><a class="el" href="group__SLBfdIPv6Oper.html#ga30222267c636f5dadb01f28c40017b89" title="BFD Object Operations. ">SLBfdv6Msg.Oper</a> = SL_OBJOP_ADD: Add one or multiple BFD sessions.</p>
 <p><a class="el" href="group__SLBfdIPv6Oper.html#ga30222267c636f5dadb01f28c40017b89" title="BFD Object Operations. ">SLBfdv6Msg.Oper</a> = SL_OBJOP_UPDATE: Update one or multiple BFD sessions.</p>
 <p><a class="el" href="group__SLBfdIPv6Oper.html#ga30222267c636f5dadb01f28c40017b89" title="BFD Object Operations. ">SLBfdv6Msg.Oper</a> = SL_OBJOP_DELETE: Delete one or multiple BFD sessions. </p>
@@ -437,7 +460,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD unique key identifier. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:gafe2c022314e26b74719951dabd2138c4"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="group__SLBFDCommon.html#gae38a3e8c144491be2a88860ca653bda2">SLBfdType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#gafe2c022314e26b74719951dabd2138c4">Type</a> = 1</td></tr>
@@ -472,7 +496,8 @@ bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gro
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD session information. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ga9e17b6cdce8643d32135621192805757"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6Key">SLBfdv6Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga9e17b6cdce8643d32135621192805757">Key</a> = 1</td></tr>
@@ -495,7 +520,8 @@ bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gro
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>Contains a List of BFD session objects. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ga30222267c636f5dadb01f28c40017b89"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="group__SLCommonTypes.html#ga0b166605b901d6e5ad5f7706ac60baf1">SLObjectOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga30222267c636f5dadb01f28c40017b89">Oper</a> = 1</td></tr>
@@ -518,7 +544,8 @@ repeated <a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6SessionCfg">
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD result. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:gaa8cde0d5503a35a74c3b500310c05b58"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#gaa8cde0d5503a35a74c3b500310c05b58">ErrStatus</a> = 1</td></tr>
@@ -541,7 +568,8 @@ repeated <a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6SessionCfg">
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD bulk result. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ga42d2210f492bea4eb41ff4d8b927df6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga42d2210f492bea4eb41ff4d8b927df6c">StatusSummary</a> = 1</td></tr>
 <tr class="memdesc:ga42d2210f492bea4eb41ff4d8b927df6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summary result of the bulk operation (refer to enum <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) In general, the StatusSummary implies one of 3 things:  <a href="group__SLBfdIPv6Oper.html#ga42d2210f492bea4eb41ff4d8b927df6c">More...</a><br /></td></tr>
@@ -562,7 +590,8 @@ repeated <a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6SessionCfg">
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD Get Message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ga8c075ec2234bd537638b5e6a4737414c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6Key">SLBfdv6Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga8c075ec2234bd537638b5e6a4737414c">Key</a> = 1</td></tr>
 <tr class="memdesc:ga8c075ec2234bd537638b5e6a4737414c"><td class="mdescLeft">&#160;</td><td class="mdescRight">BFD key.  <a href="group__SLBfdIPv6Oper.html#ga8c075ec2234bd537638b5e6a4737414c">More...</a><br /></td></tr>
@@ -591,7 +620,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD Session Config and State info. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ga44d8a824e6c278b15ee6d794a3fcdb75"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6Key">SLBfdv6Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga44d8a824e6c278b15ee6d794a3fcdb75">Key</a> = 1</td></tr>
@@ -618,7 +648,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD Get Message Response. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:gacb750efc62effa5781dff566cce9fc6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#gacb750efc62effa5781dff566cce9fc6c">Eof</a> = 1</td></tr>
 <tr class="memdesc:gacb750efc62effa5781dff566cce9fc6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">End Of File.  <a href="group__SLBfdIPv6Oper.html#gacb750efc62effa5781dff566cce9fc6c">More...</a><br /></td></tr>
@@ -643,7 +674,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD Session and State info. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ga0d5c628a1c218d0792d3964972a6b5ab"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6Key">SLBfdv6Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga0d5c628a1c218d0792d3964972a6b5ab">Key</a> = 1</td></tr>
@@ -666,19 +698,25 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>BFD Session and State info Message. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:ga470b890992b31e85850c090da50f64c8"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="group__SLBFDCommon.html#ga435e20adf0b2db870d1cf25028fe3a12">SLBfdNotifType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga470b890992b31e85850c090da50f64c8">EventType</a> = 1</td></tr>
 <tr class="memdesc:ga470b890992b31e85850c090da50f64c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event Type. <br /></td></tr>
 <tr class="separator:ga470b890992b31e85850c090da50f64c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga40a27aa625dd31a2861078928e75abbf"><td class="memItemLeft" align="right" valign="top">oneof&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga40a27aa625dd31a2861078928e75abbf">Event</a></td></tr>
-<tr class="memdesc:ga40a27aa625dd31a2861078928e75abbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on EventType.  <a href="group__SLBfdIPv6Oper.html#ga40a27aa625dd31a2861078928e75abbf">More...</a><br /></td></tr>
-<tr class="separator:ga40a27aa625dd31a2861078928e75abbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga88d3200a87b6da71320c7d4ad79b0a3d"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6SessionState">SLBfdv6SessionState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBfdIPv6Oper.html#ga88d3200a87b6da71320c7d4ad79b0a3d">Session</a> = 3</td></tr>
-<tr class="memdesc:ga88d3200a87b6da71320c7d4ad79b0a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_BFD_EVENT_TYPE_SESSION_STATE: =&gt; this field carries the session state info <br /></td></tr>
-<tr class="separator:ga88d3200a87b6da71320c7d4ad79b0a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00c0af9087656d119084e5a86dfbd456"><td class="memItemLeft" >
+oneof {</td></tr>
+<tr class="memitem:gac6c3510b42d6055872c9a153027aef05"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;&#160;&#160;<a class="el" href="group__SLBfdIPv6Oper.html#ga3a35d88205b773349d0b43ee0a594240">SLBfdv6Notif::ErrStatus</a> = 2</td></tr>
+<tr class="memdesc:gac6c3510b42d6055872c9a153027aef05"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_BFD_EVENT_TYPE_ERROR: =&gt; This field carries error info, if any error occurs during notification subscription.  <a href="group__SLBfdIPv6Oper.html#gac6c3510b42d6055872c9a153027aef05">More...</a><br /></td></tr>
+<tr class="separator:gac6c3510b42d6055872c9a153027aef05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga83c1a68241eee4063f323cedc48c99fb"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="group__SLBfdIPv6Oper.html#structSLBfdv6SessionState">SLBfdv6SessionState</a>&#160;&#160;&#160;<a class="el" href="group__SLBfdIPv6Oper.html#ga88d3200a87b6da71320c7d4ad79b0a3d">SLBfdv6Notif::Session</a> = 3</td></tr>
+<tr class="memdesc:ga83c1a68241eee4063f323cedc48c99fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">case EventType == SL_BFD_EVENT_TYPE_SESSION_STATE: =&gt; this field carries the session state info <br /></td></tr>
+<tr class="separator:ga83c1a68241eee4063f323cedc48c99fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00c0af9087656d119084e5a86dfbd456"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:ga00c0af9087656d119084e5a86dfbd456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Further info based on EventType. <br /></td></tr>
+<tr class="separator:ga00c0af9087656d119084e5a86dfbd456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 </div>
@@ -693,6 +731,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returned entries as requested in the Get operation. </p>
 <p>if Error is SL_SUCCESS, Entries contains the info requested </p>
 
 </div>
@@ -706,20 +746,38 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>End Of File. </p>
 <p>When set to True, it indicates that the server has returned M, where M &lt; N, of the original N requested Entries. </p>
 
 </div>
 </div>
-<a class="anchor" id="ga40a27aa625dd31a2861078928e75abbf"></a>
+<a class="anchor" id="ga3a35d88205b773349d0b43ee0a594240"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">oneof SLBfdv6Notif::Event</td>
+          <td class="memname"><a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a> SLBfdv6Notif::ErrStatus = 2</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">        </div><div class="line">        <a class="code" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a> ErrStatus = 2</div></div><!-- fragment -->
+
+<p>case EventType == SL_BFD_EVENT_TYPE_ERROR: =&gt; This field carries error info, if any error occurs during notification subscription. </p>
+
+</div>
+</div>
+<a class="anchor" id="gac6c3510b42d6055872c9a153027aef05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SLErrorStatus { ... } ::ErrStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>case EventType == SL_BFD_EVENT_TYPE_ERROR: =&gt; This field carries error info, if any error occurs during notification subscription. </p>
+
 </div>
 </div>
 <a class="anchor" id="ga8c075ec2234bd537638b5e6a4737414c"></a>
@@ -731,6 +789,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>BFD key. </p>
 <p>If the Key is not specified, then request up to the first 'EntriesCount' entries. </p>
 
 </div>
@@ -745,6 +805,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
       </table>
 </div><div class="memdoc">
 
+<p>In case of errors, this field indicates which entry in the bulk was erroneous. </p>
+
 </div>
 </div>
 <a class="anchor" id="ga9a4fb38763ee7c0ec705693d0f58f035"></a>
@@ -756,6 +818,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Global BFD event sequence number. </p>
 <p>Return all BFD sessions with sequence number &gt;= SeqNum. </p>
 
 </div>
@@ -769,6 +833,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Summary result of the bulk operation (refer to enum <a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>) In general, the StatusSummary implies one of 3 things: </p>
 <ol type="1">
 <li>SL_SUCCESS: signifies that the entire bulk operation was successful. In this case, the Results list is empty.</li>
 <li>SL_SOME_ERR: signifies that the operation failed for one or more entries. In this case, Results holds the result for each individual entry in the bulk.</li>
