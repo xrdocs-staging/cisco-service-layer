@@ -1,10 +1,26 @@
 var searchData=
 [
+  ['l2bundlememberattr',['L2BundleMemberAttr',['../group__SLBgplsTopo.html#a5fcff036787a60a5400dd519efadd7ec',1,'SLBgplsTopoLinkAttr']]],
   ['label',['Label',['../group__SLRouteL2Oper.html#a6d22d5ed412b0349171c86bc34a0e62a',1,'SLL2ImetRoute']]],
   ['labelblockcount',['LabelBlockCount',['../group__SLMpls.html#ab5ecbbf60f1d1de8390b8270eafd7b64',1,'SLMplsGetStatsMsgRsp']]],
   ['labelblocksize',['LabelBlockSize',['../group__SLMpls.html#a6eadca73cc43a8b18c31d0b7198f0b75',1,'SLMplsLabelBlockKey']]],
+  ['labelindex',['LabelIndex',['../group__SLBgplsTopo.html#ad09f0c7e5b359c9931d946e6a9243e3a',1,'SLBgplsTopoAdjSid::LabelIndex()'],['../group__SLBgplsTopo.html#a89d9aaf1b89019307b669b4f98fa1ed4',1,'SLBgplsTopoLanAdjSid::LabelIndex()'],['../group__SLBgplsTopo.html#aa19be82913377de0c241daa6c80502c4',1,'SLBgplsTopoPrefixSid::LabelIndex()']]],
   ['labelstack',['LabelStack',['../group__SLMpls.html#a8c00f52f6be2663e8a1b744e78060b92',1,'SLMplsPath::LabelStack()'],['../group__SLRouteCommon.html#aa9eabed8a482f30572651e7aa8da0472',1,'SLRoutePath::LabelStack()']]],
   ['labeltablesize',['LabelTableSize',['../group__SLMpls.html#aeba55f4026641426cfb6db63f604bb7e',1,'SLMplsGetMsgRsp']]],
+  ['lanadjsid',['LanAdjSid',['../group__SLBgplsTopo.html#a6070967988f72793f9cc03f7efbe54e7',1,'SLBgplsTopoLinkAttr::LanAdjSid()'],['../group__SLBgplsTopo.html#a6758e55b091bd671ac704583144ba49b',1,'SLBgplsTopoL2BundleMemberAttr::LanAdjSid()']]],
+  ['link',['Link',['../group__SLBgplsTopo.html#a2e1e1fa1f6565a1ca476d7cb098d6028',1,'SLBgplsTopoData::Link()'],['../group__SLBgplsTopo.html#a50f77c9a6e3fdd7f8115944dbc76e831',1,'SLBgplsTopoLinkData::Link()']]],
+  ['linkattr',['LinkAttr',['../group__SLBgplsTopo.html#afe71426b3a6ee7902e5f8046f94a47ec',1,'SLBgplsTopoLinkData']]],
+  ['linkdescr',['LinkDescr',['../group__SLBgplsTopo.html#a9aff44885a0a9d9e6f1d94ab66a5e8d2',1,'SLBgplsTopoLink']]],
+  ['linklocremid',['LinkLocRemId',['../group__SLBgplsTopo.html#a9c6b5f508079843bf46dffb0f76f678a',1,'SLBgplsTopoLinkAttr']]],
+  ['linkmsd',['LinkMsd',['../group__SLBgplsTopo.html#ad31dce58a6193833b15815c1f730dd02',1,'SLBgplsTopoLinkAttr']]],
+  ['linkname',['LinkName',['../group__SLBgplsTopo.html#ae9ebb625fc58d5c47d0b75c71002234d',1,'SLBgplsTopoLinkAttr']]],
   ['loadmetric',['LoadMetric',['../group__SLMpls.html#a56ba4482cf6ee99425e32b534300f407',1,'SLMplsPath::LoadMetric()'],['../group__SLRouteCommon.html#a069e2d56da815b511af2f828421fc87e',1,'SLRoutePath::LoadMetric()']]],
-  ['locallabel',['LocalLabel',['../group__SLAF.html#ad288c983dd9cc23160b478c98e826846',1,'SLMplsEntry::LocalLabel()'],['../group__SLMpls.html#a26a5ae27a8d94cb2a290e93064794c26',1,'SLMplsIlmKey::LocalLabel()'],['../group__SLRouteCommon.html#ac4424de67431d9b9a8cc748258430c24',1,'SLRouteCommon::LocalLabel()']]]
+  ['localid',['LocalId',['../group__SLBgplsTopo.html#a84181f1d8c63d0c29085c8182f766eab',1,'SLBgplsTopoLinkDescr::LocalId()'],['../group__SLBgplsTopo.html#aeb78505eb0e3e02e50b076c30d59631a',1,'SLBplsTopoLinkLocRemId::LocalId()']]],
+  ['localipv4',['LocalIpv4',['../group__SLBgplsTopo.html#a533d3198dbceefae974c74246699d880',1,'SLBgplsTopoLinkDescr::LocalIpv4()'],['../group__SLBgplsTopo.html#a033c24289be2088e1053f64129643bb7',1,'SLBgplsTopoNodeAttr::LocalIpv4()']]],
+  ['localipv4routerid',['LocalIpv4RouterId',['../group__SLBgplsTopo.html#a64301964d6d70cf0b15595b9a330d7dd',1,'SLBgplsTopoLinkAttr']]],
+  ['localipv6',['LocalIpv6',['../group__SLBgplsTopo.html#ae34dd437fffc6f96fb40df303b6c4bef',1,'SLBgplsTopoLinkDescr::LocalIpv6()'],['../group__SLBgplsTopo.html#a0230154d85bd0e9bd3ee7e60358ba529',1,'SLBgplsTopoNodeAttr::LocalIpv6()']]],
+  ['localipv6routerid',['LocalIpv6RouterId',['../group__SLBgplsTopo.html#aaf043fecc8b2880428b05be625382d90',1,'SLBgplsTopoLinkAttr']]],
+  ['locallabel',['LocalLabel',['../group__SLAF.html#ad288c983dd9cc23160b478c98e826846',1,'SLMplsEntry::LocalLabel()'],['../group__SLMpls.html#a26a5ae27a8d94cb2a290e93064794c26',1,'SLMplsIlmKey::LocalLabel()'],['../group__SLRouteCommon.html#ac4424de67431d9b9a8cc748258430c24',1,'SLRouteCommon::LocalLabel()']]],
+  ['localnodedescr',['LocalNodeDescr',['../group__SLBgplsTopo.html#a049bfd63d5d1a75a135154f95da714a6',1,'SLBgplsTopoLink']]],
+  ['loss',['Loss',['../group__SLBgplsTopo.html#a9cca911b04965756c9d7281fd93872f1',1,'SLBgplsTopoUniLinkLoss']]]
 ];

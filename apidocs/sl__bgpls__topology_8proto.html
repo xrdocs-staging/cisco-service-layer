@@ -1,0 +1,574 @@
+<!-- HTML header for doxygen 1.8.8-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- For Mobile Devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+        <meta name="generator" content="Doxygen 1.8.11"/>
+<meta charset="utf-8">
+<!-- begin SEO -->
+<title>            Blogs and Events      IOS XR Documentation @xrdocs      </title>
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="IOS XR Documentation @xrdocs">
+<meta property="og:title" content="Blogs and Events">
+  <link rel="canonical" href="https://xrdocs.github.io/cisco-service-layer/apidocs/">
+  <meta property="og:url" content="/cisco-service-layer/apidocs/">
+  <meta name="twitter:site" content="@xrdocs">
+  <meta name="twitter:title" content="Blogs and Events">
+  <meta name="twitter:description" content="Documentation, Blogs and Tutorials on the IOS-XR software">
+  <meta name="twitter:url" content="https://xrdocs.github.io/cisco-service-layer/apidocs/">
+    <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="https://xrdocs.github.io/cisco-service-layer/images/service-layer-icon-xrdocs.png">
+    <meta name="twitter:creator" content="@xrdocs">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "https://xrdocs.github.io/cisco-service-layer",
+      "logo": "https://xrdocs.github.io/images/service-layer-icon-xrdocs.png"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "person",
+      "name" : "Cisco Systems Inc",
+      "url" : "https://xrdocs.github.io/cisco-service-layer",
+      "sameAs" : ["https://twitter.com/xrdocs"]
+    }
+  </script>
+<!-- end SEO -->
+<link href="https://xrdocs.github.io/cisco-service-layer/feed.xml" type="application/atom+xml" rel="alternate" title="IOS XR Documentation @xrdocs Feed">
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="jgRKKm6B9FwJJPXxpmc0-EP3D0Mh8JHXaJqoYIGj1ek" />
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+<script>
+if (!(window.location.host.startsWith("127.0.0.1") || window.location.host.startsWith("localhost")) && (window.location.host.substr(-10) == '.github.io') && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
+<!-- For all browsers -->
+        <link href="customdoxygen.css" rel="stylesheet" type="text/css" />
+        <link href="doxyboot.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="/assets/css/main.css">
+<meta http-equiv="cleartype" content="on">
+<style>
+.underline-on-hover:hover {
+    text-decoration: underline;
+}
+.searchForm{
+      border-radius:5px;
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      width: 900px;
+   }
+#search_results{
+      display: table; margin:0 auto;
+   }
+</style>
+</style>
+<!-- start custom head snippets -->
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/lity.min.css" rel="stylesheet">
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/cisco-sans.min.css" rel="stylesheet">
+<link href="https://xrdocs.github.io/cisco-service-layer/assets/css/material-scrolltop.css" rel="stylesheet">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://xrdocs.github.io/cisco-service-layer/images/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://xrdocs.github.io/cisco-service-layer/images/favicon-128.png" sizes="128x128" />
+<link rel="shortcut icon" href="https://xrdocs.github.io/cisco-service-layer/images/favicon_cisco.ico" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="https://xrdocs.github.io/cisco-service-layer/images/mstile-310x310.png" />
+<!-- end custom head snippets -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="dynsections.js"></script>
+        <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="doxy-boot.js"></script>
+    </head>
+<body style="overflow-x: visible;">
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu" style="padding-left: 0;">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <img src="https://xrdocs.github.io/images/xrdocs_logo.png" width="45px" height="45px" alt="xrdocs logo" style="float:left;">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://xrdocs.github.io/">@xrdocs</a></li>
+          <li class="masthead__menu-item masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/">Cisco Service Layer</a></li>
+                    <li class="masthead__menu-item greedy-nav-active"><a href="https://xrdocs.github.io/cisco-service-layer/apidocs/">Apidocs</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/blogs/">Blogs</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/tutorials/">Tutorials</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/search">Search <i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/tags/">Tags</a></li>
+                    <li class="masthead__menu-item"><a href="https://xrdocs.github.io/cisco-service-layer/collection-archive/">Archive</a></li>
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+        <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+          <div id="apititle_div"><h1 class="apititle"><span>Cisco Service Layer API Documentation</span></h1></div>
+            <div class="content" id="content_tabs">
+<!-- Generated by Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Quick&#160;Start</span></a></li>
+      <li><a href="modules.html"><span>Services</span></a></li>
+      <li><a href="annotated.html"><span>Messages</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_3594538a692b3896f2b3ae880e629ca6.html">protos</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">RPC Calls</a> &#124;
+<a href="#nested-classes">Messages</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#var-members">Attributes</a>  </div>
+  <div class="headertitle">
+<div class="title">sl_bgpls_topology.proto File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>RPC proto file for BGP-LS Topology Subscription Service.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+RPC Calls</h2></td></tr>
+<tr class="memitem:ga218cedf1d6a29c6a3aa39b352e33ca32"><td class="memItemLeft" align="right" valign="top">rpc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#ga218cedf1d6a29c6a3aa39b352e33ca32">SLBgplsTopo::SLBgplsTopoNotifStream</a> (<a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNotifReqMsg">SLBgplsTopoNotifReqMsg</a>) returns(stream <a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNotifMsg">SLBgplsTopoNotifMsg</a>)</td></tr>
+<tr class="memdesc:ga218cedf1d6a29c6a3aa39b352e33ca32"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP-LS Topology Subscription.  <a href="group__SLBgplsTopo.html#ga218cedf1d6a29c6a3aa39b352e33ca32">More...</a><br /></td></tr>
+<tr class="separator:ga218cedf1d6a29c6a3aa39b352e33ca32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Messages</h2></td></tr>
+<tr class="memitem:structSLBgplsTopoNotifReqMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNotifReqMsg">SLBgplsTopoNotifReqMsg</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoNotifReqMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP-LS Topology Notification Request message.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoNotifReqMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoNotifReqMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoNlriMatch"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNlriMatch">SLBgplsTopoNlriMatch</a></td></tr>
+<tr class="separator:structSLBgplsTopoNlriMatch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoNotifMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNotifMsg">SLBgplsTopoNotifMsg</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoNotifMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP-LS Topology Notification message.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoNotifMsg">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoNotifMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoStartMarker"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoStartMarker">SLBgplsTopoStartMarker</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoStartMarker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start marker - sent before any DATA is sent.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoStartMarker">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoStartMarker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoEndMarker"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoEndMarker">SLBgplsTopoEndMarker</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoEndMarker"><td class="mdescLeft">&#160;</td><td class="mdescRight">End marker - sent after all DATA are sent.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoEndMarker">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoEndMarker"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoNotif"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNotif">SLBgplsTopoNotif</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoNotif"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP-LS Topology Updates.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoNotif">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoNotif"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoEntry"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoEntry">SLBgplsTopoEntry</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoEntry"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP-LS Topology Entry.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoEntry">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoEntry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoData"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoData">SLBgplsTopoData</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Messages for BGP-LS Data.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoData">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoInstanceId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoInstanceId">SLBgplsTopoInstanceId</a></td></tr>
+<tr class="separator:structSLBgplsTopoInstanceId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoNodeData"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNodeData">SLBgplsTopoNodeData</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoNodeData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node Data.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoNodeData">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoNodeData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkData"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkData">SLBgplsTopoLinkData</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link Data.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkData">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixData"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixData">SLBgplsTopoPrefixData</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix Data.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixData">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoNode"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNode">SLBgplsTopoNode</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoNode"><td class="mdescLeft">&#160;</td><td class="mdescRight">Messages for NLRI Objects.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoNode">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLink"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLink">SLBgplsTopoLink</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLink"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLink">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLink"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefix"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefix">SLBgplsTopoPrefix</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefix"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefix">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefix"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkDescr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkDescr">SLBgplsTopoLinkDescr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkDescr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Messages for NLRI Descriptors.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkDescr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkDescr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixDescr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixDescr">SLBgplsTopoPrefixDescr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixDescr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix descriptor.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixDescr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixDescr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoOspfNodeId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoOspfNodeId">SLBgplsTopoOspfNodeId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoOspfNodeId"><td class="mdescLeft">&#160;</td><td class="mdescRight">Messages of Node Identifiers.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoOspfNodeId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoOspfNodeId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoOspfv3NodeId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoOspfv3NodeId">SLBgplsTopoOspfv3NodeId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoOspfv3NodeId"><td class="mdescLeft">&#160;</td><td class="mdescRight">OSPFv3 Node ID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoOspfv3NodeId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoOspfv3NodeId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoIsisNodeId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoIsisNodeId">SLBgplsTopoIsisNodeId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoIsisNodeId"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISIS Node ID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoIsisNodeId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoIsisNodeId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoBgpNodeId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoBgpNodeId">SLBgplsTopoBgpNodeId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoBgpNodeId"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP Node ID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoBgpNodeId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoBgpNodeId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoNodeAttr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNodeAttr">SLBgplsTopoNodeAttr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoNodeAttr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Messages of Attributes.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoNodeAttr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoNodeAttr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkAttr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkAttr">SLBgplsTopoLinkAttr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkAttr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link Attributes.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkAttr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkAttr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixAttr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixAttr">SLBgplsTopoPrefixAttr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixAttr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix Attributes.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixAttr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixAttr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBplsTopoLinkLocRemId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBplsTopoLinkLocRemId">SLBplsTopoLinkLocRemId</a></td></tr>
+<tr class="memdesc:structSLBplsTopoLinkLocRemId"><td class="mdescLeft">&#160;</td><td class="mdescRight">Messages for Attribute definitions sorted by TLV code point.  <a href="group__SLBgplsTopo.html#structSLBplsTopoLinkLocRemId">More...</a><br /></td></tr>
+<tr class="separator:structSLBplsTopoLinkLocRemId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoMtId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoMtId">SLBgplsTopoMtId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoMtId"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multi-Topology Identifier.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoMtId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoMtId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoNodeMsd"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNodeMsd">SLBgplsTopoNodeMsd</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoNodeMsd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node MSD.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoNodeMsd">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoNodeMsd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkMsd"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkMsd">SLBgplsTopoLinkMsd</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkMsd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link MSD.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkMsd">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkMsd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoNodeFlagBits"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNodeFlagBits">SLBgplsTopoNodeFlagBits</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoNodeFlagBits"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node Flag Bits.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoNodeFlagBits">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoNodeFlagBits"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoNodeOpaqueAttr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoNodeOpaqueAttr">SLBgplsTopoNodeOpaqueAttr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoNodeOpaqueAttr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque Node Attribute.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoNodeOpaqueAttr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoNodeOpaqueAttr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsNodeName"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsNodeName">SLBgplsNodeName</a></td></tr>
+<tr class="memdesc:structSLBgplsNodeName"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node Name.  <a href="group__SLBgplsTopo.html#structSLBgplsNodeName">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsNodeName"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoIsisAreaId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoIsisAreaId">SLBgplsTopoIsisAreaId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoIsisAreaId"><td class="mdescLeft">&#160;</td><td class="mdescRight">IS-IS Area Identifier.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoIsisAreaId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoIsisAreaId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLocalIpv4RouterId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLocalIpv4RouterId">SLBgplsTopoLocalIpv4RouterId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLocalIpv4RouterId"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local IPv4/IPv6 Router-ID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLocalIpv4RouterId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLocalIpv4RouterId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLocalIpv6RouterId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLocalIpv6RouterId">SLBgplsTopoLocalIpv6RouterId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLocalIpv6RouterId"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local IPv4/IPv6 Router-ID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLocalIpv6RouterId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLocalIpv6RouterId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoRemoteIpv4RouterId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoRemoteIpv4RouterId">SLBgplsTopoRemoteIpv4RouterId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoRemoteIpv4RouterId"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remote IPv4/IPv6 Router-ID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoRemoteIpv4RouterId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoRemoteIpv4RouterId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoRemoteIpv6RouterId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoRemoteIpv6RouterId">SLBgplsTopoRemoteIpv6RouterId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoRemoteIpv6RouterId"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remote IPv4/IPv6 Router-ID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoRemoteIpv6RouterId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoRemoteIpv6RouterId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoSrgb"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoSrgb">SLBgplsTopoSrgb</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoSrgb"><td class="mdescLeft">&#160;</td><td class="mdescRight">SR Capabilities.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoSrgb">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoSrgb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoSrgbIsisFlags"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoSrgbIsisFlags">SLBgplsTopoSrgbIsisFlags</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoSrgbIsisFlags"><td class="mdescLeft">&#160;</td><td class="mdescRight">Segment Routing Global Block (SRGB) ISIS flags.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoSrgbIsisFlags">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoSrgbIsisFlags"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoSrAlgorithm"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoSrAlgorithm">SLBgplsTopoSrAlgorithm</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoSrAlgorithm"><td class="mdescLeft">&#160;</td><td class="mdescRight">SR-Algorithm.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoSrAlgorithm">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoSrAlgorithm"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoSrlb"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoSrlb">SLBgplsTopoSrlb</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoSrlb"><td class="mdescLeft">&#160;</td><td class="mdescRight">SR Local Block.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoSrlb">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoSrlb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoFad"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoFad">SLBgplsTopoFad</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoFad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flexible Algorithm Definition.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoFad">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoFad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixFAPM"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixFAPM">SLBgplsTopoPrefixFAPM</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixFAPM"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flexible Algorithm Prefix metric.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixFAPM">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixFAPM"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoFadUnsuppTlv"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoFadUnsuppTlv">SLBgplsTopoFadUnsuppTlv</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoFadUnsuppTlv"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsupported Flexible Algorithm Definition (FAD) TLVs. TLV 1046.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoFadUnsuppTlv">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoFadUnsuppTlv"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoFadExcMaxDelay"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoFadExcMaxDelay">SLBgplsTopoFadExcMaxDelay</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoFadExcMaxDelay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flexible Algorithm Exclude Maximum Delay. TLV 1050.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoFadExcMaxDelay">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoFadExcMaxDelay"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkMaxBandwidth"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkMaxBandwidth">SLBgplsTopoLinkMaxBandwidth</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkMaxBandwidth"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum Link Bandwidth.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkMaxBandwidth">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkMaxBandwidth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkMaxResvBandwidth"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkMaxResvBandwidth">SLBgplsTopoLinkMaxResvBandwidth</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkMaxResvBandwidth"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum Reservable Link Bandwidth.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkMaxResvBandwidth">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkMaxResvBandwidth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkUnresvBandwidth"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkUnresvBandwidth">SLBgplsTopoLinkUnresvBandwidth</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkUnresvBandwidth"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unreserved Link Bandwidth.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkUnresvBandwidth">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkUnresvBandwidth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkTeDefaultMetric"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkTeDefaultMetric">SLBgplsTopoLinkTeDefaultMetric</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkTeDefaultMetric"><td class="mdescLeft">&#160;</td><td class="mdescRight">TE Default Metric.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkTeDefaultMetric">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkTeDefaultMetric"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkProtectionType"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkProtectionType">SLBgplsTopoLinkProtectionType</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkProtectionType"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link Protection Type.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkProtectionType">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkProtectionType"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkMplsProtoMask"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkMplsProtoMask">SLBgplsTopoLinkMplsProtoMask</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkMplsProtoMask"><td class="mdescLeft">&#160;</td><td class="mdescRight">MPLS Proto Mask.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkMplsProtoMask">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkMplsProtoMask"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkIgpMetric"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkIgpMetric">SLBgplsTopoLinkIgpMetric</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkIgpMetric"><td class="mdescLeft">&#160;</td><td class="mdescRight">IGP Metric.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkIgpMetric">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkIgpMetric"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkSrlg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkSrlg">SLBgplsTopoLinkSrlg</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkSrlg"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared Risk Link Group.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkSrlg">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkSrlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkOpaqueAttr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkOpaqueAttr">SLBgplsTopoLinkOpaqueAttr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkOpaqueAttr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque Link Attribute.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkOpaqueAttr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkOpaqueAttr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLinkName"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLinkName">SLBgplsTopoLinkName</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLinkName"><td class="mdescLeft">&#160;</td><td class="mdescRight">Link Name.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLinkName">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLinkName"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoAdjSid"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoAdjSid">SLBgplsTopoAdjSid</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoAdjSid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjacency SID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoAdjSid">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoAdjSid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoLanAdjSid"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoLanAdjSid">SLBgplsTopoLanAdjSid</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoLanAdjSid"><td class="mdescLeft">&#160;</td><td class="mdescRight">LAN Adjacency SID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoLanAdjSid">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoLanAdjSid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoBgpPeerNodeSid"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoBgpPeerNodeSid">SLBgplsTopoBgpPeerNodeSid</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoBgpPeerNodeSid"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP Peer Node SID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoBgpPeerNodeSid">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoBgpPeerNodeSid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoBgpPeerAdjSid"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoBgpPeerAdjSid">SLBgplsTopoBgpPeerAdjSid</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoBgpPeerAdjSid"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP Peer Adjacency SID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoBgpPeerAdjSid">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoBgpPeerAdjSid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoBgpPeerSetSid"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoBgpPeerSetSid">SLBgplsTopoBgpPeerSetSid</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoBgpPeerSetSid"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP Peer Set SID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoBgpPeerSetSid">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoBgpPeerSetSid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgpLsTopoNeighborId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgpLsTopoNeighborId">SLBgpLsTopoNeighborId</a></td></tr>
+<tr class="memdesc:structSLBgpLsTopoNeighborId"><td class="mdescLeft">&#160;</td><td class="mdescRight">Neighbor ID used in Adjacency SID and SRv6 EndX SID.  <a href="group__SLBgplsTopo.html#structSLBgpLsTopoNeighborId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgpLsTopoNeighborId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoUniLinkDelay"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoUniLinkDelay">SLBgplsTopoUniLinkDelay</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoUniLinkDelay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unidirectional Link Delay.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoUniLinkDelay">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoUniLinkDelay"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoMinMaxUniLinkDelay"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoMinMaxUniLinkDelay">SLBgplsTopoMinMaxUniLinkDelay</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoMinMaxUniLinkDelay"><td class="mdescLeft">&#160;</td><td class="mdescRight">Min/Max Unidirectional Link Delay.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoMinMaxUniLinkDelay">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoMinMaxUniLinkDelay"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoUniDelayVar"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoUniDelayVar">SLBgplsTopoUniDelayVar</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoUniDelayVar"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unidirectional Delay Variation.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoUniDelayVar">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoUniDelayVar"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoUniLinkLoss"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoUniLinkLoss">SLBgplsTopoUniLinkLoss</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoUniLinkLoss"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unidirectional Link Loss.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoUniLinkLoss">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoUniLinkLoss"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoUniResBandwidth"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoUniResBandwidth">SLBgplsTopoUniResBandwidth</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoUniResBandwidth"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unidirectional Residual Bandwidth.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoUniResBandwidth">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoUniResBandwidth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoUniAvailBandwidth"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoUniAvailBandwidth">SLBgplsTopoUniAvailBandwidth</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoUniAvailBandwidth"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unidirectional Available Bandwidth.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoUniAvailBandwidth">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoUniAvailBandwidth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoUniUtilBandwidth"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoUniUtilBandwidth">SLBgplsTopoUniUtilBandwidth</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoUniUtilBandwidth"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unidirectional Utilized Bandwidth.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoUniUtilBandwidth">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoUniUtilBandwidth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoAslaAttr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoAslaAttr">SLBgplsTopoAslaAttr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoAslaAttr"><td class="mdescLeft">&#160;</td><td class="mdescRight">ASLA Attributes.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoAslaAttr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoAslaAttr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixIgpFlags"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixIgpFlags">SLBgplsTopoPrefixIgpFlags</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixIgpFlags"><td class="mdescLeft">&#160;</td><td class="mdescRight">IGP Flags.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixIgpFlags">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixIgpFlags"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixIgpRouteTag"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixIgpRouteTag">SLBgplsTopoPrefixIgpRouteTag</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixIgpRouteTag"><td class="mdescLeft">&#160;</td><td class="mdescRight">IGP Route Tag.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixIgpRouteTag">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixIgpRouteTag"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixIgpExtRouteTag"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixIgpExtRouteTag">SLBgplsTopoPrefixIgpExtRouteTag</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixIgpExtRouteTag"><td class="mdescLeft">&#160;</td><td class="mdescRight">IGP Extended Route Tag.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixIgpExtRouteTag">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixIgpExtRouteTag"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixMetric"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixMetric">SLBgplsTopoPrefixMetric</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixMetric"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix Metric.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixMetric">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixMetric"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixOspfFwdAddr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixOspfFwdAddr">SLBgplsTopoPrefixOspfFwdAddr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixOspfFwdAddr"><td class="mdescLeft">&#160;</td><td class="mdescRight">OSPF Forwarding Address.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixOspfFwdAddr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixOspfFwdAddr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixOpaqueAttr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixOpaqueAttr">SLBgplsTopoPrefixOpaqueAttr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixOpaqueAttr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opaque Prefix Attribute.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixOpaqueAttr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixOpaqueAttr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixSid"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixSid">SLBgplsTopoPrefixSid</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixSid"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix SID.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixSid">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixSid"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixRange"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixRange">SLBgplsTopoPrefixRange</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixRange"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix Range.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixRange">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixRange"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixAttrFlags"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixAttrFlags">SLBgplsTopoPrefixAttrFlags</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixAttrFlags"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix Attribute Flags.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixAttrFlags">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixAttrFlags"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoPrefixSrcRouterId"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixSrcRouterId">SLBgplsTopoPrefixSrcRouterId</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoPrefixSrcRouterId"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source Route Identifier.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoPrefixSrcRouterId">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoPrefixSrcRouterId"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoL2BundleMemberAttr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoL2BundleMemberAttr">SLBgplsTopoL2BundleMemberAttr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoL2BundleMemberAttr"><td class="mdescLeft">&#160;</td><td class="mdescRight">L2 Bundle Member Attribute.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoL2BundleMemberAttr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoL2BundleMemberAttr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoExtAdminGroup"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoExtAdminGroup">SLBgplsTopoExtAdminGroup</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoExtAdminGroup"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended Administrative Group.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoExtAdminGroup">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoExtAdminGroup"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLBgplsTopoUnknownAttr"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#structSLBgplsTopoUnknownAttr">SLBgplsTopoUnknownAttr</a></td></tr>
+<tr class="memdesc:structSLBgplsTopoUnknownAttr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unknown Attribute.  <a href="group__SLBgplsTopo.html#structSLBgplsTopoUnknownAttr">More...</a><br /></td></tr>
+<tr class="separator:structSLBgplsTopoUnknownAttr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gac07e83257ad48e0a1595f4760a023b39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac07e83257ad48e0a1595f4760a023b39"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#gac07e83257ad48e0a1595f4760a023b39">SLBgplsTopoOperation</a> { <b>SL_BGPLS_TOPO_OPERATION_RESERVED</b> = 0, 
+<b>SL_BGPLS_TOPO_OPERATION_UPDATE</b> = 1, 
+<b>SL_BGPLS_TOPO_OPERATION_DELETE</b> = 2
+ }<tr class="memdesc:gac07e83257ad48e0a1595f4760a023b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP-LS Topology Operation. <br /></td></tr>
+</td></tr>
+<tr class="separator:gac07e83257ad48e0a1595f4760a023b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga085c41863516ca51b5bf11e4fe758211"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga085c41863516ca51b5bf11e4fe758211"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#ga085c41863516ca51b5bf11e4fe758211">SLBgplsTopoNlriType</a> { <br />
+&#160;&#160;<b>SL_BGPLS_TOPO_NLRI_TYPE_RESERVED</b> = 0, 
+<b>SL_BGPLS_TOPO_NLRI_TYPE_NODE</b> = 1, 
+<b>SL_BGPLS_TOPO_NLRI_TYPE_LINK</b> = 2, 
+<b>SL_BGPLS_TOPO_NLRI_TYPE_IPV4_PREFIX</b> = 3, 
+<br />
+&#160;&#160;<b>SL_BGPLS_TOPO_NLRI_TYPE_IPV6_PREFIX</b> = 4
+<br />
+ }<tr class="memdesc:ga085c41863516ca51b5bf11e4fe758211"><td class="mdescLeft">&#160;</td><td class="mdescRight">NLRI type. <br /></td></tr>
+</td></tr>
+<tr class="separator:ga085c41863516ca51b5bf11e4fe758211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15a8cdabd217a8c218a169c381c30916"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga15a8cdabd217a8c218a169c381c30916"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#ga15a8cdabd217a8c218a169c381c30916">SLBgplsTopoProtocol</a> { <br />
+&#160;&#160;<b>SL_BGPLS_TOPO_PROTOCOL_RESERVED</b> = 0, 
+<b>SL_BGPLS_TOPO_PROTOCOL_ISIS_L1</b> = 1, 
+<b>SL_BGPLS_TOPO_PROTOCOL_ISIS_L2</b> = 2, 
+<b>SL_BGPLS_TOPO_PROTOCOL_OSPFv2</b> = 3, 
+<br />
+&#160;&#160;<b>SL_BGPLS_TOPO_PROTOCOL_DIRECT</b> = 4, 
+<b>SL_BGPLS_TOPO_PROTOCOL_STATIC</b> = 5, 
+<b>SL_BGPLS_TOPO_PROTOCOL_OSPFv3</b> = 6, 
+<b>SL_BGPLS_TOPO_PROTOCOL_BGP</b> = 7, 
+<br />
+&#160;&#160;<b>SL_BGPLS_TOPO_PROTOCOL_RSVP_TE</b> = 8, 
+<b>SL_BGPLS_TOPO_PROTOCOL_SR</b> = 9
+<br />
+ }<tr class="memdesc:ga15a8cdabd217a8c218a169c381c30916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Protocols. <br /></td></tr>
+</td></tr>
+<tr class="separator:ga15a8cdabd217a8c218a169c381c30916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadff3777141578ac381d85337bf812792"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gadff3777141578ac381d85337bf812792"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#gadff3777141578ac381d85337bf812792">SLBgplsTopoOspfRouteType</a> { <br />
+&#160;&#160;<b>SL_BGPLS_TOPO_OSPF_ROUTE_TYPE_RESERVED</b> = 0, 
+<b>SL_BGPLS_TOPO_OSPF_ROUTE_TYPE_INTRA_AREA</b> = 1, 
+<b>SL_BGPLS_TOPO_OSPF_ROUTE_TYPE_INTER_AREA</b> = 2, 
+<b>SL_BGPLS_TOPO_OSPF_ROUTE_TYPE_EXTERN_1</b> = 3, 
+<br />
+&#160;&#160;<b>SL_BGPLS_TOPO_OSPF_ROUTE_TYPE_EXTERN_2</b> = 4, 
+<b>SL_BGPLS_TOPO_OSPF_ROUTE_TYPE_NSSA_1</b> = 5, 
+<b>SL_BGPLS_TOPO_OSPF_ROUTE_TYPE_NSSA_2</b> = 6
+<br />
+ }<tr class="memdesc:gadff3777141578ac381d85337bf812792"><td class="mdescLeft">&#160;</td><td class="mdescRight">OSPF Route types. <br /></td></tr>
+</td></tr>
+<tr class="separator:gadff3777141578ac381d85337bf812792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ea4775101faab8cfcd9beb8fee15b28"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#ga0ea4775101faab8cfcd9beb8fee15b28">SLBgplsTopoSidFormat</a> { <a class="el" href="group__SLBgplsTopo.html#gga0ea4775101faab8cfcd9beb8fee15b28a44e291e4d120a2a76d79e24ff8570468">SL_BGPLS_TOPO_SID_FORMAT_RESERVED</a> = 0, 
+<a class="el" href="group__SLBgplsTopo.html#gga0ea4775101faab8cfcd9beb8fee15b28a0aecf56242987f083999e4b563ef473c">SL_BGPLS_TOPO_SID_FORMAT_LABEL</a> = 1, 
+<a class="el" href="group__SLBgplsTopo.html#gga0ea4775101faab8cfcd9beb8fee15b28ad38944df5f34e088e82c7d7643925b3f">SL_BGPLS_TOPO_SID_FORMAT_INDEX</a> = 2, 
+<a class="el" href="group__SLBgplsTopo.html#gga0ea4775101faab8cfcd9beb8fee15b28a8f19e399fea99c2a9359a612b4808a25">SL_BGPLS_TOPO_SID_FORMAT_V6_ADDR</a> = 3
+ }<tr class="memdesc:ga0ea4775101faab8cfcd9beb8fee15b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP-LS Topology SID Formats.  <a href="group__SLBgplsTopo.html#ga0ea4775101faab8cfcd9beb8fee15b28">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ga0ea4775101faab8cfcd9beb8fee15b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa12d69fecca020a8899e035b700ca8b9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLBgplsTopo.html#gaa12d69fecca020a8899e035b700ca8b9">SLBgplsTopoPrefixSidFormat</a> { <a class="el" href="group__SLBgplsTopo.html#ggaa12d69fecca020a8899e035b700ca8b9ad03f2c6681c5b18935548993cef85e28">SL_BGPLS_TOPO_PREFIX_SID_FORMAT_RESERVED</a> = 0, 
+<a class="el" href="group__SLBgplsTopo.html#ggaa12d69fecca020a8899e035b700ca8b9a5df16fc02f9a4e90563d86a07725025d">SL_BGPLS_TOPO_PREFIX_SID_FORMAT_LABEL</a> = 1, 
+<a class="el" href="group__SLBgplsTopo.html#ggaa12d69fecca020a8899e035b700ca8b9a5b9c99363c551a297adc31a737645c99">SL_BGPLS_TOPO_PREFIX_SID_FORMAT_INDEX</a> = 2
+ }<tr class="memdesc:gaa12d69fecca020a8899e035b700ca8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">BGP-LS Topology Prefix SID Formats.  <a href="group__SLBgplsTopo.html#gaa12d69fecca020a8899e035b700ca8b9">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gaa12d69fecca020a8899e035b700ca8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Attributes</h2></td></tr>
+<tr class="memitem:adbedb258e13546cc707a6ebb073a3d8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbedb258e13546cc707a6ebb073a3d8a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>syntax</b> = &quot;proto3&quot;</td></tr>
+<tr class="separator:adbedb258e13546cc707a6ebb073a3d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a293eb43ea51d8359911f89a0e4c6284e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a293eb43ea51d8359911f89a0e4c6284e"></a>
+package&#160;</td><td class="memItemRight" valign="bottom"><b>service_layer</b></td></tr>
+<tr class="separator:a293eb43ea51d8359911f89a0e4c6284e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6545e6a32e6568e63da34c1cdf4c3bb5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6545e6a32e6568e63da34c1cdf4c3bb5"></a>
+option&#160;</td><td class="memItemRight" valign="bottom"><b>go_package</b> =&quot;github.com/Cisco-service-layer/service-layer-objmodel/grpc/protos;service_layer&quot;</td></tr>
+<tr class="separator:a6545e6a32e6568e63da34c1cdf4c3bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>RPC proto file for BGP-LS Topology Subscription Service. </p>
+<p>The RPCs and messages defined here are experimental and subject to change without notice and such changes can break backwards compatibility. </p><hr/>
+<p> Copyright (c) 2024 by Cisco Systems, Inc. </p><h2>All rights reserved. </h2>
+</div></div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.8-->
+<!-- start footer part -->
+</div>
+</div>
+</div>
+</div>
+</div>
+    <div class="page__footer" style="position: relative;">
+      <footer>
+<div class="page__footer-follow">
+  <ul class="social-icons">
+      <li><strong>Follow:</strong></li>
+      <li><a href="https://twitter.com/xrdocs"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="http://github.com/xrdocs"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    <li><a href="https://xrdocs.github.io/cisco-service-layer/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+<div class="page__footer-copyright">&copy; 2017 Cisco Systems Inc. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+    <script src="https://xrdocs.github.io/cisco-service-layer/assets/js/main.min.js"></script>
+<script src="https://xrdocs.github.io/cisco-service-layer/assets/js/scrollmenu.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-78256516-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- material-scrolltop button -->
+<button class="material-scrolltop" type="button"></button>
+<!-- material-scrolltop plugin -->
+<script src="https://xrdocs.github.io/cisco-service-layer/assets/js/material-scrolltop.js"></script>
+<!-- Initialize material-scrolltop with (minimal) -->
+<script>
+    $('body').materialScrollTop();
+</script>
+</body>
+</html>

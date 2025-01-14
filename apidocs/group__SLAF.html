@@ -261,7 +261,11 @@ Messages</h2></td></tr>
 <tr class="memitem:structSLAFGetMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#structSLAFGetMsg">SLAFGetMsg</a></td></tr>
 <tr class="memdesc:structSLAFGetMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to retrieve objects in a VRF table.  <a href="group__SLAF.html#structSLAFGetMsg">More...</a><br /></td></tr>
 <tr class="separator:structSLAFGetMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLAFDepFibStatus"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#structSLAFDepFibStatus">SLAFDepFibStatus</a></td></tr>
+<tr class="memdesc:structSLAFDepFibStatus"><td class="mdescLeft">&#160;</td><td class="mdescRight">FIB programming result of the dependent operation.  <a href="group__SLAF.html#structSLAFDepFibStatus">More...</a><br /></td></tr>
+<tr class="separator:structSLAFDepFibStatus"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structSLAFFibStatus"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#structSLAFFibStatus">SLAFFibStatus</a></td></tr>
+<tr class="memdesc:structSLAFFibStatus"><td class="mdescLeft">&#160;</td><td class="mdescRight">FIB programming result of an object.  <a href="group__SLAF.html#structSLAFFibStatus">More...</a><br /></td></tr>
 <tr class="separator:structSLAFFibStatus"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structSLAFGetMsgRspEntry"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#structSLAFGetMsgRspEntry">SLAFGetMsgRspEntry</a></td></tr>
 <tr class="memdesc:structSLAFGetMsgRspEntry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object and its programming status returned on Get.  <a href="group__SLAF.html#structSLAFGetMsgRspEntry">More...</a><br /></td></tr>
@@ -304,6 +308,9 @@ Messages</h2></td></tr>
 <tr class="memitem:structSLAFNotif"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#structSLAFNotif">SLAFNotif</a></td></tr>
 <tr class="memdesc:structSLAFNotif"><td class="mdescLeft">&#160;</td><td class="mdescRight">AF Notification message.  <a href="group__SLAF.html#structSLAFNotif">More...</a><br /></td></tr>
 <tr class="separator:structSLAFNotif"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structSLAFNotif_1_1SLRedistMarker"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#structSLAFNotif_1_1SLRedistMarker">SLAFNotif::SLRedistMarker</a></td></tr>
+<tr class="memdesc:structSLAFNotif_1_1SLRedistMarker"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route redistribution marker.  <a href="group__SLAF.html#structSLAFNotif_1_1SLRedistMarker">More...</a><br /></td></tr>
+<tr class="separator:structSLAFNotif_1_1SLRedistMarker"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structSLAFNotifMsg"><td class="memItemLeft" align="right" valign="top">message &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#structSLAFNotifMsg">SLAFNotifMsg</a></td></tr>
 <tr class="memdesc:structSLAFNotifMsg"><td class="mdescLeft">&#160;</td><td class="mdescRight">RPC Notification message.  <a href="group__SLAF.html#structSLAFNotifMsg">More...</a><br /></td></tr>
 <tr class="separator:structSLAFNotifMsg"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -798,12 +805,13 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <ul>
 <li>If the flag is not set, all paths in the PathList are installed in the MPLS Entry's load balance group, even if paths are unviable. The Network element does not automatically update the MPLS Entry's load balance group when path viability changes and expects the client to take corrective action.</li>
 <li>If the flag is set, the network element only installs viable paths from the PathList in the MPLS Entry's load balance group. The Network element also automatically updates the MPLS Entry's load balance group when path viability changes.</li>
+<li>If the MPLS Entry refers to the PathGroup, then a programming error is returned and the corresponding setting on the PathGroup dictates path programming.</li>
 </ul>
 <p>SL_ROUTE_FLAG_ACTIVE_ON_VIABLE_PATH - This flag is supported only for MPLS Entries that contain the PathList.</p>
 <ul>
 <li>If this flag is not set, the MPLS entry is active if it is preferred based on administrative distance. Viability of the paths in the PathList is not used as a criterion to determine the MPLS Entry's activeness. If the MPLS Entry is active, the PathList programming is dictated by SL_ROUTE_FLAG_VIABLE_PATHS_ONLY.</li>
 <li>If this flag is set, SL_ROUTE_FLAG_VIABLE_PATHS_ONLY must also be set. The MPLS Entry is considered as active if it is preferred based on administrative distance AND at least one path in the PathList is viable. The Network element also automatically promotes or demotes the MPLS Entry when the first path becomes viable or none of the paths are no longer viable.</li>
-<li>If the MPLS Entry refers to the PathGroup, then this flag on the route is ignored. Instead, the corresponding setting on PathGroup dictates whether this route should be considered in best route calculations.</li>
+<li>If the MPLS Entry refers to the PathGroup, then a programming error is returned and the corresponding setting on PathGroup dictates whether this route should be considered in best route calculations.</li>
 </ul>
 <p>Others - Reserved. </p>
 
@@ -949,6 +957,72 @@ repeated <a class="el" href="group__SLRouteCommon.html#structSLRouteGetMatch">SL
 
 </div>
 </div>
+<a name="structSLAFDepFibStatus" id="structSLAFDepFibStatus"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLAFDepFibStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>FIB programming result of the dependent operation. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:ae5058913151215fc1b2ef08f4c703505"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5058913151215fc1b2ef08f4c703505"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#ae5058913151215fc1b2ef08f4c703505">ErrorCode</a> = 1</td></tr>
+<tr class="memdesc:ae5058913151215fc1b2ef08f4c703505"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code associated with hardware programming. <br /></td></tr>
+<tr class="separator:ae5058913151215fc1b2ef08f4c703505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b7c086c402a17355adfccc3a56a74ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b7c086c402a17355adfccc3a56a74ef"></a>
+uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a6b7c086c402a17355adfccc3a56a74ef">OperationID</a> = 2</td></tr>
+<tr class="memdesc:a6b7c086c402a17355adfccc3a56a74ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operation ID of the dependent object. <br /></td></tr>
+<tr class="separator:a6b7c086c402a17355adfccc3a56a74ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b5e5c9f8f5f1b76bdcaaf29c14025f"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#ad4b5e5c9f8f5f1b76bdcaaf29c14025f">Version</a> = 3</td></tr>
+<tr class="memdesc:ad4b5e5c9f8f5f1b76bdcaaf29c14025f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version of the dependent object.  <a href="#ad4b5e5c9f8f5f1b76bdcaaf29c14025f">More...</a><br /></td></tr>
+<tr class="separator:ad4b5e5c9f8f5f1b76bdcaaf29c14025f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43567319105357df40b6b7e5c1ee2230"><td class="memItemLeft" >oneof {</td></tr>
+<tr class="memitem:aeb85bda3815ed68f35b96d32d582dd7e"><td class="memItemLeft" >
+&#160;&#160;&#160;<a class="el" href="group__SLCommonTypes.html#structSLPathGroupRefKey">SLPathGroupRefKey</a>&#160;&#160;&#160;<a class="el" href="group__SLAF.html#a8d147795a7e515e624e8058cd7b69f44">PathGroupKey</a> = 4</td></tr>
+<tr class="memdesc:aeb85bda3815ed68f35b96d32d582dd7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path group reference key. <br /></td></tr>
+<tr class="separator:aeb85bda3815ed68f35b96d32d582dd7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43567319105357df40b6b7e5c1ee2230"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a43567319105357df40b6b7e5c1ee2230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key of the dependent object.  <a href="#a43567319105357df40b6b7e5c1ee2230">More...</a><br /></td></tr>
+<tr class="separator:a43567319105357df40b6b7e5c1ee2230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a43567319105357df40b6b7e5c1ee2230"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">oneof { ... } </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Key of the dependent object. </p>
+<p>This attribute is oneof to allow for future extension. If the parent object is programmed with reference to a path-group, the key of dependent path-group is returned here. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad4b5e5c9f8f5f1b76bdcaaf29c14025f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 SLAFDepFibStatus::Version = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Version of the dependent object. </p>
+<p>A valid version is a non-zero positive number. </p>
+
+</div>
+</div>
+
+</div>
+</div>
 <a name="structSLAFFibStatus" id="structSLAFFibStatus"></a>
 <div class="memitem">
 <div class="memproto">
@@ -958,40 +1032,29 @@ repeated <a class="el" href="group__SLRouteCommon.html#structSLRouteGetMatch">SL
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"></div><table class="memberdecls">
+<div class="textblock"><p>FIB programming result of an object. </p>
+</div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
-<tr class="memitem:a2d8960dc4d76c0a075d2e8d06e2ca74f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d8960dc4d76c0a075d2e8d06e2ca74f"></a>
-<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a2d8960dc4d76c0a075d2e8d06e2ca74f">ErrorCode</a> = 1</td></tr>
-<tr class="memdesc:a2d8960dc4d76c0a075d2e8d06e2ca74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error code associated with hardware programming. <br /></td></tr>
-<tr class="separator:a2d8960dc4d76c0a075d2e8d06e2ca74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ba17ac37dad754425ba235eafcfb808"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ba17ac37dad754425ba235eafcfb808"></a>
-uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a9ba17ac37dad754425ba235eafcfb808">OperationID</a> = 2</td></tr>
-<tr class="memdesc:a9ba17ac37dad754425ba235eafcfb808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operation ID associated with hardware programming. <br /></td></tr>
-<tr class="separator:a9ba17ac37dad754425ba235eafcfb808"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c9ab5f88be79f6a87bda38796791664"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a7c9ab5f88be79f6a87bda38796791664">Version</a> = 3</td></tr>
-<tr class="memdesc:a7c9ab5f88be79f6a87bda38796791664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version associated with hardware programming.  <a href="#a7c9ab5f88be79f6a87bda38796791664">More...</a><br /></td></tr>
+<tr class="memitem:a7c9ab5f88be79f6a87bda38796791664"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a7c9ab5f88be79f6a87bda38796791664">Version</a> = 1</td></tr>
+<tr class="memdesc:a7c9ab5f88be79f6a87bda38796791664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version generated by the device for this operation.  <a href="#a7c9ab5f88be79f6a87bda38796791664">More...</a><br /></td></tr>
 <tr class="separator:a7c9ab5f88be79f6a87bda38796791664"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a336b94013a7a84722b186bd110231bdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a336b94013a7a84722b186bd110231bdc"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a336b94013a7a84722b186bd110231bdc">ErrorString</a> = 4</td></tr>
-<tr class="memdesc:a336b94013a7a84722b186bd110231bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptive string describing error if any, on the hardware programming. <br /></td></tr>
-<tr class="separator:a336b94013a7a84722b186bd110231bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae322e3e7520148240205aefd24582ab4"><td class="memItemLeft" align="right" valign="top">repeated <a class="el" href="group__SLAF.html#structSLAFFibStatus">SLAFFibStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#ae322e3e7520148240205aefd24582ab4">DepResult</a> = 5</td></tr>
-<tr class="memdesc:ae322e3e7520148240205aefd24582ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">DepResult is the result of any operation that this operation depends on.  <a href="#ae322e3e7520148240205aefd24582ab4">More...</a><br /></td></tr>
-<tr class="separator:ae322e3e7520148240205aefd24582ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d5fb776eee264addce18e46bdbcd8f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__SLAF.html#structSLAFDepFibStatus">SLAFDepFibStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a7d5fb776eee264addce18e46bdbcd8f5">DepResult</a> = 2</td></tr>
+<tr class="memdesc:a7d5fb776eee264addce18e46bdbcd8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">DepResult is the result of any object that this operation's object depends on.  <a href="#a7d5fb776eee264addce18e46bdbcd8f5">More...</a><br /></td></tr>
+<tr class="separator:a7d5fb776eee264addce18e46bdbcd8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h4 class="groupheader">Member Data Documentation</h4>
-<a class="anchor" id="ae322e3e7520148240205aefd24582ab4"></a>
+<a class="anchor" id="a7d5fb776eee264addce18e46bdbcd8f5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">repeated <a class="el" href="group__SLAF.html#structSLAFFibStatus">SLAFFibStatus</a> SLAFFibStatus::DepResult = 5</td>
+          <td class="memname"><a class="el" href="group__SLAF.html#structSLAFDepFibStatus">SLAFDepFibStatus</a> SLAFFibStatus::DepResult = 2</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>DepResult is the result of any operation that this operation depends on. </p>
-<p>For example: if this OperationID is about programming an ipv4 or ipv6 route that is pointing to a Path Group, then DepResult will carry the Result of operation that programmed that Path Group. NOTE: DepResult is not supported on Get Operations. </p>
+<p>DepResult is the result of any object that this operation's object depends on. </p>
+<p>For example: if this operation is about programming an IPv4 or IPv6 route that is pointing to a Path Group, then the DepResult that will carry the FIB result of the operation that programmed that Path Group. Note, DepResult is returned on ADD and UPDATE operations only. </p>
 
 </div>
 </div>
@@ -1000,13 +1063,13 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint64 SLAFFibStatus::Version = 3</td>
+          <td class="memname">uint64 SLAFFibStatus::Version = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Version associated with hardware programming. </p>
-<p>A valid version is a non-zero positive number. </p>
+<p>Version generated by the device for this operation. </p>
+<p>A valid version is a non-zero positive number </p>
 
 </div>
 </div>
@@ -1029,11 +1092,29 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <a class="el" href="group__SLAF.html#structSLAFOp">SLAFOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a6c3021443309f734783c6eb398039c78">AFOp</a> = 1</td></tr>
 <tr class="memdesc:a6c3021443309f734783c6eb398039c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object. <br /></td></tr>
 <tr class="separator:a6c3021443309f734783c6eb398039c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54a390d3a0d2c21ef2b043dbded4dad8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54a390d3a0d2c21ef2b043dbded4dad8"></a>
-<a class="el" href="group__SLAF.html#structSLAFFibStatus">SLAFFibStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a54a390d3a0d2c21ef2b043dbded4dad8">FIBStatus</a> = 2</td></tr>
-<tr class="memdesc:a54a390d3a0d2c21ef2b043dbded4dad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the operation was programmed with ACK type set to RIB_AND_FIB_ACK, then FIBStatus indicates status of hardware programming of the operation. <br /></td></tr>
-<tr class="separator:a54a390d3a0d2c21ef2b043dbded4dad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8b668dbb25adabb6393ea9715ace197"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8b668dbb25adabb6393ea9715ace197"></a>
+<a class="el" href="group__SLCommonTypes.html#structSLErrorStatus">SLErrorStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#aa8b668dbb25adabb6393ea9715ace197">ErrorCode</a> = 2</td></tr>
+<tr class="memdesc:aa8b668dbb25adabb6393ea9715ace197"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the operation was programmed with ACK type set to RIB_AND_FIB_ACK, then ErrorCode indicates result of hardware programming of the operation. <br /></td></tr>
+<tr class="separator:aa8b668dbb25adabb6393ea9715ace197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abddc407fe25903d505dc48fe78864a31"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#abddc407fe25903d505dc48fe78864a31">Version</a> = 3</td></tr>
+<tr class="memdesc:abddc407fe25903d505dc48fe78864a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the operation was programmed with ACK type set to RIB_AND_FIB_ACK, then Version is the last version number assigned by the device.  <a href="#abddc407fe25903d505dc48fe78864a31">More...</a><br /></td></tr>
+<tr class="separator:abddc407fe25903d505dc48fe78864a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="abddc407fe25903d505dc48fe78864a31"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64 SLAFGetMsgRspEntry::Version = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If the operation was programmed with ACK type set to RIB_AND_FIB_ACK, then Version is the last version number assigned by the device. </p>
+
+</div>
+</div>
 
 </div>
 </div>
@@ -1109,7 +1190,9 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
       </table>
 </div><div class="memdoc">
 <div class="textblock"><p>Operation on the address family. </p>
-<p>The objects are programmed in the given VRF's corresponding table. </p>
+<p>The objects are programmed in the given VRF's corresponding table.</p>
+<p>If the number of routes exceeds MaxAFOpsPerMsg, RPC will exit with error.</p>
+<p>If VrfName is not set, each request is errored and and sent to client. For stream, RPC will then wait for next message on stream. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
 <tr class="memitem:af9434237d5d058e44260994048802851"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9434237d5d058e44260994048802851"></a>
@@ -1148,8 +1231,12 @@ repeated <a class="el" href="group__SLAF.html#structSLAFOp">SLAFOp</a>&#160;</td
 <a class="el" href="group__SLAF.html#structSLAFOp">SLAFOp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a931141df6d3d33e73cacad61eabced44">Operation</a> = 2</td></tr>
 <tr class="memdesc:a931141df6d3d33e73cacad61eabced44"><td class="mdescLeft">&#160;</td><td class="mdescRight">The operation, expected to carry only the part that is considered the key to uniquely identify the object that is programmed. <br /></td></tr>
 <tr class="separator:a931141df6d3d33e73cacad61eabced44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2cacdcf6001a2e835c8be62e0adcc1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2cacdcf6001a2e835c8be62e0adcc1f"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#af2cacdcf6001a2e835c8be62e0adcc1f">ErrorString</a> = 3</td></tr>
+<tr class="memdesc:af2cacdcf6001a2e835c8be62e0adcc1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Descriptive string describing error if any, on the hardware programming. <br /></td></tr>
+<tr class="separator:af2cacdcf6001a2e835c8be62e0adcc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f3dd042aab958cdd25b4a4b72074e26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f3dd042aab958cdd25b4a4b72074e26"></a>
-<a class="el" href="group__SLAF.html#structSLAFFibStatus">SLAFFibStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a6f3dd042aab958cdd25b4a4b72074e26">FIBStatus</a> = 3</td></tr>
+<a class="el" href="group__SLAF.html#structSLAFFibStatus">SLAFFibStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a6f3dd042aab958cdd25b4a4b72074e26">FIBStatus</a> = 4</td></tr>
 <tr class="memdesc:a6f3dd042aab958cdd25b4a4b72074e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the operation was programmed with ACK type set to RIB_AND_FIB_ACK, then FIBStatus indicates status of hardware programming of the operation. <br /></td></tr>
 <tr class="separator:a6f3dd042aab958cdd25b4a4b72074e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -1263,15 +1350,15 @@ repeated <a class="el" href="group__SLAF.html#structSLAFRes">SLAFRes</a>&#160;</
 <div class="textblock"><p>Next hop registration request key. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
-<tr class="memitem:a1955a98b7a7657c43257e00bd08a6ce8"><td class="memItemLeft" ><a class="anchor" id="a1955a98b7a7657c43257e00bd08a6ce8"></a>
+<tr class="memitem:a9bc81543051ab24d640892fd4a8faf7d"><td class="memItemLeft" ><a class="anchor" id="a9bc81543051ab24d640892fd4a8faf7d"></a>
 oneof {</td></tr>
-<tr class="memitem:a9adea8e4e01f1873633c8afaeb374ba3"><td class="memItemLeft" >
+<tr class="memitem:a2b9dde197442f103ef8faa2494b9b65e"><td class="memItemLeft" >
 &#160;&#160;&#160;<a class="el" href="group__SLAF.html#structSLAFNextHopRegKey_1_1SLNextHopKey">SLNextHopKey</a>&#160;&#160;&#160;<a class="el" href="group__SLAF.html#a64a6da7fd12fb7b6f072dfbc90daf93f">NextHop</a> = 1</td></tr>
-<tr class="memdesc:a9adea8e4e01f1873633c8afaeb374ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">A next hop IP address. <br /></td></tr>
-<tr class="separator:a9adea8e4e01f1873633c8afaeb374ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1955a98b7a7657c43257e00bd08a6ce8"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:a1955a98b7a7657c43257e00bd08a6ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification request key. <br /></td></tr>
-<tr class="separator:a1955a98b7a7657c43257e00bd08a6ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a2b9dde197442f103ef8faa2494b9b65e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A next hop IP address. <br /></td></tr>
+<tr class="separator:a2b9dde197442f103ef8faa2494b9b65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc81543051ab24d640892fd4a8faf7d"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="memdesc:a9bc81543051ab24d640892fd4a8faf7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notification request key. <br /></td></tr>
+<tr class="separator:a9bc81543051ab24d640892fd4a8faf7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 </div>
@@ -1358,18 +1445,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 <div class="textblock"><p>Notification request message for a single item. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
-<tr class="memitem:a95e254035220fdbb3b63026bd6885701"><td class="memItemLeft" ><a class="anchor" id="a95e254035220fdbb3b63026bd6885701"></a>
+<tr class="memitem:abf9e40a6298fcec00cefc33b60d95290"><td class="memItemLeft" ><a class="anchor" id="abf9e40a6298fcec00cefc33b60d95290"></a>
 oneof {</td></tr>
-<tr class="memitem:ace1bef882e0041ac687229e9d5ba663a"><td class="memItemLeft" >
+<tr class="memitem:a865f1b26b5ccb22c4b98fec68aa2860e"><td class="memItemLeft" >
 &#160;&#160;&#160;<a class="el" href="group__SLAF.html#structSLAFRedistRegMsg">SLAFRedistRegMsg</a>&#160;&#160;&#160;<a class="el" href="group__SLAF.html#a4aac1d917492fb2ac6ad7c399d4d8fa1">RedistReq</a> = 1</td></tr>
-<tr class="memdesc:ace1bef882e0041ac687229e9d5ba663a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route redistribution request. <br /></td></tr>
-<tr class="separator:ace1bef882e0041ac687229e9d5ba663a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb17eb1efc9f0664745d7cfbd3e864d1"><td class="memItemLeft" >
+<tr class="memdesc:a865f1b26b5ccb22c4b98fec68aa2860e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route redistribution registration. <br /></td></tr>
+<tr class="separator:a865f1b26b5ccb22c4b98fec68aa2860e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a192744e85dcc07245f2db3629c823b85"><td class="memItemLeft" >
 &#160;&#160;&#160;<a class="el" href="group__SLAF.html#structSLAFNextHopRegMsg">SLAFNextHopRegMsg</a>&#160;&#160;&#160;<a class="el" href="group__SLAF.html#ab12db540361dae2a88a653675a2f6e40">NextHopReq</a> = 2</td></tr>
-<tr class="memdesc:acb17eb1efc9f0664745d7cfbd3e864d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next hop notification request. <br /></td></tr>
-<tr class="separator:acb17eb1efc9f0664745d7cfbd3e864d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95e254035220fdbb3b63026bd6885701"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a95e254035220fdbb3b63026bd6885701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a192744e85dcc07245f2db3629c823b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next hop notification registration. <br /></td></tr>
+<tr class="separator:a192744e85dcc07245f2db3629c823b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9e40a6298fcec00cefc33b60d95290"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:abf9e40a6298fcec00cefc33b60d95290"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f0653bda11c4c8d1a64e419e36a9ef1"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a6f0653bda11c4c8d1a64e419e36a9ef1">OperationID</a> = 3</td></tr>
 <tr class="memdesc:a6f0653bda11c4c8d1a64e419e36a9ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique OperationID sent by the client to correlate the registration request with the response.  <a href="#a6f0653bda11c4c8d1a64e419e36a9ef1">More...</a><br /></td></tr>
 <tr class="separator:a6f0653bda11c4c8d1a64e419e36a9ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1568,22 +1655,99 @@ uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <div class="textblock"><p>AF Notification message. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
-<tr class="memitem:a772c981d0d53a362b047b12695c7f240"><td class="memItemLeft" ><a class="anchor" id="a772c981d0d53a362b047b12695c7f240"></a>
+<tr class="memitem:add5cee4edcbad743eea84b870a76d3ad"><td class="memItemLeft" ><a class="anchor" id="add5cee4edcbad743eea84b870a76d3ad"></a>
 oneof {</td></tr>
-<tr class="memitem:a695c176a6e508dfe0c18bc51c8beb469"><td class="memItemLeft" >
+<tr class="memitem:a2525a885661feb542ed23e4d4db4e6c5"><td class="memItemLeft" >
 &#160;&#160;&#160;<a class="el" href="group__SLAF.html#structSLAFNotifRsp">SLAFNotifRsp</a>&#160;&#160;&#160;<a class="el" href="group__SLAF.html#a50bf737cdd502cb059f20f3972bafb0d">NotifStatus</a> = 1</td></tr>
-<tr class="memdesc:a695c176a6e508dfe0c18bc51c8beb469"><td class="mdescLeft">&#160;</td><td class="mdescRight">This field carries the status of the <a class="el" href="group__SLAF.html#structSLAFNotifReq" title="RPC Notification request - either a route redistribution request or a next hop change notification re...">SLAFNotifReq</a> message. <br /></td></tr>
-<tr class="separator:a695c176a6e508dfe0c18bc51c8beb469"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cde2a73f517401a0be78255328fcbe8"><td class="memItemLeft" >
-&#160;&#160;&#160;<a class="el" href="group__SLAF.html#structSLAFObject">SLAFObject</a>&#160;&#160;&#160;<a class="el" href="group__SLAF.html#acb6352dfd5ddb1c65872052167496de3">RedistObject</a> = 4</td></tr>
-<tr class="memdesc:a0cde2a73f517401a0be78255328fcbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route redistribution notification. <br /></td></tr>
-<tr class="separator:a0cde2a73f517401a0be78255328fcbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dea90aba420b07db4127fb05e8056b2"><td class="memItemLeft" >
+<tr class="memdesc:a2525a885661feb542ed23e4d4db4e6c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This field carries the status of the <a class="el" href="group__SLAF.html#structSLAFNotifReq" title="RPC Notification request - either a route redistribution request or a next hop change notification re...">SLAFNotifReq</a> message. <br /></td></tr>
+<tr class="separator:a2525a885661feb542ed23e4d4db4e6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0fba15955781e317a48e2785c22bb64"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="group__SLAF.html#structSLAFNotif_1_1SLRedistMarker">SLRedistMarker</a>&#160;&#160;&#160;<a class="el" href="group__SLAF.html#a1f1749ae49a4f601a3e4601ae53dfa8b">StartMarker</a> = 2</td></tr>
+<tr class="memdesc:aa0fba15955781e317a48e2785c22bb64"><td class="mdescLeft">&#160;</td><td class="mdescRight">This field carries the start marker per VRF per Tabletype.  <a href="#aa0fba15955781e317a48e2785c22bb64">More...</a><br /></td></tr>
+<tr class="separator:aa0fba15955781e317a48e2785c22bb64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da511ff827eec6d290e60e39979eb05"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="group__SLAF.html#structSLAFNotif_1_1SLRedistMarker">SLRedistMarker</a>&#160;&#160;&#160;<a class="el" href="group__SLAF.html#a3a33f941aad97552334d3da55765e5da">EndMarker</a> = 3</td></tr>
+<tr class="memdesc:a4da511ff827eec6d290e60e39979eb05"><td class="mdescLeft">&#160;</td><td class="mdescRight">This field carries the end marker per VRF per Tabletype and is an indication that all notifications corresponding to the outstanding redistribution registrations have been sent to the client.  <a href="#a4da511ff827eec6d290e60e39979eb05">More...</a><br /></td></tr>
+<tr class="separator:a4da511ff827eec6d290e60e39979eb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83de253eed277899bd9fc2b0f1e99a3"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="group__SLAF.html#structSLAFObject">SLAFObject</a>&#160;&#160;&#160;<a class="el" href="group__SLAF.html#acb6352dfd5ddb1c65872052167496de3">RedistObject</a> = 4</td></tr>
+<tr class="memdesc:aa83de253eed277899bd9fc2b0f1e99a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Route redistribution notification.  <a href="#aa83de253eed277899bd9fc2b0f1e99a3">More...</a><br /></td></tr>
+<tr class="separator:aa83de253eed277899bd9fc2b0f1e99a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92982f7d77f41a4516caca6597afa7de"><td class="memItemLeft" >
 &#160;&#160;&#160;<a class="el" href="group__SLAF.html#structSLNextHop">SLNextHop</a>&#160;&#160;&#160;<a class="el" href="group__SLAF.html#a42fd9b752dfaf83f2cbe68ceb3facc5b">NextHop</a> = 5</td></tr>
-<tr class="memdesc:a0dea90aba420b07db4127fb05e8056b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next hop change notification. <br /></td></tr>
-<tr class="separator:a0dea90aba420b07db4127fb05e8056b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a772c981d0d53a362b047b12695c7f240"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:a772c981d0d53a362b047b12695c7f240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a92982f7d77f41a4516caca6597afa7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next hop change notification. <br /></td></tr>
+<tr class="separator:a92982f7d77f41a4516caca6597afa7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add5cee4edcbad743eea84b870a76d3ad"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:add5cee4edcbad743eea84b870a76d3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">Member Data Documentation</h4>
+<a class="anchor" id="a3a33f941aad97552334d3da55765e5da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLAF.html#structSLAFNotif_1_1SLRedistMarker">SLRedistMarker</a> SLAFNotif::EndMarker = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This field carries the end marker per VRF per Tabletype and is an indication that all notifications corresponding to the outstanding redistribution registrations have been sent to the client. </p>
+<p>The server send EndMarker under following conditions:</p><ul>
+<li>On redistribution registrations from the client when all routes matching the outstanding redistribution registrations have been sent to the client.</li>
+<li>On RIB restart, after all routes matching the outstanding registrations on the VRF and table type have been notified to the client. The client can now reconcile and sweep any stale notifications. </li>
+</ul>
+
+</div>
+</div>
+<a class="anchor" id="acb6352dfd5ddb1c65872052167496de3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLAF.html#structSLAFObject">SLAFObject</a> SLAFNotif::RedistObject = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Route redistribution notification. </p>
+<p>If the route is programmed with PathList, the redistributed route contains the PathList. The PathList contains paths used for forwarding. If the route is deleted, or no paths are available for forwarding, the PathList is not returned. If the route is programmed with PathGroupRefKey, the redistributed route contains PathGroupRefKey. If the route is deleted, or the path group is unviable, the PathGroupRefKey is not returned. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1f1749ae49a4f601a3e4601ae53dfa8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__SLAF.html#structSLAFNotif_1_1SLRedistMarker">SLRedistMarker</a> SLAFNotif::StartMarker = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This field carries the start marker per VRF per Tabletype. </p>
+<p>Server sends this event before any notifications are sent under following conditions:</p><ul>
+<li>If there are no previous redistribution registrations for the VRF and table type, and new redistribution requests are registered, then when the first route matching any of the redistribution registrations is available.</li>
+<li>On a RIB restart if there are previous redistribution registrations on the VRF and table type. This allows the client to stale any previous notifications in its database. </li>
+</ul>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="structSLAFNotif_1_1SLRedistMarker" id="structSLAFNotif_1_1SLRedistMarker"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">message SLAFNotif::SLRedistMarker</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Route redistribution marker. </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Attributes</h3></td></tr>
+<tr class="memitem:a6c232c38bbd5f79f05f75636a24ff34f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c232c38bbd5f79f05f75636a24ff34f"></a>
+<a class="el" href="group__SLCommonTypes.html#gaf9a0d45d36b43a18018d89088dca1047">SLTableType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SLAF.html#a6c232c38bbd5f79f05f75636a24ff34f">Table</a> = 1</td></tr>
+<tr class="memdesc:a6c232c38bbd5f79f05f75636a24ff34f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Table type for the Marker. <br /></td></tr>
+<tr class="separator:a6c232c38bbd5f79f05f75636a24ff34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 </div>

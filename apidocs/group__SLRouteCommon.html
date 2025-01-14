@@ -890,18 +890,18 @@ string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gr
 <p>Specify a regular expression for PathGroup name or a numerical value for Vxlan VNI. </p>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h3>Attributes</h3></td></tr>
-<tr class="memitem:aea49558fe68cfdf47910c3aeaf5006a3"><td class="memItemLeft" ><a class="anchor" id="aea49558fe68cfdf47910c3aeaf5006a3"></a>
+<tr class="memitem:ab20ae118ed3f9cd78087318bb5adbf7e"><td class="memItemLeft" ><a class="anchor" id="ab20ae118ed3f9cd78087318bb5adbf7e"></a>
 oneof {</td></tr>
-<tr class="memitem:ac42d87816ff38213793336801f430787"><td class="memItemLeft" >
+<tr class="memitem:abd10962c93a1356da18df9ae60ac08ad"><td class="memItemLeft" >
 &#160;&#160;&#160;string&#160;&#160;&#160;<a class="el" href="group__SLRouteCommon.html#a2fee77a3923b49f7a3a087b780dc8597">PathGroupRegex</a> = 1</td></tr>
-<tr class="memdesc:ac42d87816ff38213793336801f430787"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLAFGetMsgRsp.AFList.AFOp.AFObject.entry.PathGroupKey.PathGroupId.Name. <br /></td></tr>
-<tr class="separator:ac42d87816ff38213793336801f430787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8ee445fea32b17100106fc10b79e962"><td class="memItemLeft" >
+<tr class="memdesc:abd10962c93a1356da18df9ae60ac08ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLAFGetMsgRsp.AFList.AFOp.AFObject.entry.PathGroupKey.PathGroupId.Name. <br /></td></tr>
+<tr class="separator:abd10962c93a1356da18df9ae60ac08ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005b08f9ef7b193ebc7d0ca282ab8a31"><td class="memItemLeft" >
 &#160;&#160;&#160;uint32&#160;&#160;&#160;<a class="el" href="group__SLRouteCommon.html#a6d572664e5dad0355e40f78134512c31">VxlanVniId</a> = 2</td></tr>
-<tr class="memdesc:af8ee445fea32b17100106fc10b79e962"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLAFGetMsgRsp.AFList.AFOp.AFObject.PathList.VxLANPath.VNI. <br /></td></tr>
-<tr class="separator:af8ee445fea32b17100106fc10b79e962"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea49558fe68cfdf47910c3aeaf5006a3"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="separator:aea49558fe68cfdf47910c3aeaf5006a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:a005b08f9ef7b193ebc7d0ca282ab8a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLAFGetMsgRsp.AFList.AFOp.AFObject.PathList.VxLANPath.VNI. <br /></td></tr>
+<tr class="separator:a005b08f9ef7b193ebc7d0ca282ab8a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20ae118ed3f9cd78087318bb5adbf7e"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ab20ae118ed3f9cd78087318bb5adbf7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 
 </div>
@@ -971,13 +971,13 @@ oneof {</td></tr>
 <ul>
 <li>If the flag is not set, all paths in the PathList are installed in the route's load balance group, even if paths are unviable. The Network element does not automatically update the route's load balance group when path viability changes and expects the client to take corrective action.</li>
 <li>If the flag is set, the network element only installs viable paths from the PathList in the route's load balance group. The Network element also automatically updates the route's load balance group when path viability changes.</li>
-<li>This flag is ignored if the route refers to the PathGroup and the corresponding setting on the PathGroup dictates path programming.</li>
+<li>If the route refers to the PathGroup, then a programming error is returned and the corresponding setting on the PathGroup dictates path programming.</li>
 </ul>
 <p>SL_ROUTE_FLAG_ACTIVE_ON_VIABLE_PATH - This flag is supported only for routes that contain the PathList.</p>
 <ul>
 <li>If this flag is not set, the route is active if it is preferred based on administrative distance. Viability of the paths in the PathList is not used as a criterion to determine route's activeness. If the route is active, the PathList programming is dictated by SL_ROUTE_FLAG_VIABLE_PATHS_ONLY.</li>
 <li>If this flag is set, SL_ROUTE_FLAG_VIABLE_PATHS_ONLY must also be set. The route is considered as active if it is preferred based on administrative distance AND at least one path in the PathList is viable. The Network element also automatically promotes or demotes the route when the first path becomes viable or none of the paths are no longer viable.</li>
-<li>If the route refers to the PathGroup, then this flag on the route is ignored. Instead, the corresponding setting on PathGroup dictates whether this route should be considered in best route calculations.</li>
+<li>If the route refers to the PathGroup, then a programming error is returned and the corresponding setting on the PathGroup dictates whether this route should be considered in best route calculations.</li>
 </ul>
 <p>All others are reserved. </p>
 
@@ -1231,7 +1231,7 @@ bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gro
 </div><div class="memdoc">
 
 <p>Outgoing interface name for the path. </p>
-<p>For ENCAP_VXLAN, this field is not supported and will be ignored. </p>
+<p>For ENCAP_VXLAN, this field is not supported and will be ignored. The client should listen to interface state change API for create/delete and reprogram the route or PG. </p>
 
 </div>
 </div>
@@ -1305,7 +1305,7 @@ bytes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="gro
 </div><div class="memdoc">
 
 <p>Path VRF name. </p>
-<p>This field is used ONLY if the path is in a different VRF than the route (e.g. VPN cases). </p>
+<p>This field is optional and if not specified, VRF of the AF object containing this path is assumed. The client can set a different VRF name for certain use cases such as VPN or VxLAN encapsulation. </p>
 
 </div>
 </div>
